@@ -22,14 +22,21 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "add_to_cart": MessageLookupByLibrary.simpleMessage("Add to cart"),
+        "best_seller": MessageLookupByLibrary.simpleMessage("Best seller"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "contact_us": MessageLookupByLibrary.simpleMessage("Contact us"),
+        "corner": MessageLookupByLibrary.simpleMessage("Corner"),
         "create_new_acc":
             MessageLookupByLibrary.simpleMessage("Create new account"),
         "discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch":
             MessageLookupByLibrary.simpleMessage(
                 "Discover our distinctive collection of furniture and renew your home with a magical touch."),
+        "doors": MessageLookupByLibrary.simpleMessage("Doors"),
+        "dressing": MessageLookupByLibrary.simpleMessage("Dressing"),
+        "dressing_room": MessageLookupByLibrary.simpleMessage("Dressing room"),
+        "egp": MessageLookupByLibrary.simpleMessage("EGP"),
         "email": MessageLookupByLibrary.simpleMessage("E-mail"),
         "email_is_required":
             MessageLookupByLibrary.simpleMessage("Email is required"),
@@ -41,21 +48,34 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Here we make you fall in love with the place you live in"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "kitchen_collections":
+            MessageLookupByLibrary.simpleMessage("Kitchen collections"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "login_failed": MessageLookupByLibrary.simpleMessage("Login Failed"),
         "login_successfully":
             MessageLookupByLibrary.simpleMessage("Login Successfully"),
         "login_with": MessageLookupByLibrary.simpleMessage("Login with"),
+        "more": MessageLookupByLibrary.simpleMessage("More"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("New home!! New furniture!!"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "no_history_yet":
+            MessageLookupByLibrary.simpleMessage("No history yet!"),
         "offers": MessageLookupByLibrary.simpleMessage("Offers"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("Password is required"),
+        "pieces": MessageLookupByLibrary.simpleMessage("Pieces"),
         "please_enter_valid_email":
             MessageLookupByLibrary.simpleMessage("Please enter valid email"),
+        "popular": MessageLookupByLibrary.simpleMessage("Popular"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "room_ideas": MessageLookupByLibrary.simpleMessage("Room ideas"),
+        "search_history":
+            MessageLookupByLibrary.simpleMessage("Search history"),
+        "sofa": MessageLookupByLibrary.simpleMessage("Sofa"),
+        "tables": MessageLookupByLibrary.simpleMessage("Tables"),
+        "tv_units": MessageLookupByLibrary.simpleMessage("TV units"),
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage(
                 "We create furniture with your eyes!!"),

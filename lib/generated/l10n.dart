@@ -1,7 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -298,6 +297,176 @@ class S {
     return Intl.message(
       'Offers',
       name: 'offers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Best seller`
+  String get best_seller {
+    return Intl.message(
+      'Best seller',
+      name: 'best_seller',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `More`
+  String get more {
+    return Intl.message(
+      'More',
+      name: 'more',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `EGP`
+  String get egp {
+    return Intl.message(
+      'EGP',
+      name: 'egp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add to cart`
+  String get add_to_cart {
+    return Intl.message(
+      'Add to cart',
+      name: 'add_to_cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Room ideas`
+  String get room_ideas {
+    return Intl.message(
+      'Room ideas',
+      name: 'room_ideas',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dressing room`
+  String get dressing_room {
+    return Intl.message(
+      'Dressing room',
+      name: 'dressing_room',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pieces`
+  String get pieces {
+    return Intl.message(
+      'Pieces',
+      name: 'pieces',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Kitchen collections`
+  String get kitchen_collections {
+    return Intl.message(
+      'Kitchen collections',
+      name: 'kitchen_collections',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search history`
+  String get search_history {
+    return Intl.message(
+      'Search history',
+      name: 'search_history',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No history yet!`
+  String get no_history_yet {
+    return Intl.message(
+      'No history yet!',
+      name: 'no_history_yet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Popular`
+  String get popular {
+    return Intl.message(
+      'Popular',
+      name: 'popular',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tables`
+  String get tables {
+    return Intl.message(
+      'Tables',
+      name: 'tables',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sofa`
+  String get sofa {
+    return Intl.message(
+      'Sofa',
+      name: 'sofa',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Corner`
+  String get corner {
+    return Intl.message(
+      'Corner',
+      name: 'corner',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Doors`
+  String get doors {
+    return Intl.message(
+      'Doors',
+      name: 'doors',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `TV units`
+  String get tv_units {
+    return Intl.message(
+      'TV units',
+      name: 'tv_units',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dressing`
+  String get dressing {
+    return Intl.message(
+      'Dressing',
+      name: 'dressing',
       desc: '',
       args: [],
     );

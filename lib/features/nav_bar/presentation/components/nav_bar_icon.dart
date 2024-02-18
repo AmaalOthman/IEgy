@@ -3,7 +3,7 @@ import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
 
 class NavBarIcon extends StatelessWidget {
-  NavBarIcon(this.selected, this.selectedImagePath, this.unSelectedImagePath);
+  NavBarIcon(this.selected, this.selectedImagePath, this.unSelectedImagePath, {super.key});
 
   bool selected;
   String selectedImagePath, unSelectedImagePath;

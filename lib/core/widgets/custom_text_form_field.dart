@@ -38,7 +38,7 @@ class CustomTextFormField extends StatelessWidget {
         ]: null,
       ),
       child: TextFormField(
-        focusNode: focusNode ?? null,
+        focusNode: focusNode,
         keyboardType: keyboardType,
         controller: controller,
         validator: validator,

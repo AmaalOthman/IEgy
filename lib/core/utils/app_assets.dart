@@ -33,4 +33,6 @@ class AppAssets{
   static const String table = '${basePath}table.png';
   static const String tv = '${basePath}tv.png';
   static const String door = '${basePath}door.png';
+  static const String placeholder = '${basePath}placeholder.png';
+  static const String errorImage = '${basePath}error_image.jpg';
 }
