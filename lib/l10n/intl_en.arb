@@ -40,5 +40,12 @@
   "corner": "Corner",
   "doors": "Doors",
   "tv_units": "TV units",
-  "dressing": "Dressing"
+  "dressing": "Dressing",
+  "our_branches": "Our branches",
+  "orders_and_tracking": "Orders and tracking",
+  "favourites": "Favourites",
+  "dark_mode": "Dark mode",
+  "exchange_and_return_policy": "Exchange and return policy",
+  "supply_and_installation": "Supply and installation",
+  "about_us": "About us"
 }

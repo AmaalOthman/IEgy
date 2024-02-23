@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "about_us": MessageLookupByLibrary.simpleMessage("ماذا عنا؟"),
         "add_to_cart": MessageLookupByLibrary.simpleMessage("أضف إلى السلة"),
         "best_seller": MessageLookupByLibrary.simpleMessage("الأكثر مبيعاً"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
@@ -30,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "corner": MessageLookupByLibrary.simpleMessage("رُكنة"),
         "create_new_acc":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+        "dark_mode": MessageLookupByLibrary.simpleMessage("المظهر الليلي"),
         "discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch":
             MessageLookupByLibrary.simpleMessage(
                 "اكتشف تشكيلتنا المميزة من الأثاث و جدد منزلك بلمسة سحرية."),
@@ -40,7 +42,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "email_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال بريد إلكتروني"),
+        "exchange_and_return_policy":
+            MessageLookupByLibrary.simpleMessage("سياسة الاستبدال و الاسترجاع"),
         "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
+        "favourites": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "google": MessageLookupByLibrary.simpleMessage("جوجل"),
@@ -63,6 +68,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_history_yet":
             MessageLookupByLibrary.simpleMessage("لا توجد عمليات بحث سابقة!"),
         "offers": MessageLookupByLibrary.simpleMessage("العروض"),
+        "orders_and_tracking":
+            MessageLookupByLibrary.simpleMessage("الطلبات و تتبعها"),
+        "our_branches": MessageLookupByLibrary.simpleMessage("فروعنا"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال كلمة مرور"),
@@ -75,6 +83,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "search_history":
             MessageLookupByLibrary.simpleMessage("عمليات البحث السابقة"),
         "sofa": MessageLookupByLibrary.simpleMessage("سفرة"),
+        "supply_and_installation":
+            MessageLookupByLibrary.simpleMessage("التوريد و التركيب"),
         "tables": MessageLookupByLibrary.simpleMessage("ترابيزات"),
         "tv_units": MessageLookupByLibrary.simpleMessage("وحدات تلفزيون"),
         "we_create_furniture_with_your_eyes":

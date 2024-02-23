@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "about_us": MessageLookupByLibrary.simpleMessage("About us"),
         "add_to_cart": MessageLookupByLibrary.simpleMessage("Add to cart"),
         "best_seller": MessageLookupByLibrary.simpleMessage("Best seller"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
@@ -30,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "corner": MessageLookupByLibrary.simpleMessage("Corner"),
         "create_new_acc":
             MessageLookupByLibrary.simpleMessage("Create new account"),
+        "dark_mode": MessageLookupByLibrary.simpleMessage("Dark mode"),
         "discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch":
             MessageLookupByLibrary.simpleMessage(
                 "Discover our distinctive collection of furniture and renew your home with a magical touch."),
@@ -40,7 +42,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("E-mail"),
         "email_is_required":
             MessageLookupByLibrary.simpleMessage("Email is required"),
+        "exchange_and_return_policy":
+            MessageLookupByLibrary.simpleMessage("Exchange and return policy"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "favourites": MessageLookupByLibrary.simpleMessage("Favourites"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "google": MessageLookupByLibrary.simpleMessage("Google"),
@@ -62,6 +67,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_history_yet":
             MessageLookupByLibrary.simpleMessage("No history yet!"),
         "offers": MessageLookupByLibrary.simpleMessage("Offers"),
+        "orders_and_tracking":
+            MessageLookupByLibrary.simpleMessage("Orders and tracking"),
+        "our_branches": MessageLookupByLibrary.simpleMessage("Our branches"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("Password is required"),
@@ -74,6 +82,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "search_history":
             MessageLookupByLibrary.simpleMessage("Search history"),
         "sofa": MessageLookupByLibrary.simpleMessage("Sofa"),
+        "supply_and_installation":
+            MessageLookupByLibrary.simpleMessage("Supply and installation"),
         "tables": MessageLookupByLibrary.simpleMessage("Tables"),
         "tv_units": MessageLookupByLibrary.simpleMessage("TV units"),
         "we_create_furniture_with_your_eyes":

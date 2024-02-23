@@ -40,5 +40,12 @@
   "corner": "رُكنة",
   "doors": "أبواب",
   "tv_units": "وحدات تلفزيون",
-  "dressing": "دريسنج"
+  "dressing": "دريسنج",
+  "our_branches": "فروعنا",
+  "orders_and_tracking": "الطلبات و تتبعها",
+  "favourites": "المفضلة",
+  "dark_mode": "المظهر الليلي",
+  "exchange_and_return_policy": "سياسة الاستبدال و الاسترجاع",
+  "supply_and_installation": "التوريد و التركيب",
+  "about_us": "ماذا عنا؟"
 }

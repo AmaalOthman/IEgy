@@ -5,21 +5,16 @@ import 'package:iegy/core/services/service_locator.dart';
 
 class GlobalCubit extends Cubit<GlobalState> {
   GlobalCubit() : super(GlobalInitial());
-  bool isArabic = true;
   String langCode = 'ar';
-  void convertToArabic() async {
-    emit(changeLanguageLoading());
-    if (isArabic) return;
-    langCode = 'ar';
-    await sl<CacheHelper>().cacheLanguage('ar');
-    emit(changeLanguageSuccess());
-  }
 
-  void convertToEnglish() async {
+  void switchLanguage() async {
     emit(changeLanguageLoading());
-    if (isArabic == false) return;
-    langCode = 'en';
-    await sl<CacheHelper>().cacheLanguage('en');
+    if(sl<CacheHelper>().getCachedLanguage() == 'ar') {
+      langCode = 'en';
+      await sl<CacheHelper>().cacheLanguage('en');
+    } else {langCode = 'ar';
+    await sl<CacheHelper>().cacheLanguage('ar');
+    }
     emit(changeLanguageSuccess());
   }
 

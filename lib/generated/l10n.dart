@@ -471,6 +471,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Our branches`
+  String get our_branches {
+    return Intl.message(
+      'Our branches',
+      name: 'our_branches',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Orders and tracking`
+  String get orders_and_tracking {
+    return Intl.message(
+      'Orders and tracking',
+      name: 'orders_and_tracking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Favourites`
+  String get favourites {
+    return Intl.message(
+      'Favourites',
+      name: 'favourites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark mode`
+  String get dark_mode {
+    return Intl.message(
+      'Dark mode',
+      name: 'dark_mode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exchange and return policy`
+  String get exchange_and_return_policy {
+    return Intl.message(
+      'Exchange and return policy',
+      name: 'exchange_and_return_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Supply and installation`
+  String get supply_and_installation {
+    return Intl.message(
+      'Supply and installation',
+      name: 'supply_and_installation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About us`
+  String get about_us {
+    return Intl.message(
+      'About us',
+      name: 'about_us',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -16,6 +16,7 @@ import 'package:iegy/features/home/presentation/components/section_title.dart';
 import 'package:iegy/features/home/presentation/cubit/home_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/home_state.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:iegy/features/home/presentation/screens/home_side_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -34,12 +35,13 @@ class HomeScreen extends StatelessWidget {
             }
           },
           child: Scaffold(
+            drawer: Drawer(
+              width: 270.w,
+              child: const HomeSideMenu(),
+            ),
               appBar: BlocProvider.of<HomeCubit>(context).focusNode.hasFocus
                   ? null
                   : AppBar(
-                      leading: const Icon(
-                        Icons.menu,
-                      ),
                       title: const CustomImage(
                         imagePath: AppAssets.homeLogo,
                       ),
@@ -354,19 +356,19 @@ class HomeScreen extends StatelessWidget {
                   backgroundColor: AppColors.brown,
                   heroTag: null,
                   child: const Icon(Icons.phone_enabled, color: AppColors.white,),
-                  onPressed: () {},
+                  onPressed: () => BlocProvider.of<HomeCubit>(context).dialPhoneNumber(),
                 ),
                 FloatingActionButton.small(
                   backgroundColor: AppColors.brown,
                   heroTag: null,
                   child: const Icon(Icons.facebook, color: AppColors.white,),
-                  onPressed: () {},
+                  onPressed: () => BlocProvider.of<HomeCubit>(context).openFacebookPage(),
                 ),
                 FloatingActionButton.small(
                   backgroundColor: AppColors.brown,
                   heroTag: null,
                   child: const Icon(FontAwesomeIcons.whatsapp, color: AppColors.white,),
-                  onPressed: () {},
+                  onPressed: () => BlocProvider.of<HomeCubit>(context).onWhatsAppPressed(),
                 )
               ],
             ),),
