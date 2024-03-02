@@ -2,6 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iegy/core/database/cache/cache_helper.dart';
+import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
 import 'package:iegy/core/widgets/custom_button.dart';
@@ -145,7 +147,7 @@ class Sale extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             CustomButton(
-              w: 120.w,
+              w: sl<CacheHelper>().getCachedLanguage() == 'ar'? 140.w: 120.w,
               h: 24.h,
               onPressed: () {},
               text: AppLocalizations.of(context)!.add_to_cart,

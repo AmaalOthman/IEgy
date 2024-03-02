@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iegy/core/database/cache/cache_helper.dart';
+import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
 import 'package:iegy/core/widgets/custom_button.dart';
@@ -39,315 +41,345 @@ class HomeScreen extends StatelessWidget {
               width: 270.w,
               child: const HomeSideMenu(),
             ),
-              appBar: BlocProvider.of<HomeCubit>(context).focusNode.hasFocus
-                  ? null
-                  : AppBar(
-                      title: const CustomImage(
-                        imagePath: AppAssets.homeLogo,
-                      ),
-                      actions: const [
-                        CustomImage(imagePath: AppAssets.notifications)
-                      ],
+            appBar: BlocProvider.of<HomeCubit>(context).focusNode.hasFocus
+                ? null
+                : AppBar(
+                    title: const CustomImage(
+                      imagePath: AppAssets.homeLogo,
                     ),
-              body: Padding(
-                padding: EdgeInsets.only(top: 24.h),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: 16.w,
-                    ),
-                    SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          Row(
+                    actions: const [
+                      CustomImage(imagePath: AppAssets.notifications)
+                    ],
+                  ),
+            body: Padding(
+              padding: EdgeInsets.only(top: 24.h),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 16.w,
+                  ),
+                  SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            SizedBox(
+                                width: 350.w,
+                                child: CustomTextFormField(
+                                  controller: TextEditingController(
+                                      text: BlocProvider.of<HomeCubit>(context)
+                                              .speechToText
+                                              .isListening
+                                          ? "listening.."
+                                          : BlocProvider.of<HomeCubit>(
+                                                      context)
+                                                  .spokenWords),
+                                  focusNode: BlocProvider.of<HomeCubit>(context)
+                                      .focusNode,
+                                  shadow: true,
+                                  preIcon: Icons.search,
+                                  suffixIcon: CupertinoIcons.mic_solid,
+                                  hint: AppLocalizations.of(context)!
+                                      .what_are_u_looking_for,
+                                  onSuffixPressed:
+                                      BlocProvider.of<HomeCubit>(context)
+                                          .onVoiceSearchClicked,
+                                )),
+                            SizedBox(width: 20.w),
+                            const CustomImage(imagePath: AppAssets.replace)
+                          ],
+                        ),
+                        SizedBox(
+                          height: 16.h,
+                        ),
+                        if (!BlocProvider.of<HomeCubit>(context)
+                            .focusNode
+                            .hasFocus)
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(16.w),
+                                width: 398.w,
+                                height: 203.h,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: const Color(0xffe8e3da)),
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 106.w,
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: [
+                                          RichText(
+                                            // maxLines: 2,
+                                            overflow: TextOverflow.fade,
+                                            text: TextSpan(
+                                              text: AppLocalizations.of(
+                                                      context)!
+                                                  .here_we_make_u_fall_in_love_with_the_place_u_live_in,
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .displayMedium!
+                                                  .copyWith(
+                                                    height: 2.h,
+                                                  ),
+                                            ),
+                                          ),
+                                          CustomButton(
+                                            h: 22.h,
+                                            onPressed: () {},
+                                            text: AppLocalizations.of(context)!
+                                                .contact_us,
+                                            fontSize: 10.w,
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    const Spacer(),
+                                    const CustomImage(
+                                        imagePath: AppAssets.home1st)
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 16.h,
+                              ),
+                              SizedBox(
+                                width: 414.w,
+                                height: 39.h,
+                                child: ListView(
+                                  scrollDirection: Axis.horizontal,
+                                  children: BlocProvider.of<HomeCubit>(context)
+                                      .homeCategories,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 40.h,
+                              ),
+                              Text(
+                                AppLocalizations.of(context)!.offers,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .displayLarge!
+                                    .copyWith(color: AppColors.lightBrown),
+                              ),
+                              SizedBox(
+                                height: 12.h,
+                              ),
+                              SizedBox(
+                                height: 190.h,
+                                width: 414.w,
+                                child: ListView.separated(
+                                  scrollDirection: Axis.horizontal,
+                                  itemBuilder: (context, index) {
+                                    return const Offer();
+                                  },
+                                  separatorBuilder: (context, index) {
+                                    return SizedBox(width: 8.w);
+                                  },
+                                  itemCount: 32,
+                                ),
+                              ),
+                              SizedBox(height: 15.h),
+                              SectionTitle(
+                                  title: AppLocalizations.of(context)!
+                                      .best_seller),
+                              SizedBox(
+                                height: 12.h,
+                              ),
+                              SizedBox(
+                                height: 251.h,
+                                width: 414.w,
+                                child: ListView.separated(
+                                  scrollDirection: Axis.horizontal,
+                                  itemBuilder: (context, index) {
+                                    return const Sale();
+                                  },
+                                  separatorBuilder: (context, index) {
+                                    return SizedBox(width: 16.w);
+                                  },
+                                  itemCount: 32,
+                                ),
+                              ),
+                              SizedBox(height: 15.h),
+                              SectionTitle(
+                                  title:
+                                      AppLocalizations.of(context)!.room_ideas),
+                              SizedBox(
+                                height: 12.h,
+                              ),
+                              SizedBox(
+                                height: 154.h,
+                                width: 414.w,
+                                child: ListView.separated(
+                                  scrollDirection: Axis.horizontal,
+                                  itemBuilder: (context, index) {
+                                    return const Idea();
+                                  },
+                                  separatorBuilder: (context, index) {
+                                    return SizedBox(width: 16.w);
+                                  },
+                                  itemCount: 32,
+                                ),
+                              ),
+                              SizedBox(height: 15.h),
+                              SectionTitle(
+                                  title: AppLocalizations.of(context)!
+                                      .kitchen_collections),
+                              SizedBox(
+                                height: 12.h,
+                              ),
+                              SizedBox(
+                                height: 154.h,
+                                width: 414.w,
+                                child: ListView.separated(
+                                  scrollDirection: Axis.horizontal,
+                                  itemBuilder: (context, index) {
+                                    return const Idea();
+                                  },
+                                  separatorBuilder: (context, index) {
+                                    return SizedBox(width: 16.w);
+                                  },
+                                  itemCount: 32,
+                                ),
+                              )
+                            ],
+                          )
+                        else
+                          Column(
                             children: [
                               SizedBox(
-                                  width: 350.w,
-                                  child: CustomTextFormField(
-                                    focusNode:
-                                        BlocProvider.of<HomeCubit>(context)
-                                            .focusNode,
-                                    shadow: true,
-                                    preIcon: Icons.search,
-                                    suffixIcon: CupertinoIcons.mic_solid,
-                                    hint: AppLocalizations.of(context)!
-                                        .what_are_u_looking_for,
-                                  )),
-                              SizedBox(width: 20.w),
-                              const CustomImage(imagePath: AppAssets.replace)
+                                height: 20.h,
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    AppLocalizations.of(context)!
+                                        .search_history,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displayLarge!
+                                        .copyWith(fontSize: 17),
+                                  ),
+                                  SizedBox(
+                                    width:
+                                        sl<CacheHelper>().getCachedLanguage() ==
+                                                'ar'
+                                            ? 230.w
+                                            : 295.w,
+                                  )
+                                ],
+                              ),
+                              SizedBox(
+                                height: 25.h,
+                              ),
+                              Text(
+                                AppLocalizations.of(context)!.no_history_yet,
+                                style:
+                                    Theme.of(context).textTheme.displayMedium,
+                              ),
+                              SizedBox(
+                                height: 36.h,
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    AppLocalizations.of(context)!.popular,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displayLarge!
+                                        .copyWith(fontSize: 17),
+                                  ),
+                                  SizedBox(
+                                    width: 350.w,
+                                  )
+                                ],
+                              ),
+                              SizedBox(
+                                height: 12.h,
+                              ),
+                              Row(
+                                children: [
+                                  CustomButton(
+                                      onPressed: () {},
+                                      text:
+                                          AppLocalizations.of(context)!.tables,
+                                      borderRadius: 15,
+                                      background: AppColors.lightBrown,
+                                      w: 120.w),
+                                  SizedBox(
+                                    width: 12.w,
+                                  ),
+                                  CustomButton(
+                                      onPressed: () {},
+                                      text: AppLocalizations.of(context)!.sofa,
+                                      borderRadius: 15,
+                                      background: AppColors.lightBrown,
+                                      w: 120.w),
+                                  SizedBox(
+                                    width: 12.w,
+                                  ),
+                                  CustomButton(
+                                      onPressed: () {},
+                                      text:
+                                          AppLocalizations.of(context)!.corner,
+                                      borderRadius: 15,
+                                      background: AppColors.lightBrown,
+                                      w: 120.w)
+                                ],
+                              ),
+                              SizedBox(
+                                height: 6.h,
+                              ),
+                              Row(
+                                children: [
+                                  CustomButton(
+                                      onPressed: () {},
+                                      text: AppLocalizations.of(context)!.doors,
+                                      borderRadius: 15,
+                                      background: AppColors.lightBrown,
+                                      w: 120.w),
+                                  SizedBox(
+                                    width: 12.w,
+                                  ),
+                                  CustomButton(
+                                      onPressed: () {},
+                                      text: AppLocalizations.of(context)!
+                                          .tv_units,
+                                      borderRadius: 15,
+                                      background: AppColors.lightBrown,
+                                      w: sl<CacheHelper>()
+                                                  .getCachedLanguage() ==
+                                              'ar'
+                                          ? 175.w
+                                          : 135.w),
+                                  SizedBox(
+                                    width: 12.w,
+                                  ),
+                                  CustomButton(
+                                      onPressed: () {},
+                                      text: AppLocalizations.of(context)!
+                                          .dressing,
+                                      borderRadius: 15,
+                                      background: AppColors.lightBrown,
+                                      w: sl<CacheHelper>()
+                                                  .getCachedLanguage() ==
+                                              'ar'
+                                          ? 120.w
+                                          : 130.w)
+                                ],
+                              )
                             ],
-                          ),
-                          SizedBox(
-                            height: 16.h,
-                          ),
-                          if (!BlocProvider.of<HomeCubit>(context)
-                              .focusNode
-                              .hasFocus)
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.all(16.w),
-                                  width: 398.w,
-                                  height: 203.h,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(15),
-                                      color: const Color(0xffe8e3da)),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 106.w,
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceAround,
-                                          children: [
-                                            RichText(
-                                              // maxLines: 2,
-                                              overflow: TextOverflow.fade,
-                                              text: TextSpan(
-                                                text: AppLocalizations.of(
-                                                        context)!
-                                                    .here_we_make_u_fall_in_love_with_the_place_u_live_in,
-                                                style: Theme.of(context)
-                                                    .textTheme
-                                                    .displayMedium!
-                                                    .copyWith(
-                                                      height: 2.h,
-                                                    ),
-                                              ),
-                                            ),
-                                            CustomButton(
-                                              h: 22.h,
-                                              onPressed: () {},
-                                              text:
-                                                  AppLocalizations.of(context)!
-                                                      .contact_us,
-                                              fontSize: 10.w,
-                                            )
-                                          ],
-                                        ),
-                                      ),
-                                      const Spacer(),
-                                      const CustomImage(
-                                          imagePath: AppAssets.home1st)
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 16.h,
-                                ),
-                                SizedBox(
-                                  width: 414.w,
-                                  height: 39.h,
-                                  child: ListView(
-                                    scrollDirection: Axis.horizontal,
-                                    children:
-                                        BlocProvider.of<HomeCubit>(context)
-                                            .homeCategories,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 40.h,
-                                ),
-                                Text(
-                                  AppLocalizations.of(context)!.offers,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .displayLarge!
-                                      .copyWith(color: AppColors.lightBrown),
-                                ),
-                                SizedBox(
-                                  height: 12.h,
-                                ),
-                                SizedBox(
-                                  height: 190.h,
-                                  width: 414.w,
-                                  child: ListView.separated(
-                                    scrollDirection: Axis.horizontal,
-                                    itemBuilder: (context, index) {
-                                      return const Offer();
-                                    },
-                                    separatorBuilder: (context, index) {
-                                      return SizedBox(width: 8.w);
-                                    },
-                                    itemCount: 32,
-                                  ),
-                                ),
-                                SizedBox(height: 15.h),
-                                SectionTitle(
-                                    title: AppLocalizations.of(context)!
-                                        .best_seller),
-                                SizedBox(
-                                  height: 12.h,
-                                ),
-                                SizedBox(
-                                  height: 251.h,
-                                  width: 414.w,
-                                  child: ListView.separated(
-                                    scrollDirection: Axis.horizontal,
-                                    itemBuilder: (context, index) {
-                                      return const Sale();
-                                    },
-                                    separatorBuilder: (context, index) {
-                                      return SizedBox(width: 16.w);
-                                    },
-                                    itemCount: 32,
-                                  ),
-                                ),
-                                SizedBox(height: 15.h),
-                                SectionTitle(
-                                    title: AppLocalizations.of(context)!
-                                        .room_ideas),
-                                SizedBox(
-                                  height: 12.h,
-                                ),
-                                SizedBox(
-                                  height: 154.h,
-                                  width: 414.w,
-                                  child: ListView.separated(
-                                    scrollDirection: Axis.horizontal,
-                                    itemBuilder: (context, index) {
-                                      return const Idea();
-                                    },
-                                    separatorBuilder: (context, index) {
-                                      return SizedBox(width: 16.w);
-                                    },
-                                    itemCount: 32,
-                                  ),
-                                ),
-                                SizedBox(height: 15.h),
-                                SectionTitle(
-                                    title: AppLocalizations.of(context)!
-                                        .kitchen_collections),
-                                SizedBox(
-                                  height: 12.h,
-                                ),
-                                SizedBox(
-                                  height: 154.h,
-                                  width: 414.w,
-                                  child: ListView.separated(
-                                    scrollDirection: Axis.horizontal,
-                                    itemBuilder: (context, index) {
-                                      return const Idea();
-                                    },
-                                    separatorBuilder: (context, index) {
-                                      return SizedBox(width: 16.w);
-                                    },
-                                    itemCount: 32,
-                                  ),
-                                )
-                              ],
-                            )
-                          else
-                            Column(
-                              children: [
-                                SizedBox(
-                                  height: 20.h,
-                                ),
-                                Row(
-                                  children: [
-                                    Text(
-                                      AppLocalizations.of(context)!
-                                          .search_history,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .displayLarge!
-                                          .copyWith(fontSize: 17),
-                                    ),
-                                    SizedBox(
-                                      width: 230.w,
-                                    )
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: 25.h,
-                                ),
-                                Text(
-                                  AppLocalizations.of(context)!.no_history_yet,
-                                  style:
-                                      Theme.of(context).textTheme.displayMedium,
-                                ),
-                                SizedBox(
-                                  height: 36.h,
-                                ),
-                                Row(
-                                  children: [
-                                    Text(
-                                      AppLocalizations.of(context)!.popular,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .displayLarge!
-                                          .copyWith(fontSize: 17),
-                                    ),
-                                    SizedBox(
-                                      width: 350.w,
-                                    )
-                                  ],
-                                ),
-                                SizedBox(height: 12.h,),
-                                Row(
-                                  children: [
-                                    CustomButton(
-                                        onPressed: () {},
-                                        text: AppLocalizations.of(context)!
-                                            .tables,
-                                        borderRadius: 15,
-                                        background: AppColors.lightBrown,
-                                        w: 120.w),
-                                    SizedBox(width: 12.w,),
-                                    CustomButton(
-                                        onPressed: () {},
-                                        text:
-                                            AppLocalizations.of(context)!.sofa,
-                                        borderRadius: 15,
-                                        background: AppColors.lightBrown,
-                                        w: 120.w),
-                                    SizedBox(width: 12.w,),
-                                    CustomButton(
-                                        onPressed: () {},
-                                        text: AppLocalizations.of(context)!
-                                            .corner,
-                                        borderRadius: 15,
-                                        background: AppColors.lightBrown,
-                                        w: 120.w)
-                                  ],
-                                ),
-                                SizedBox(height: 6.h,),
-                                Row(
-                                  children: [
-                                    CustomButton(
-                                        onPressed: () {},
-                                        text: AppLocalizations.of(context)!
-                                            .doors,
-                                        borderRadius: 15,
-                                        background: AppColors.lightBrown,
-                                        w: 120.w),
-                                    SizedBox(width: 12.w,),
-                                    CustomButton(
-                                        onPressed: () {},
-                                        text:
-                                            AppLocalizations.of(context)!.tv_units,
-                                        borderRadius: 15,
-                                        background: AppColors.lightBrown,
-                                        w: 160.w),
-                                    SizedBox(width: 12.w,),
-                                    CustomButton(
-                                        onPressed: () {},
-                                        text: AppLocalizations.of(context)!
-                                            .dressing,
-                                        borderRadius: 15,
-                                        background: AppColors.lightBrown,
-                                        w: 120.w)
-                                  ],
-                                )
-                              ],
-                            )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
+                          )
+                      ],
+                    ),
+                  )
+                ],
               ),
+            ),
             floatingActionButtonLocation: ExpandableFab.location,
             floatingActionButton: ExpandableFab(
               type: ExpandableFabType.up,
@@ -355,23 +387,36 @@ class HomeScreen extends StatelessWidget {
                 FloatingActionButton.small(
                   backgroundColor: AppColors.brown,
                   heroTag: null,
-                  child: const Icon(Icons.phone_enabled, color: AppColors.white,),
-                  onPressed: () => BlocProvider.of<HomeCubit>(context).dialPhoneNumber(),
+                  child: const Icon(
+                    Icons.phone_enabled,
+                    color: AppColors.white,
+                  ),
+                  onPressed: () =>
+                      BlocProvider.of<HomeCubit>(context).dialPhoneNumber(),
                 ),
                 FloatingActionButton.small(
                   backgroundColor: AppColors.brown,
                   heroTag: null,
-                  child: const Icon(Icons.facebook, color: AppColors.white,),
-                  onPressed: () => BlocProvider.of<HomeCubit>(context).openFacebookPage(),
+                  child: const Icon(
+                    Icons.facebook,
+                    color: AppColors.white,
+                  ),
+                  onPressed: () =>
+                      BlocProvider.of<HomeCubit>(context).openFacebookPage(),
                 ),
                 FloatingActionButton.small(
                   backgroundColor: AppColors.brown,
                   heroTag: null,
-                  child: const Icon(FontAwesomeIcons.whatsapp, color: AppColors.white,),
-                  onPressed: () => BlocProvider.of<HomeCubit>(context).onWhatsAppPressed(),
+                  child: const Icon(
+                    FontAwesomeIcons.whatsapp,
+                    color: AppColors.white,
+                  ),
+                  onPressed: () =>
+                      BlocProvider.of<HomeCubit>(context).onWhatsAppPressed(),
                 )
               ],
-            ),),
+            ),
+          ),
         );
       },
     ));

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/features/home/presentation/components/home_category.dart';
 import 'package:iegy/features/home/presentation/cubit/home_state.dart';
+import 'package:speech_to_text/speech_to_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeCubit extends Cubit<HomeState> {
@@ -49,5 +50,34 @@ class HomeCubit extends Cubit<HomeState> {
     } else {
       throw 'Could not launch $facebookUrl';
     }
+  }
+
+  final SpeechToText speechToText = SpeechToText();
+  bool speechEnabled = false;
+  String? spokenWords = "";
+  double confidenceLevel = 0;
+
+  void onVoiceSearchClicked() async {
+    speechEnabled = await speechToText.initialize();
+    if(speechToText.isListening) {
+      _stopListening();
+    } else {_startListening();}
+  }
+
+  void _startListening() async {
+    await speechToText.listen(onResult: _onSpeechResult);
+    confidenceLevel = 0;
+    emit(SpeechEnabledState());
+  }
+
+  void _stopListening () async {
+    await speechToText.stop();
+    emit(HomeInitial());
+  }
+
+  void _onSpeechResult(result) {
+    spokenWords = "${result.recognizedWords}";
+    confidenceLevel = result.cofidence;
+    emit(HomeInitial());
   }
 }
