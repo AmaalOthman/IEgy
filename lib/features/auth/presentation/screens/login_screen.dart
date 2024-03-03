@@ -54,7 +54,7 @@ class LoginScreen extends StatelessWidget {
                           keyboardType: TextInputType.emailAddress,
                           controller: BlocProvider.of<LoginCubit>(context).emailController,
                           hint: AppLocalizations.of(context)!.email,
-                          preIcon: Icons.mail,
+                          preIcon: const Icon(Icons.mail, color: AppColors.darkBlue,),
                           validator: (data) {
                             if (!ValidationUtils.isValidEmail(data!)) {
                               return AppLocalizations.of(context)!
@@ -73,7 +73,7 @@ class LoginScreen extends StatelessWidget {
                         CustomTextFormField(
                           controller: BlocProvider.of<LoginCubit>(context).passwordController,
                           hint: AppLocalizations.of(context)!.password,
-                          preIcon: Icons.lock,
+                          preIcon: const Icon(Icons.lock, color: AppColors.darkBlue,),
                           isObSecure: BlocProvider.of<LoginCubit>(context).isLoginPasswordHidden,
                           suffixIcon: BlocProvider.of<LoginCubit>(context).suffixIcon,
                           onSuffixPressed: BlocProvider.of<LoginCubit>(context).changeLoginPasswordSuffixIcon,

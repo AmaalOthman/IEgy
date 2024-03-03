@@ -21,9 +21,9 @@ class Idea extends StatelessWidget {
             height: 154.h,
             width: 256.w,
             imageUrl:
-            'https://beyootfurniture.com/cdn/shop/files/Artboard_2_6.png?v=1621809435',
+                'https://cdn.alweb.com/thumbs/family/article/fit710x532/%D8%A3%D9%81%D9%83%D8%A7%D8%B1-%D8%AF%D9%8A%D9%83%D9%88%D8%B1%D8%A7%D8%AA-%D8%BA%D8%B1%D9%81-%D9%86%D9%88%D9%85-%D8%A8%D9%86%D8%A7%D8%AA-%D9%83%D8%A8%D8%A7%D8%B1.jpg',
             errorWidget: (context, url, error) =>
-            const CustomImage(imagePath: AppAssets.errorImage),
+                const CustomImage(imagePath: AppAssets.errorImage),
             // placeholder: (context, url) => const CustomImage(imagePath: AppAssets.placeholder),
             progressIndicatorBuilder: (context, url, progress) => SizedBox(
                 width: 228.w,
@@ -36,8 +36,20 @@ class Idea extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(AppLocalizations.of(context)!.dressing_room, style: Theme.of(context).textTheme.displayMedium!.copyWith(color: AppColors.white),),
-              Text('6 ${AppLocalizations.of(context)!.pieces}', style: Theme.of(context).textTheme.displayMedium!.copyWith(color: AppColors.white),)
+              Text(
+                AppLocalizations.of(context)!.dressing_room,
+                style: Theme.of(context)
+                    .textTheme
+                    .displayMedium!
+                    .copyWith(color: AppColors.white),
+              ),
+              Text(
+                '6 ${AppLocalizations.of(context)!.pieces}',
+                style: Theme.of(context)
+                    .textTheme
+                    .displayMedium!
+                    .copyWith(color: AppColors.white),
+              )
             ],
           ),
         )

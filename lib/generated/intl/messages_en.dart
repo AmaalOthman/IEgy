@@ -42,6 +42,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("E-mail"),
         "email_is_required":
             MessageLookupByLibrary.simpleMessage("Email is required"),
+        "enter_discount_promo_code":
+            MessageLookupByLibrary.simpleMessage("Enter discount promo code"),
         "exchange_and_return_policy":
             MessageLookupByLibrary.simpleMessage("Exchange and return policy"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
@@ -60,7 +62,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "login_successfully":
             MessageLookupByLibrary.simpleMessage("Login Successfully"),
         "login_with": MessageLookupByLibrary.simpleMessage("Login with"),
+        "modern_chair": MessageLookupByLibrary.simpleMessage("Modern chair"),
         "more": MessageLookupByLibrary.simpleMessage("More"),
+        "my_basket": MessageLookupByLibrary.simpleMessage("My basket"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("New home!! New furniture!!"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
@@ -73,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("Password is required"),
+        "pay": MessageLookupByLibrary.simpleMessage("Pay"),
         "pieces": MessageLookupByLibrary.simpleMessage("Pieces"),
         "please_enter_valid_email":
             MessageLookupByLibrary.simpleMessage("Please enter valid email"),
@@ -85,6 +90,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("Supply and installation"),
         "tables": MessageLookupByLibrary.simpleMessage("Tables"),
+        "total": MessageLookupByLibrary.simpleMessage("Total:"),
         "tv_units": MessageLookupByLibrary.simpleMessage("TV units"),
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage(

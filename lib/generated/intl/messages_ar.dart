@@ -42,6 +42,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "email_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال بريد إلكتروني"),
+        "enter_discount_promo_code":
+            MessageLookupByLibrary.simpleMessage("أدخل الرمز الترويجي للخصم"),
         "exchange_and_return_policy":
             MessageLookupByLibrary.simpleMessage("سياسة الاستبدال و الاسترجاع"),
         "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
@@ -61,7 +63,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "login_successfully":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "login_with": MessageLookupByLibrary.simpleMessage("التسجيل بـ"),
+        "modern_chair": MessageLookupByLibrary.simpleMessage("كرسي مودرن"),
         "more": MessageLookupByLibrary.simpleMessage("المزيد"),
+        "my_basket": MessageLookupByLibrary.simpleMessage("سلتي"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("منزل جديد!! أثاث جديد!!"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
@@ -74,6 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال كلمة مرور"),
+        "pay": MessageLookupByLibrary.simpleMessage("الدفع"),
         "pieces": MessageLookupByLibrary.simpleMessage("قطع"),
         "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
             "من فضلك أدخل بريد إلكتروني صحيح"),
@@ -86,6 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("التوريد و التركيب"),
         "tables": MessageLookupByLibrary.simpleMessage("ترابيزات"),
+        "total": MessageLookupByLibrary.simpleMessage("الكل:"),
         "tv_units": MessageLookupByLibrary.simpleMessage("وحدات تلفزيون"),
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage("نصنع الأثاث بعيونك أنت!!"),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/utils/app_colors.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -18,7 +19,7 @@ class CustomTextFormField extends StatelessWidget {
   final String? Function(String?)? validator;
   final bool? isObSecure;
   final bool? shadow;
-  final IconData? preIcon, suffixIcon;
+  final Widget? preIcon, suffixIcon;
   final VoidCallback? onSuffixPressed;
   final TextInputType? keyboardType;
   final FocusNode? focusNode;
@@ -44,12 +45,13 @@ class CustomTextFormField extends StatelessWidget {
         validator: validator,
         obscureText: isObSecure ?? false,
         decoration: InputDecoration(
+          contentPadding: EdgeInsets.symmetric(horizontal: preIcon == null? 20.w: 0),
             hintText: hint,
             labelText: label,
-            prefixIcon: Icon(preIcon, color: AppColors.darkBlue),
+            prefixIcon: preIcon,
             suffixIcon: IconButton(
                 onPressed: onSuffixPressed,
-                icon: Icon(suffixIcon, color: AppColors.darkBlue))),
+                icon: suffixIcon?? Icon(Icons.ac_unit))),
       ),
     );
   }

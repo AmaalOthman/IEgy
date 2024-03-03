@@ -38,6 +38,7 @@ class AppAssets{
   static const String door = '${imagesPath}door.png';
   static const String placeholder = '${imagesPath}placeholder.png';
   static const String errorImage = '${imagesPath}error_image.jpg';
+  static const String sofaCategory = '${imagesPath}sofa_category.png';
 
   //Icons
   static const String darkMood = '${iconsPath}dark_mood.png';
@@ -48,4 +49,5 @@ class AppAssets{
   static const String info = '${iconsPath}info.png';
   static const String location = '${iconsPath}location.png';
   static const String order = '${iconsPath}order.png';
+  static const String send = '${iconsPath}send.png';
 }

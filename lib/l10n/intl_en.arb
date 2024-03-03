@@ -47,5 +47,10 @@
   "dark_mode": "Dark mode",
   "exchange_and_return_policy": "Exchange and return policy",
   "supply_and_installation": "Supply and installation",
-  "about_us": "About us"
+  "about_us": "About us",
+  "my_basket": "My basket",
+  "modern_chair": "Modern chair",
+  "enter_discount_promo_code": "Enter discount promo code",
+  "total": "Total:",
+  "pay": "Pay"
 }

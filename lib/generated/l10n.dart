@@ -541,6 +541,56 @@ class S {
       args: [],
     );
   }
+
+  /// `My basket`
+  String get my_basket {
+    return Intl.message(
+      'My basket',
+      name: 'my_basket',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Modern chair`
+  String get modern_chair {
+    return Intl.message(
+      'Modern chair',
+      name: 'modern_chair',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter discount promo code`
+  String get enter_discount_promo_code {
+    return Intl.message(
+      'Enter discount promo code',
+      name: 'enter_discount_promo_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total:`
+  String get total {
+    return Intl.message(
+      'Total:',
+      name: 'total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pay`
+  String get pay {
+    return Intl.message(
+      'Pay',
+      name: 'pay',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

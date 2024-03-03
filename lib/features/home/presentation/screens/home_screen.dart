@@ -77,8 +77,8 @@ class HomeScreen extends StatelessWidget {
                                   focusNode: BlocProvider.of<HomeCubit>(context)
                                       .focusNode,
                                   shadow: true,
-                                  preIcon: Icons.search,
-                                  suffixIcon: CupertinoIcons.mic_solid,
+                                  preIcon: const Icon(Icons.search, color: AppColors.darkBlue,),
+                                  suffixIcon: const Icon(CupertinoIcons.mic_solid, color: AppColors.darkBlue,),
                                   hint: AppLocalizations.of(context)!
                                       .what_are_u_looking_for,
                                   onSuffixPressed:
