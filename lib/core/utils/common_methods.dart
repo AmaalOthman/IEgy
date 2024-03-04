@@ -43,7 +43,7 @@ Color getState(ToastStates state) {
     case ToastStates.error:
       return AppColors.red;
     case ToastStates.success:
-      return AppColors.brown;
+      return AppColors.darkBrown;
     case ToastStates.warning:
       return AppColors.blue;
   }

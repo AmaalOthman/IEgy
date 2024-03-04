@@ -5,6 +5,7 @@ import 'package:iegy/features/auth/presentation/cubit/login_cubit/login_cubit.da
 import 'package:iegy/features/cart/presentation/cubit/cart_cubit/cart_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/home_cubit.dart';
 import 'package:iegy/features/nav_bar/presentation/cubit/nav_bar_cubit.dart';
+import 'package:iegy/features/profile/presentation/cubit/profile_cubit/profile_cubit.dart';
 import 'package:iegy/features/splash/presentation/cubit/welcome_cubit.dart';
 
 final sl = GetIt.instance;
@@ -16,5 +17,6 @@ void initServiceLocator() {
   sl.registerLazySingleton(() => WelcomeCubit());
   sl.registerLazySingleton(() => HomeCubit());
   sl.registerLazySingleton(() => CartCubit());
+  sl.registerLazySingleton(() => ProfileCubit());
   sl.registerLazySingleton(() => CacheHelper());
 }

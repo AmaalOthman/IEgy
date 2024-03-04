@@ -24,9 +24,11 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about_us": MessageLookupByLibrary.simpleMessage("ماذا عنا؟"),
         "add_to_cart": MessageLookupByLibrary.simpleMessage("أضف إلى السلة"),
+        "bed_rooms": MessageLookupByLibrary.simpleMessage("غرف نوم"),
         "best_seller": MessageLookupByLibrary.simpleMessage("الأكثر مبيعاً"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
         "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
+        "chairs": MessageLookupByLibrary.simpleMessage("كراسي"),
         "contact_us": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "corner": MessageLookupByLibrary.simpleMessage("رُكنة"),
         "create_new_acc":
@@ -57,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "kitchen_collections":
             MessageLookupByLibrary.simpleMessage("تشكيلات مطابخ"),
+        "kitchens": MessageLookupByLibrary.simpleMessage("مطابخ"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "login_failed":
             MessageLookupByLibrary.simpleMessage("فشل تسجيل الدخول"),
@@ -65,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login_with": MessageLookupByLibrary.simpleMessage("التسجيل بـ"),
         "modern_chair": MessageLookupByLibrary.simpleMessage("كرسي مودرن"),
         "more": MessageLookupByLibrary.simpleMessage("المزيد"),
+        "my_account": MessageLookupByLibrary.simpleMessage("حسابي"),
         "my_basket": MessageLookupByLibrary.simpleMessage("سلتي"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("منزل جديد!! أثاث جديد!!"),
@@ -72,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_history_yet":
             MessageLookupByLibrary.simpleMessage("لا توجد عمليات بحث سابقة!"),
         "offers": MessageLookupByLibrary.simpleMessage("العروض"),
+        "orders": MessageLookupByLibrary.simpleMessage("الطلبيات"),
         "orders_and_tracking":
             MessageLookupByLibrary.simpleMessage("الطلبات و تتبعها"),
         "our_branches": MessageLookupByLibrary.simpleMessage("فروعنا"),
@@ -87,7 +92,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "room_ideas": MessageLookupByLibrary.simpleMessage("أفكار غرف"),
         "search_history":
             MessageLookupByLibrary.simpleMessage("عمليات البحث السابقة"),
+        "shoes_cabinets": MessageLookupByLibrary.simpleMessage("جزامات"),
         "sofa": MessageLookupByLibrary.simpleMessage("سفرة"),
+        "sofas": MessageLookupByLibrary.simpleMessage("أنتريهات"),
+        "sofra": MessageLookupByLibrary.simpleMessage("سفرة"),
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("التوريد و التركيب"),
         "tables": MessageLookupByLibrary.simpleMessage("ترابيزات"),

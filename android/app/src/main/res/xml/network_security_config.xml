@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <network-security-config>
+        <domain-config cleartextTrafficPermitted="true">
+            <domain includeSubdomains="true">https://www.facebook.com</domain>
+            <domain includeSubdomains="true">whatsapp://send?phone=+201015066160</domain>
+            <!-- Add any other domains as needed -->
+        </domain-config>
+    </network-security-config>
+</PreferenceScreen>

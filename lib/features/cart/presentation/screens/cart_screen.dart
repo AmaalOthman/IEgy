@@ -30,9 +30,10 @@ class CartScreen extends StatelessWidget {
             leading: IconButton(
               onPressed: () =>
                   BlocProvider.of<CartCubit>(context).onBackPressed(context),
-              icon: Icon(sl<CacheHelper>().getCachedLanguage() == 'ar'
+              icon: Icon(
+                  sl<CacheHelper>().getCachedLanguage() == 'ar'
                   ? CupertinoIcons.arrow_turn_up_right
-                  : CupertinoIcons.arrow_turn_up_left),
+                  : CupertinoIcons.arrow_turn_up_left, size: 40.w),
             ),
           ),
           body: Padding(
@@ -65,7 +66,7 @@ class CartScreen extends StatelessWidget {
                         children: [
                           Text(AppLocalizations.of(context)!.total, style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.darkBlue),),
                           const Spacer(),
-                          Text('4500 ${AppLocalizations.of(context)!.egp}', style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.lightBrown),)
+                          Text('4500 ${AppLocalizations.of(context)!.egp}', style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.brown),)
                         ],
                       )
                     ],

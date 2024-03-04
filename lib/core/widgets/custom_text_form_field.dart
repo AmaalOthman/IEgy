@@ -31,7 +31,7 @@ class CustomTextFormField extends StatelessWidget {
         borderRadius: BorderRadius.circular(59),
         boxShadow: shadow == true? [
           BoxShadow(
-            color: AppColors.black.withOpacity(0.35),
+            color: AppColors.black.withOpacity(0.08),
             spreadRadius: 2,
             blurRadius: 2,
             offset: const Offset(0, 3),
@@ -49,9 +49,9 @@ class CustomTextFormField extends StatelessWidget {
             hintText: hint,
             labelText: label,
             prefixIcon: preIcon,
-            suffixIcon: IconButton(
+            suffixIcon: suffixIcon != null? IconButton(
                 onPressed: onSuffixPressed,
-                icon: suffixIcon?? Icon(Icons.ac_unit))),
+                icon: suffixIcon!): null),
       ),
     );
   }

@@ -69,14 +69,14 @@ class Sale extends StatelessWidget {
             ),
             const CircleAvatar(
               maxRadius: 7,
-              backgroundColor: AppColors.lightBrown,
+              backgroundColor: AppColors.brown,
             ),
             SizedBox(
               width: 3.w,
             ),
             const CircleAvatar(
               maxRadius: 7,
-              backgroundColor: AppColors.brown,
+              backgroundColor: AppColors.darkBrown,
             )
           ],
         ),

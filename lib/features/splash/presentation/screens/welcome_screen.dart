@@ -31,14 +31,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   height: 420.h,
                   width: 430.w,
                   child: PageView.builder(
-                    controller: BlocProvider.of<WelcomeCubit>(context).controller,
-                    itemCount: BlocProvider.of<WelcomeCubit>(context).pages.length,
+                    controller:
+                        BlocProvider.of<WelcomeCubit>(context).controller,
+                    itemCount:
+                        BlocProvider.of<WelcomeCubit>(context).pages.length,
                     itemBuilder: (_, index) {
-                      return BlocProvider.of<WelcomeCubit>(context).pages[index % BlocProvider.of<WelcomeCubit>(context).pages.length];
+                      return BlocProvider.of<WelcomeCubit>(context).pages[
+                          index %
+                              BlocProvider.of<WelcomeCubit>(context)
+                                  .pages
+                                  .length];
                     },
                     onPageChanged: (int index) {
                       setState(() {
-                        BlocProvider.of<WelcomeCubit>(context).isFirstPage = index == 0;
+                        BlocProvider.of<WelcomeCubit>(context).isFirstPage =
+                            index == 0;
                       });
                     },
                   ),
@@ -49,24 +56,24 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   h: 126.h,
                   w: 126.w,
                 ),
-                SizedBox(height: 66.h),
+                SizedBox(height: BlocProvider.of<WelcomeCubit>(context).isFirstPage? 66.h: 32.h),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 22.w),
                   child: Text(
-            BlocProvider.of<WelcomeCubit>(context).isFirstPage
+                    BlocProvider.of<WelcomeCubit>(context).isFirstPage
                         ? AppLocalizations.of(context)!
                             .we_create_furniture_with_your_eyes
                         : '${AppLocalizations.of(context)!.new_home_new_furniture}\n ${AppLocalizations.of(context)!.discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch}',
-                    style: Theme.of(context).textTheme.displayLarge,
+                    style: Theme.of(context).textTheme.displayLarge!.copyWith(height: 2.h),
                     textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(height: 66.h),
+                SizedBox(height: BlocProvider.of<WelcomeCubit>(context).isFirstPage? 66.h: 16.h),
                 SmoothPageIndicator(
                   controller: BlocProvider.of<WelcomeCubit>(context).controller,
                   count: BlocProvider.of<WelcomeCubit>(context).pages.length,
                   effect: ExpandingDotsEffect(
-                    activeDotColor: AppColors.brown,
+                    activeDotColor: AppColors.darkBrown,
                     dotColor: AppColors.grey,
                     dotHeight: 6.h,
                     dotWidth: 6.w,
@@ -78,21 +85,28 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           },
         ),
       ),
-      floatingActionButton: GestureDetector(
-        onTap: () => BlocProvider.of<WelcomeCubit>(context).onFloatingActionButtonPressed(context),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Text(
-              AppLocalizations.of(context)!.next,
-              style: Theme.of(context).textTheme.displayLarge,
-            ),
-            Icon(
-              Icons.arrow_right_outlined,
-              color: AppColors.brown,
-              size: 39.w,
-            ),
-          ],
+      floatingActionButton: Padding(
+        padding: EdgeInsets.only(bottom: 50.h),
+        child: GestureDetector(
+          onTap: () => BlocProvider.of<WelcomeCubit>(context)
+              .onFloatingActionButtonPressed(context),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                AppLocalizations.of(context)!.next,
+                style: Theme.of(context)
+                    .textTheme
+                    .displayLarge!
+                    .copyWith(fontSize: 20.w),
+              ),
+              Icon(
+                Icons.arrow_right_outlined,
+                color: AppColors.darkBrown,
+                size: 39.w,
+              ),
+            ],
+          ),
         ),
       ),
     );

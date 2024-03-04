@@ -68,7 +68,7 @@ class _SendCodeScreenState extends State<SendCodeScreen> {
                 controller: controller,
                 count: pages.length,
                 effect: ExpandingDotsEffect(
-                  activeDotColor: AppColors.brown,
+                  activeDotColor: AppColors.darkBrown,
                   dotColor: AppColors.grey,
                   dotHeight: 6.h,
                   dotWidth: 6.w,

@@ -35,7 +35,7 @@ class CustomButton extends StatelessWidget {
             style: Theme.of(context).elevatedButtonTheme.style!.copyWith(
                 elevation: MaterialStateProperty.all(elevation),
                 backgroundColor:
-                    MaterialStateProperty.all(background ?? AppColors.brown), shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    MaterialStateProperty.all(background ?? AppColors.darkBrown), shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(borderRadius?? 59),
               ),

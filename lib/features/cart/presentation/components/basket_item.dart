@@ -101,7 +101,7 @@ class BaskedItem extends StatelessWidget {
               )
             ],
           ),
-          const Icon(CupertinoIcons.xmark_square_fill, color: AppColors.brown,)
+          const Icon(CupertinoIcons.xmark_square_fill, color: AppColors.darkBrown,)
         ],
       ),
     );

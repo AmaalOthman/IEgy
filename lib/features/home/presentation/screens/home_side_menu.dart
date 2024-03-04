@@ -35,11 +35,6 @@ class HomeSideMenu extends StatelessWidget {
                     iconPath: AppAssets.glob,
                     text: isEnglish ? 'العربية' : 'English',
                     onTap: () {
-                      /*isEnglish
-                          ? BlocProvider.of<GlobalCubit>(context)
-                              .convertToArabic()
-                          : BlocProvider.of<GlobalCubit>(context)
-                              .convertToEnglish();*/
                       BlocProvider.of<GlobalCubit>(context).switchLanguage();
                     });
               },

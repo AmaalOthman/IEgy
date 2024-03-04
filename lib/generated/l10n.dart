@@ -591,6 +591,86 @@ class S {
       args: [],
     );
   }
+
+  /// `My account`
+  String get my_account {
+    return Intl.message(
+      'My account',
+      name: 'my_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Orders`
+  String get orders {
+    return Intl.message(
+      'Orders',
+      name: 'orders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chairs`
+  String get chairs {
+    return Intl.message(
+      'Chairs',
+      name: 'chairs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sofas`
+  String get sofas {
+    return Intl.message(
+      'Sofas',
+      name: 'sofas',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sofra`
+  String get sofra {
+    return Intl.message(
+      'Sofra',
+      name: 'sofra',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bed rooms`
+  String get bed_rooms {
+    return Intl.message(
+      'Bed rooms',
+      name: 'bed_rooms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Kitchens`
+  String get kitchens {
+    return Intl.message(
+      'Kitchens',
+      name: 'kitchens',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shoes cabinets`
+  String get shoes_cabinets {
+    return Intl.message(
+      'Shoes cabinets',
+      name: 'shoes_cabinets',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

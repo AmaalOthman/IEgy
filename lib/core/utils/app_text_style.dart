@@ -19,7 +19,7 @@ TextStyle _notoSansArabictextStyle(
 }
 
 TextStyle boldStyle(
-        {Color color = AppColors.brown,
+        {Color color = AppColors.darkBrown,
         double fontSize = 24}) =>
     _textStyle(color: color, fontSize: fontSize, fontWeight: FontWeight.bold);
 
@@ -34,6 +34,6 @@ TextStyle regularStyle(
     _textStyle(color: color, fontSize: fontSize, fontWeight: FontWeight.normal);
 
 TextStyle bodyRegularStyle(
-    {Color color = AppColors.lightBrown,
+    {Color color = AppColors.brown,
       double fontSize = 14}) =>
     _notoSansArabictextStyle(color: color, fontSize: fontSize, fontWeight: FontWeight.normal);

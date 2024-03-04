@@ -24,9 +24,11 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about_us": MessageLookupByLibrary.simpleMessage("About us"),
         "add_to_cart": MessageLookupByLibrary.simpleMessage("Add to cart"),
+        "bed_rooms": MessageLookupByLibrary.simpleMessage("Bed rooms"),
         "best_seller": MessageLookupByLibrary.simpleMessage("Best seller"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
+        "chairs": MessageLookupByLibrary.simpleMessage("Chairs"),
         "contact_us": MessageLookupByLibrary.simpleMessage("Contact us"),
         "corner": MessageLookupByLibrary.simpleMessage("Corner"),
         "create_new_acc":
@@ -57,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "kitchen_collections":
             MessageLookupByLibrary.simpleMessage("Kitchen collections"),
+        "kitchens": MessageLookupByLibrary.simpleMessage("Kitchens"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "login_failed": MessageLookupByLibrary.simpleMessage("Login Failed"),
         "login_successfully":
@@ -64,6 +67,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login_with": MessageLookupByLibrary.simpleMessage("Login with"),
         "modern_chair": MessageLookupByLibrary.simpleMessage("Modern chair"),
         "more": MessageLookupByLibrary.simpleMessage("More"),
+        "my_account": MessageLookupByLibrary.simpleMessage("My account"),
         "my_basket": MessageLookupByLibrary.simpleMessage("My basket"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("New home!! New furniture!!"),
@@ -71,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "no_history_yet":
             MessageLookupByLibrary.simpleMessage("No history yet!"),
         "offers": MessageLookupByLibrary.simpleMessage("Offers"),
+        "orders": MessageLookupByLibrary.simpleMessage("Orders"),
         "orders_and_tracking":
             MessageLookupByLibrary.simpleMessage("Orders and tracking"),
         "our_branches": MessageLookupByLibrary.simpleMessage("Our branches"),
@@ -86,7 +91,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "room_ideas": MessageLookupByLibrary.simpleMessage("Room ideas"),
         "search_history":
             MessageLookupByLibrary.simpleMessage("Search history"),
+        "shoes_cabinets":
+            MessageLookupByLibrary.simpleMessage("Shoes cabinets"),
         "sofa": MessageLookupByLibrary.simpleMessage("Sofa"),
+        "sofas": MessageLookupByLibrary.simpleMessage("Sofas"),
+        "sofra": MessageLookupByLibrary.simpleMessage("Sofra"),
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("Supply and installation"),
         "tables": MessageLookupByLibrary.simpleMessage("Tables"),

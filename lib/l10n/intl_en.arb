@@ -52,5 +52,13 @@
   "modern_chair": "Modern chair",
   "enter_discount_promo_code": "Enter discount promo code",
   "total": "Total:",
-  "pay": "Pay"
+  "pay": "Pay",
+  "my_account": "My account",
+  "orders": "Orders",
+  "chairs": "Chairs",
+  "sofas": "Sofas",
+  "sofra": "Sofra",
+  "bed_rooms": "Bed rooms",
+  "kitchens": "Kitchens",
+  "shoes_cabinets": "Shoes cabinets"
 }

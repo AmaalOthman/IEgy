@@ -23,7 +23,7 @@ class SectionTitle extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .displayLarge!
-                  .copyWith(color: AppColors.lightBrown),
+                  .copyWith(color: AppColors.brown),
               maxLines: 1,
             ),
           ),
@@ -37,7 +37,7 @@ class SectionTitle extends StatelessWidget {
                 sl<CacheHelper>().getCachedLanguage() == 'ar'
                     ? Icons.keyboard_arrow_left_outlined
                     : Icons.keyboard_arrow_right_outlined,
-                color: AppColors.lightBrown,
+                color: AppColors.brown,
               ),
             ],
           )

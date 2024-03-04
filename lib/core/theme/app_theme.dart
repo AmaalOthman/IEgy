@@ -11,14 +11,14 @@ ThemeData getAppTheme() {
     appBarTheme: const AppBarTheme(
         backgroundColor: Colors.transparent, centerTitle: true),
     textTheme: TextTheme(
-      displayLarge: boldStyle(color: AppColors.brown),
+      displayLarge: boldStyle(color: AppColors.darkBrown),
       displayMedium: mediumStyle(),
       displaySmall: regularStyle(),
       bodySmall: bodyRegularStyle()
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.brown,
+            backgroundColor: AppColors.darkBrown,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(59)))),
     inputDecorationTheme: InputDecorationTheme(
@@ -48,12 +48,12 @@ ThemeData getAppTheme() {
             textStyle: MaterialStateProperty.all(
                 boldStyle(color: AppColors.grey, fontSize: 16)))),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        selectedIconTheme: const IconThemeData(color: AppColors.brown),
+        selectedIconTheme: const IconThemeData(color: AppColors.darkBrown),
         selectedLabelStyle: GoogleFonts.ibmPlexSansArabic(
             fontWeight: FontWeight.normal,
             fontSize: 14.w,
-            color: AppColors.brown),
-        selectedItemColor: AppColors.brown,
+            color: AppColors.darkBrown),
+        selectedItemColor: AppColors.darkBrown,
         showSelectedLabels: true,
         showUnselectedLabels: true,
         unselectedIconTheme: const IconThemeData(color: AppColors.grey),

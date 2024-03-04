@@ -5,21 +5,11 @@ import 'package:iegy/features/home/presentation/components/home_category.dart';
 import 'package:iegy/features/home/presentation/cubit/home_state.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
   FocusNode focusNode = FocusNode();
-  List<Widget> homeCategories = [
-    HomeCategory(first: true, icon: AppAssets.shuffle),
-    HomeCategory(icon: AppAssets.chair),
-    HomeCategory(icon: AppAssets.table),
-    HomeCategory(icon: AppAssets.sofa),
-    HomeCategory(icon: AppAssets.sofra),
-    HomeCategory(icon: AppAssets.door),
-    HomeCategory(icon: AppAssets.bed),
-    HomeCategory(icon: AppAssets.kitchen),
-    HomeCategory(icon: AppAssets.tv)
-  ];
 
   void onWhatsAppPressed() async {
     var whatsappUrl = "whatsapp://send?phone=+201015066160";

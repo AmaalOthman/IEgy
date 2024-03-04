@@ -15,6 +15,7 @@ class NavBarScreen extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           body: PageView.builder(
+            physics: const NeverScrollableScrollPhysics(),
             controller: BlocProvider.of<NavBarCubit>(context).controller,
             itemCount: BlocProvider.of<NavBarCubit>(context).pages.length,
             itemBuilder: (_, index) {
@@ -36,7 +37,7 @@ class NavBarScreen extends StatelessWidget {
                 BlocProvider.of<NavBarCubit>(context).changeIndex(index);
                 BlocProvider.of<NavBarCubit>(context).controller.animateToPage(
                   index,
-                  duration: Duration(milliseconds: 300),
+                  duration: const Duration(milliseconds: 300),
                   curve: Curves.easeInOut,
                 );
               },
