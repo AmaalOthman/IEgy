@@ -33,7 +33,7 @@ class CartScreen extends StatelessWidget {
               icon: Icon(
                   sl<CacheHelper>().getCachedLanguage() == 'ar'
                   ? CupertinoIcons.arrow_turn_up_right
-                  : CupertinoIcons.arrow_turn_up_left, size: 40.w),
+                  : CupertinoIcons.arrow_turn_up_left, size: 35.w),
             ),
           ),
           body: Padding(

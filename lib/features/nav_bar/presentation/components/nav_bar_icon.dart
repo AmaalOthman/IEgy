@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
 
@@ -11,11 +12,12 @@ class NavBarIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         if (selected)
-          const CustomImage(imagePath: AppAssets.tabIndicator),
-        CustomImage(imagePath: selected? selectedImagePath: unSelectedImagePath),
+          CustomImage(imagePath: AppAssets.tabIndicator, w: 37.w,),
+        // SizedBox(height: 11.94.h,),
+        CustomImage(imagePath: selected? selectedImagePath: unSelectedImagePath, h: 24.h, w: 24.w,),
       ],
     );
   }

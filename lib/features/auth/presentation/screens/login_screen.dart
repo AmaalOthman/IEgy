@@ -101,7 +101,7 @@ class LoginScreen extends StatelessWidget {
                       Row(
                         children: [
                           InkWell(
-                            onTap: () => navigate(context: context, route: Routes.sendCode),
+                            onTap: () => BlocProvider.of<LoginCubit>(context).onForgetPasswordPressed(context),
                             child: Text(
                               AppLocalizations.of(context)!.forgot_password,
                               style: Theme.of(context)
@@ -182,13 +182,16 @@ class LoginScreen extends StatelessWidget {
                       SizedBox(
                         height: 24.h,
                       ),
-                      Text(
-                        AppLocalizations.of(context)!.create_new_acc,
-                        style: Theme.of(context)
-                            .textTheme
-                            .displayLarge!
-                            .copyWith(
-                                fontSize: 16.w, color: AppColors.darkBlue),
+                      InkWell(
+                        onTap: () => BlocProvider.of<LoginCubit>(context).onRegisterPressed(context),
+                        child: Text(
+                          AppLocalizations.of(context)!.create_new_acc,
+                          style: Theme.of(context)
+                              .textTheme
+                              .displayLarge!
+                              .copyWith(
+                                  fontSize: 16.w, color: AppColors.darkBlue),
+                        ),
                       )
                     ],
                   ),

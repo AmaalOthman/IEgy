@@ -24,13 +24,20 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about_us": MessageLookupByLibrary.simpleMessage("About us"),
         "add_to_cart": MessageLookupByLibrary.simpleMessage("Add to cart"),
+        "already_you_have_an_account": MessageLookupByLibrary.simpleMessage(
+            "Already you have an account?"),
         "bed_rooms": MessageLookupByLibrary.simpleMessage("Bed rooms"),
         "best_seller": MessageLookupByLibrary.simpleMessage("Best seller"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "chairs": MessageLookupByLibrary.simpleMessage("Chairs"),
+        "check_your_email":
+            MessageLookupByLibrary.simpleMessage("Check your email"),
+        "confirm_password":
+            MessageLookupByLibrary.simpleMessage("Confirm password?"),
         "contact_us": MessageLookupByLibrary.simpleMessage("Contact us"),
         "corner": MessageLookupByLibrary.simpleMessage("Corner"),
+        "create_acc": MessageLookupByLibrary.simpleMessage("Create account"),
         "create_new_acc":
             MessageLookupByLibrary.simpleMessage("Create new account"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("Dark mode"),
@@ -44,14 +51,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("E-mail"),
         "email_is_required":
             MessageLookupByLibrary.simpleMessage("Email is required"),
+        "email_or_phone":
+            MessageLookupByLibrary.simpleMessage("Email or phone"),
         "enter_discount_promo_code":
             MessageLookupByLibrary.simpleMessage("Enter discount promo code"),
+        "enter_your_email_or_phone_number":
+            MessageLookupByLibrary.simpleMessage(
+                "Enter your email or phone number"),
         "exchange_and_return_policy":
             MessageLookupByLibrary.simpleMessage("Exchange and return policy"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "favourites": MessageLookupByLibrary.simpleMessage("Favourites"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
         "google": MessageLookupByLibrary.simpleMessage("Google"),
         "here_we_make_u_fall_in_love_with_the_place_u_live_in":
             MessageLookupByLibrary.simpleMessage(
@@ -83,14 +96,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("Password is required"),
         "pay": MessageLookupByLibrary.simpleMessage("Pay"),
+        "phone_number": MessageLookupByLibrary.simpleMessage("Phone number"),
+        "phone_number_is_required":
+            MessageLookupByLibrary.simpleMessage("Phone Number is required"),
         "pieces": MessageLookupByLibrary.simpleMessage("Pieces"),
         "please_enter_valid_email":
             MessageLookupByLibrary.simpleMessage("Please enter valid email"),
+        "please_enter_valid_phone_number": MessageLookupByLibrary.simpleMessage(
+            "Please enter valid phone number"),
         "popular": MessageLookupByLibrary.simpleMessage("Popular"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "reset_password":
+            MessageLookupByLibrary.simpleMessage("Reset Password"),
         "room_ideas": MessageLookupByLibrary.simpleMessage("Room ideas"),
         "search_history":
             MessageLookupByLibrary.simpleMessage("Search history"),
+        "send_the_code_again":
+            MessageLookupByLibrary.simpleMessage("Send the code again"),
         "shoes_cabinets":
             MessageLookupByLibrary.simpleMessage("Shoes cabinets"),
         "sofa": MessageLookupByLibrary.simpleMessage("Sofa"),
@@ -104,6 +126,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage(
                 "We create furniture with your eyes!!"),
+        "we_have_sent_you_a_four_digit_code":
+            MessageLookupByLibrary.simpleMessage(
+                "We have sent you a four-digit code"),
         "what_are_u_looking_for":
             MessageLookupByLibrary.simpleMessage("What are you looking for?")
       };

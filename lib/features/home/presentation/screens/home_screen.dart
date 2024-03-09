@@ -460,7 +460,6 @@ class HomeScreen extends StatelessWidget {
               floatingActionButtonLocation:
                   FloatingActionButtonLocation.startFloat,
               floatingActionButton: SpeedDial(
-                /*buttonSize: Size(70.w, 70.h),*/
                 overlayOpacity: 0,
                 iconTheme: const IconThemeData(color: AppColors.white),
                 backgroundColor: AppColors.darkBrown,

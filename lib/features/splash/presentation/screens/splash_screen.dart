@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
         body: Center(
       child: SizedBox(
-          height: 200.h, width: 200.w, child: CustomImage(imagePath: AppAssets.appLogo)),
+          height: 200.h, width: 200.w, child: const CustomImage(imagePath: AppAssets.appLogo)),
     ));
   }
 }

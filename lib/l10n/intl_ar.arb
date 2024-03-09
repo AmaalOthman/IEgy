@@ -60,5 +60,18 @@
   "sofra": "سفرة",
   "bed_rooms": "غرف نوم",
   "kitchens": "مطابخ",
-  "shoes_cabinets": "جزامات"
+  "shoes_cabinets": "جزامات",
+  "already_you_have_an_account": "هل لديك حساب بالفعل؟",
+  "confirm_password": "اعادة كلمة المرور",
+  "full_name": "الاسم بالكامل",
+  "create_acc": "انشاء حساب",
+  "please_enter_valid_phone_number": "من فضلك ادخل رقم هاتف صحيح",
+  "phone_number_is_required": "يجب ادخال رقم الهاتف",
+  "phone_number": "رقم الهاتف",
+  "check_your_email": "افحص البريد الالكتروني الخاص بك",
+  "we_have_sent_you_a_four_digit_code": "لقد ارسلنا اليك كود مكون من 4 ارقام",
+  "send_the_code_again": "ارسال الكود مرة اخري؟",
+  "enter_your_email_or_phone_number" : "ادخل البريد الالكترونى او رقم الهاتف الخاص بك.",
+  "email_or_phone" : "البريد الالكتروني او الهاتف ",
+  "reset_password" : "اعادة الباسورد"
 }

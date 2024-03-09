@@ -12,17 +12,12 @@ class AppAssets{
   static const String register = '${imagesPath}register.png';
   static const String splash1 = '${imagesPath}splash1.png';
   static const String splash2 = '${imagesPath}splash2.png';
-  static const String google = '${imagesPath}google.png';
-  static const String facebook = '${imagesPath}facebook.png';
-  static const String home = '${imagesPath}home.png';
   static const String homeOutline = '${imagesPath}home_outline.png';
-  static const String categories = '${imagesPath}categories.png';
   static const String categoriesOutline = '${imagesPath}categories_outline.png';
   static const String cart = '${imagesPath}cart.png';
   static const String cartSelected = '${imagesPath}cart_selected.png';
   static const String profile = '${imagesPath}profile.png';
   static const String profileOutline = '${imagesPath}profile_outline.png';
-  static const String tabIndicator = '${imagesPath}tab_indicator.png';
   static const String homeLogo = '${imagesPath}home_logo.png';
   static const String home1st = '${imagesPath}home_1st.png';
   static const String placeholder = '${imagesPath}placeholder.png';
@@ -57,4 +52,9 @@ class AppAssets{
   static const String shoesCabinet = '${iconsPath}shoes_cabinet.png';
   static const String dressingRoom = '${iconsPath}dressing_room.png';
   static const String mic = '${iconsPath}mic.png';
+  static const String google = '${iconsPath}google.png';
+  static const String facebook = '${iconsPath}facebook.png';
+  static const String home = '${iconsPath}home.png';
+  static const String categories = '${iconsPath}categories.png';
+  static const String tabIndicator = '${iconsPath}tab_indicator.png';
 }

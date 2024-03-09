@@ -60,5 +60,18 @@
   "sofra": "Sofra",
   "bed_rooms": "Bed rooms",
   "kitchens": "Kitchens",
-  "shoes_cabinets": "Shoes cabinets"
+  "shoes_cabinets": "Shoes cabinets",
+  "already_you_have_an_account": "Already you have an account?",
+  "confirm_password": "Confirm password?",
+  "full_name": "Full Name",
+  "create_acc": "Create account",
+  "please_enter_valid_phone_number": "Please enter valid phone number",
+  "phone_number_is_required": "Phone Number is required",
+  "phone_number": "Phone number",
+  "check_your_email": "Check your email",
+  "we_have_sent_you_a_four_digit_code": "We have sent you a four-digit code",
+  "send_the_code_again": "Send the code again",
+  "enter_your_email_or_phone_number" :"Enter your email or phone number",
+  "email_or_phone" : "Email or phone",
+  "reset_password" : "Reset Password"
 }

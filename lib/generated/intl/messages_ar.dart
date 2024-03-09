@@ -24,13 +24,20 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about_us": MessageLookupByLibrary.simpleMessage("ماذا عنا؟"),
         "add_to_cart": MessageLookupByLibrary.simpleMessage("أضف إلى السلة"),
+        "already_you_have_an_account":
+            MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
         "bed_rooms": MessageLookupByLibrary.simpleMessage("غرف نوم"),
         "best_seller": MessageLookupByLibrary.simpleMessage("الأكثر مبيعاً"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
         "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
         "chairs": MessageLookupByLibrary.simpleMessage("كراسي"),
+        "check_your_email": MessageLookupByLibrary.simpleMessage(
+            "افحص البريد الالكتروني الخاص بك"),
+        "confirm_password":
+            MessageLookupByLibrary.simpleMessage("اعادة كلمة المرور"),
         "contact_us": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "corner": MessageLookupByLibrary.simpleMessage("رُكنة"),
+        "create_acc": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "create_new_acc":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("المظهر الليلي"),
@@ -44,14 +51,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "email_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال بريد إلكتروني"),
+        "email_or_phone": MessageLookupByLibrary.simpleMessage(
+            "البريد الالكتروني او الهاتف "),
         "enter_discount_promo_code":
             MessageLookupByLibrary.simpleMessage("أدخل الرمز الترويجي للخصم"),
+        "enter_your_email_or_phone_number":
+            MessageLookupByLibrary.simpleMessage(
+                "ادخل البريد الالكترونى او رقم الهاتف الخاص بك."),
         "exchange_and_return_policy":
             MessageLookupByLibrary.simpleMessage("سياسة الاستبدال و الاسترجاع"),
         "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
         "favourites": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
+        "full_name": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
         "google": MessageLookupByLibrary.simpleMessage("جوجل"),
         "here_we_make_u_fall_in_love_with_the_place_u_live_in":
             MessageLookupByLibrary.simpleMessage(
@@ -84,14 +97,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال كلمة مرور"),
         "pay": MessageLookupByLibrary.simpleMessage("الدفع"),
+        "phone_number": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "phone_number_is_required":
+            MessageLookupByLibrary.simpleMessage("يجب ادخال رقم الهاتف"),
         "pieces": MessageLookupByLibrary.simpleMessage("قطع"),
         "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
             "من فضلك أدخل بريد إلكتروني صحيح"),
+        "please_enter_valid_phone_number":
+            MessageLookupByLibrary.simpleMessage("من فضلك ادخل رقم هاتف صحيح"),
         "popular": MessageLookupByLibrary.simpleMessage("شائع"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
+        "reset_password":
+            MessageLookupByLibrary.simpleMessage("اعادة الباسورد"),
         "room_ideas": MessageLookupByLibrary.simpleMessage("أفكار غرف"),
         "search_history":
             MessageLookupByLibrary.simpleMessage("عمليات البحث السابقة"),
+        "send_the_code_again":
+            MessageLookupByLibrary.simpleMessage("ارسال الكود مرة اخري؟"),
         "shoes_cabinets": MessageLookupByLibrary.simpleMessage("جزامات"),
         "sofa": MessageLookupByLibrary.simpleMessage("سفرة"),
         "sofas": MessageLookupByLibrary.simpleMessage("أنتريهات"),
@@ -103,6 +125,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "tv_units": MessageLookupByLibrary.simpleMessage("وحدات تلفزيون"),
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage("نصنع الأثاث بعيونك أنت!!"),
+        "we_have_sent_you_a_four_digit_code":
+            MessageLookupByLibrary.simpleMessage(
+                "لقد ارسلنا اليك كود مكون من 4 ارقام"),
         "what_are_u_looking_for":
             MessageLookupByLibrary.simpleMessage("عن ماذا تبحث؟")
       };

@@ -671,6 +671,136 @@ class S {
       args: [],
     );
   }
+
+  /// `Already you have an account?`
+  String get already_you_have_an_account {
+    return Intl.message(
+      'Already you have an account?',
+      name: 'already_you_have_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm password?`
+  String get confirm_password {
+    return Intl.message(
+      'Confirm password?',
+      name: 'confirm_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get full_name {
+    return Intl.message(
+      'Full Name',
+      name: 'full_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create account`
+  String get create_acc {
+    return Intl.message(
+      'Create account',
+      name: 'create_acc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter valid phone number`
+  String get please_enter_valid_phone_number {
+    return Intl.message(
+      'Please enter valid phone number',
+      name: 'please_enter_valid_phone_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number is required`
+  String get phone_number_is_required {
+    return Intl.message(
+      'Phone Number is required',
+      name: 'phone_number_is_required',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number`
+  String get phone_number {
+    return Intl.message(
+      'Phone number',
+      name: 'phone_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check your email`
+  String get check_your_email {
+    return Intl.message(
+      'Check your email',
+      name: 'check_your_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We have sent you a four-digit code`
+  String get we_have_sent_you_a_four_digit_code {
+    return Intl.message(
+      'We have sent you a four-digit code',
+      name: 'we_have_sent_you_a_four_digit_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send the code again`
+  String get send_the_code_again {
+    return Intl.message(
+      'Send the code again',
+      name: 'send_the_code_again',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your email or phone number`
+  String get enter_your_email_or_phone_number {
+    return Intl.message(
+      'Enter your email or phone number',
+      name: 'enter_your_email_or_phone_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email or phone`
+  String get email_or_phone {
+    return Intl.message(
+      'Email or phone',
+      name: 'email_or_phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset Password`
+  String get reset_password {
+    return Intl.message(
+      'Reset Password',
+      name: 'reset_password',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

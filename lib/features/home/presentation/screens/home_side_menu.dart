@@ -17,8 +17,10 @@ class HomeSideMenu extends StatelessWidget {
     bool isEnglish = currentLocale.languageCode == 'en';
     return Scaffold(
       appBar: AppBar(
-        title: const CustomImage(
+        title: CustomImage(
           imagePath: AppAssets.homeLogo,
+          h: 40.h,
+          w: 95.w,
         ),
       ),
       body: Padding(

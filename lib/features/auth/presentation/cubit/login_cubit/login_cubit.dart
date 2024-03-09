@@ -2,7 +2,6 @@ import 'dart:developer';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/routes/app_routes.dart';
 import 'package:iegy/core/utils/app_colors.dart';
 import 'package:iegy/core/utils/common_methods.dart';
@@ -32,5 +31,16 @@ class LoginCubit extends Cubit<LoginState> {
     } else {
       emit(LoginErrorState(AppLocalizations.of(context)!.login_failed));
     }
+  }
+
+  void onRegisterPressed(BuildContext context) {
+    navigateLast(context: context, route: Routes.register);
+  }
+  void onForgotPasswordPressed(BuildContext context){
+    navigate(context: context, route: Routes.sendCode);
+  }
+
+  void onForgetPasswordPressed(BuildContext context) {
+    navigate(context: context, route: Routes.resetPasswordNavigator);
   }
 }
