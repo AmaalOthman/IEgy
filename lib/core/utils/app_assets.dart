@@ -60,4 +60,5 @@ class AppAssets{
   static const String tabIndicator = '${iconsPath}tab_indicator.png';
   static const String lockerAndKey = '${iconsPath}locker_and_key.png';
   static const String logOut = '${iconsPath}log_out.png';
+  static const String back = '${iconsPath}back.png';
 }

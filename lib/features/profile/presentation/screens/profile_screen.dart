@@ -8,6 +8,7 @@ import 'package:iegy/core/database/cache/cache_helper.dart';
 import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
+import 'package:iegy/core/widgets/back_arrow.dart';
 import 'package:iegy/core/widgets/custom_button.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:iegy/core/widgets/custom_loading_indicator.dart';
@@ -30,9 +31,7 @@ class ProfileScreen extends StatelessWidget {
             leading: IconButton(
               onPressed: () =>
                   BlocProvider.of<ProfileCubit>(context).onBackPressed(context),
-              icon: Icon(sl<CacheHelper>().getCachedLanguage() == 'ar'
-                  ? CupertinoIcons.arrow_turn_up_right
-                  : CupertinoIcons.arrow_turn_up_left),
+              icon: const BackArrow(),
             ),
           ),
           body: Padding(
@@ -157,7 +156,7 @@ class ProfileScreen extends StatelessWidget {
                         .copyWith(fontSize: 16.w),
                   ),
                   leading: ImageIcon(
-                    AssetImage(AppAssets.notifications),
+                    const AssetImage(AppAssets.notifications),
                     color: AppColors.darkBlue,
                     size: 20.w,
                   ),
