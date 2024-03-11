@@ -72,6 +72,9 @@
   "we_have_sent_you_a_four_digit_code": "لقد ارسلنا اليك كود مكون من 4 ارقام",
   "send_the_code_again": "ارسال الكود مرة اخري؟",
   "enter_your_email_or_phone_number" : "ادخل البريد الالكترونى او رقم الهاتف الخاص بك.",
-  "email_or_phone" : "البريد الالكتروني او الهاتف ",
-  "reset_password" : "اعادة الباسورد"
+  "email_or_phone" : "البريد الإلكتروني أو الهاتف ",
+  "reset_password" : "إعادة كلمة المرور",
+  "my_address": "عنواني",
+  "notifications": "الإشعارات",
+  "log_out": "تسجيل الخروج"
 }

@@ -73,6 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "kitchen_collections":
             MessageLookupByLibrary.simpleMessage("Kitchen collections"),
         "kitchens": MessageLookupByLibrary.simpleMessage("Kitchens"),
+        "log_out": MessageLookupByLibrary.simpleMessage("Log out"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "login_failed": MessageLookupByLibrary.simpleMessage("Login Failed"),
         "login_successfully":
@@ -81,12 +82,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "modern_chair": MessageLookupByLibrary.simpleMessage("Modern chair"),
         "more": MessageLookupByLibrary.simpleMessage("More"),
         "my_account": MessageLookupByLibrary.simpleMessage("My account"),
+        "my_address": MessageLookupByLibrary.simpleMessage("My address"),
         "my_basket": MessageLookupByLibrary.simpleMessage("My basket"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("New home!! New furniture!!"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "no_history_yet":
             MessageLookupByLibrary.simpleMessage("No history yet!"),
+        "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "offers": MessageLookupByLibrary.simpleMessage("Offers"),
         "orders": MessageLookupByLibrary.simpleMessage("Orders"),
         "orders_and_tracking":

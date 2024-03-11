@@ -32,6 +32,7 @@ class AppAssets{
   static const String hummer = '${iconsPath}hummer.png';
   static const String info = '${iconsPath}info.png';
   static const String location = '${iconsPath}location.png';
+  static const String locationSolid = '${iconsPath}location_solid.png';
   static const String order = '${iconsPath}order.png';
   static const String send = '${iconsPath}send.png';
   static const String pin = '${iconsPath}pin.png';
@@ -57,4 +58,6 @@ class AppAssets{
   static const String home = '${iconsPath}home.png';
   static const String categories = '${iconsPath}categories.png';
   static const String tabIndicator = '${iconsPath}tab_indicator.png';
+  static const String lockerAndKey = '${iconsPath}locker_and_key.png';
+  static const String logOut = '${iconsPath}log_out.png';
 }
