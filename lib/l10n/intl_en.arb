@@ -76,5 +76,7 @@
   "reset_password" : "Reset Password",
   "my_address": "My address",
   "notifications": "Notifications",
-  "log_out": "Log out"
+  "log_out": "Log out",
+  "all": "All",
+  "about_us_ii": "About us"
 }
