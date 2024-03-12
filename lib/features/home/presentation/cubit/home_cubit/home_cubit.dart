@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/features/home/presentation/components/home_category.dart';
-import 'package:iegy/features/home/presentation/cubit/home_state.dart';
+import 'package:iegy/features/home/presentation/cubit/home_cubit/home_state.dart';
+import 'package:iegy/features/home/presentation/screens/notifications_screen.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -69,5 +70,25 @@ class HomeCubit extends Cubit<HomeState> {
     spokenWords = "${result.recognizedWords}";
     confidenceLevel = result.cofidence;
     emit(HomeInitial());
+  }
+
+  void goToNotifications(BuildContext context) {
+    Navigator.of(context).push(
+      PageRouteBuilder(
+        pageBuilder: (context, animation, secondaryAnimation) =>
+            const NotificationsScreen(),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          var begin = const Offset(0.0, 1.0);
+          var end = Offset.zero;
+          var curve = Curves.ease;
+          var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+          var slideAnimation = animation.drive(tween);
+          return SlideTransition(
+            position: slideAnimation,
+            child: child,
+          );
+        },
+      ),
+    );
   }
 }

@@ -16,8 +16,8 @@ import 'package:iegy/features/home/presentation/components/offer.dart';
 import 'package:iegy/features/home/presentation/components/idea.dart';
 import 'package:iegy/features/home/presentation/components/sale.dart';
 import 'package:iegy/features/home/presentation/components/section_title.dart';
-import 'package:iegy/features/home/presentation/cubit/home_cubit.dart';
-import 'package:iegy/features/home/presentation/cubit/home_state.dart';
+import 'package:iegy/features/home/presentation/cubit/home_cubit/home_cubit.dart';
+import 'package:iegy/features/home/presentation/cubit/home_cubit/home_state.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu.dart';
 
@@ -51,10 +51,13 @@ class HomeScreen extends StatelessWidget {
                         imagePath: AppAssets.homeLogo,
                       ),
                       actions: [
-                        CustomImage(
-                          imagePath: AppAssets.notifications,
-                          h: 22.4.h,
-                          w: 19.6.w,
+                        GestureDetector(
+                          onTap: () => BlocProvider.of<HomeCubit>(context).goToNotifications(context),
+                          child: CustomImage(
+                            imagePath: AppAssets.notifications,
+                            h: 22.4.h,
+                            w: 19.6.w,
+                          ),
                         ),
                         SizedBox(
                           width: 13.w,

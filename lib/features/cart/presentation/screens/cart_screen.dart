@@ -7,6 +7,7 @@ import 'package:iegy/core/database/cache/cache_helper.dart';
 import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
+import 'package:iegy/core/widgets/back_arrow.dart';
 import 'package:iegy/core/widgets/custom_button.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:iegy/core/widgets/custom_text_form_field.dart';
@@ -30,10 +31,7 @@ class CartScreen extends StatelessWidget {
             leading: IconButton(
               onPressed: () =>
                   BlocProvider.of<CartCubit>(context).onBackPressed(context),
-              icon: Icon(
-                  sl<CacheHelper>().getCachedLanguage() == 'ar'
-                  ? CupertinoIcons.arrow_turn_up_right
-                  : CupertinoIcons.arrow_turn_up_left, size: 35.w),
+              icon: const BackArrow(),
             ),
           ),
           body: Padding(

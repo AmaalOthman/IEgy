@@ -12,7 +12,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:iegy/features/auth/presentation/cubit/login_cubit/login_cubit.dart';
 import 'package:iegy/features/auth/presentation/cubit/reset_password_navigator_cubit/reset_password_navigator_cubit.dart';
 import 'package:iegy/features/cart/presentation/cubit/cart_cubit/cart_cubit.dart';
-import 'package:iegy/features/home/presentation/cubit/home_cubit.dart';
+import 'package:iegy/features/home/presentation/cubit/home_cubit/home_cubit.dart';
+import 'package:iegy/features/home/presentation/cubit/notification_cubit/notification_cubit.dart';
 import 'package:iegy/features/nav_bar/presentation/cubit/nav_bar_cubit.dart';
 import 'package:iegy/features/profile/presentation/cubit/profile_cubit/profile_cubit.dart';
 import 'package:iegy/features/splash/presentation/cubit/welcome_cubit.dart';
@@ -34,7 +35,8 @@ main() async {
       BlocProvider(create: (context) => sl<HomeCubit>()),
       BlocProvider(create: (context) => sl<CartCubit>()),
       BlocProvider(create: (context) => sl<ProfileCubit>()),
-      BlocProvider(create: (context) => sl<ResetPasswordNavigatorCubit>())
+      BlocProvider(create: (context) => sl<ResetPasswordNavigatorCubit>()),
+      BlocProvider(create: (context) => sl<NotificationCubit>())
     ],
     child: const MyApp(),
   ));
