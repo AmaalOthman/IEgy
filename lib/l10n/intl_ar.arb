@@ -81,5 +81,17 @@
   "about_us_ii": "عنا",
   "filter": "الفلتر",
   "price_ranges_between": "السعر يتراوح ما بين",
-  "to": "إلى"
+  "to": "إلى",
+  "category": "الفئة",
+  "color": "اللون",
+  "grey": "رمادي",
+  "blue": "أزرق",
+  "green": "أخضر",
+  "red": "أحمر",
+  "white": "أبيض",
+  "yellow": "أصفر",
+  "black": "أسود",
+  "apply_filtration": "تطبيق الفلتر",
+  "reset": "إعادة ضبط",
+  "filtration_applied": "تم تطبيق الفلتر"
 }

@@ -91,6 +91,8 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   void onFilterPressed(BuildContext context) {
-    showModalBottomSheet(context: context, builder: (_) => const FilterBottomSheet());
+    showModalBottomSheet(
+        isScrollControlled: true,
+        context: context, builder: (_) => const FilterBottomSheet());
   }
 }
