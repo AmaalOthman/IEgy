@@ -78,5 +78,8 @@
   "notifications": "Notifications",
   "log_out": "Log out",
   "all": "All",
-  "about_us_ii": "About us"
+  "about_us_ii": "About us",
+  "filter": "Filter",
+  "price_ranges_between": "Price ranges between",
+  "to": "To"
 }

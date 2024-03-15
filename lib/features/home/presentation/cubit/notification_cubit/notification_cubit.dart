@@ -13,6 +13,7 @@ class NotificationCubit extends Cubit<NotificationState> {
   ];
 
   void onBackPressed(BuildContext context) {
+    changeTab(0);
     Navigator.pop(context);
   }
 

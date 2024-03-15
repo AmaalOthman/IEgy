@@ -64,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Exchange and return policy"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "favourites": MessageLookupByLibrary.simpleMessage("Favourites"),
+        "filter": MessageLookupByLibrary.simpleMessage("Filter"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
@@ -110,6 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "please_enter_valid_phone_number": MessageLookupByLibrary.simpleMessage(
             "Please enter valid phone number"),
         "popular": MessageLookupByLibrary.simpleMessage("Popular"),
+        "price_ranges_between":
+            MessageLookupByLibrary.simpleMessage("Price ranges between"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
@@ -126,6 +129,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("Supply and installation"),
         "tables": MessageLookupByLibrary.simpleMessage("Tables"),
+        "to": MessageLookupByLibrary.simpleMessage("To"),
         "total": MessageLookupByLibrary.simpleMessage("Total:"),
         "tv_units": MessageLookupByLibrary.simpleMessage("TV units"),
         "we_create_furniture_with_your_eyes":

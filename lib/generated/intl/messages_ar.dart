@@ -34,12 +34,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
         "chairs": MessageLookupByLibrary.simpleMessage("كراسي"),
         "check_your_email": MessageLookupByLibrary.simpleMessage(
-            "افحص البريد الالكتروني الخاص بك"),
+            "افحص البريد الإلكتروني الخاص بك"),
         "confirm_password":
-            MessageLookupByLibrary.simpleMessage("اعادة كلمة المرور"),
+            MessageLookupByLibrary.simpleMessage("إعادة كلمة المرور"),
         "contact_us": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "corner": MessageLookupByLibrary.simpleMessage("رُكنة"),
-        "create_acc": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "create_acc": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "create_new_acc":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("المظهر الليلي"),
@@ -64,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("سياسة الاستبدال و الاسترجاع"),
         "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
         "favourites": MessageLookupByLibrary.simpleMessage("المفضلة"),
+        "filter": MessageLookupByLibrary.simpleMessage("الفلتر"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "full_name": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
@@ -104,13 +105,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "pay": MessageLookupByLibrary.simpleMessage("الدفع"),
         "phone_number": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "phone_number_is_required":
-            MessageLookupByLibrary.simpleMessage("يجب ادخال رقم الهاتف"),
+            MessageLookupByLibrary.simpleMessage("يجب إدخال رقم الهاتف"),
         "pieces": MessageLookupByLibrary.simpleMessage("قطع"),
         "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
             "من فضلك أدخل بريد إلكتروني صحيح"),
         "please_enter_valid_phone_number":
-            MessageLookupByLibrary.simpleMessage("من فضلك ادخل رقم هاتف صحيح"),
+            MessageLookupByLibrary.simpleMessage("من فضلك أدخل رقم هاتف صحيح"),
         "popular": MessageLookupByLibrary.simpleMessage("شائع"),
+        "price_ranges_between":
+            MessageLookupByLibrary.simpleMessage("السعر يتراوح ما بين"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("إعادة كلمة المرور"),
@@ -126,13 +129,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("التوريد و التركيب"),
         "tables": MessageLookupByLibrary.simpleMessage("ترابيزات"),
+        "to": MessageLookupByLibrary.simpleMessage("إلى"),
         "total": MessageLookupByLibrary.simpleMessage("الكل:"),
         "tv_units": MessageLookupByLibrary.simpleMessage("وحدات تلفزيون"),
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage("نصنع الأثاث بعيونك أنت!!"),
         "we_have_sent_you_a_four_digit_code":
             MessageLookupByLibrary.simpleMessage(
-                "لقد ارسلنا اليك كود مكون من 4 ارقام"),
+                "لقد أرسلنا إليك رمز مكون من 4 أرقام"),
         "what_are_u_looking_for":
             MessageLookupByLibrary.simpleMessage("عن ماذا تبحث؟")
       };
