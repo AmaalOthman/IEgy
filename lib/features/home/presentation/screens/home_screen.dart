@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
@@ -52,7 +53,8 @@ class HomeScreen extends StatelessWidget {
                       ),
                       actions: [
                         GestureDetector(
-                          onTap: () => BlocProvider.of<HomeCubit>(context).goToNotifications(context),
+                          onTap: () => BlocProvider.of<HomeCubit>(context)
+                              .goToNotifications(context),
                           child: CustomImage(
                             imagePath: AppAssets.notifications,
                             h: 22.4.h,
@@ -96,7 +98,11 @@ class HomeScreen extends StatelessWidget {
                                       Icons.search,
                                       color: AppColors.darkBlue,
                                     ),
-                                    suffixIcon: CustomImage(imagePath: AppAssets.mic, h: 18.h, w: 13.39.w,),
+                                    suffixIcon: CustomImage(
+                                      imagePath: AppAssets.mic,
+                                      h: 18.h,
+                                      w: 13.39.w,
+                                    ),
                                     hint: AppLocalizations.of(context)!
                                         .what_are_u_looking_for,
                                     onSuffixPressed:
@@ -104,9 +110,12 @@ class HomeScreen extends StatelessWidget {
                                             .onVoiceSearchClicked,
                                   )),
                               SizedBox(width: 20.w),
-                              CustomImage(
-                                imagePath: AppAssets.filter,
-                                w: 18.67.w,
+                              GestureDetector(
+                                onTap: () => BlocProvider.of<HomeCubit>(context).onFilterPressed(context),
+                                child: CustomImage(
+                                  imagePath: AppAssets.filter,
+                                  w: 18.67.w,
+                                ),
                               ),
                               SizedBox(width: 16.w)
                             ],

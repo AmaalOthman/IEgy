@@ -28,18 +28,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "all": MessageLookupByLibrary.simpleMessage("الكل"),
         "already_you_have_an_account":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
+        "apply_filtration":
+            MessageLookupByLibrary.simpleMessage("تطبيق الفلتر"),
         "bed_rooms": MessageLookupByLibrary.simpleMessage("غرف نوم"),
         "best_seller": MessageLookupByLibrary.simpleMessage("الأكثر مبيعاً"),
+        "black": MessageLookupByLibrary.simpleMessage("أسود"),
+        "blue": MessageLookupByLibrary.simpleMessage("أزرق"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
         "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
+        "category": MessageLookupByLibrary.simpleMessage("الفئة"),
         "chairs": MessageLookupByLibrary.simpleMessage("كراسي"),
         "check_your_email": MessageLookupByLibrary.simpleMessage(
-            "افحص البريد الالكتروني الخاص بك"),
+            "افحص البريد الإلكتروني الخاص بك"),
+        "color": MessageLookupByLibrary.simpleMessage("اللون"),
         "confirm_password":
-            MessageLookupByLibrary.simpleMessage("اعادة كلمة المرور"),
+            MessageLookupByLibrary.simpleMessage("إعادة كلمة المرور"),
         "contact_us": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "corner": MessageLookupByLibrary.simpleMessage("رُكنة"),
-        "create_acc": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "create_acc": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "create_new_acc":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("المظهر الليلي"),
@@ -64,10 +70,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("سياسة الاستبدال و الاسترجاع"),
         "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
         "favourites": MessageLookupByLibrary.simpleMessage("المفضلة"),
+        "filter": MessageLookupByLibrary.simpleMessage("الفلتر"),
+        "filtration_applied":
+            MessageLookupByLibrary.simpleMessage("تم تطبيق الفلتر"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "full_name": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
         "google": MessageLookupByLibrary.simpleMessage("جوجل"),
+        "green": MessageLookupByLibrary.simpleMessage("أخضر"),
+        "grey": MessageLookupByLibrary.simpleMessage("رمادي"),
         "here_we_make_u_fall_in_love_with_the_place_u_live_in":
             MessageLookupByLibrary.simpleMessage(
                 "هنا نجعلك تقع في حب المكان الذي تعيش فيه"),
@@ -104,14 +115,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "pay": MessageLookupByLibrary.simpleMessage("الدفع"),
         "phone_number": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "phone_number_is_required":
-            MessageLookupByLibrary.simpleMessage("يجب ادخال رقم الهاتف"),
+            MessageLookupByLibrary.simpleMessage("يجب إدخال رقم الهاتف"),
         "pieces": MessageLookupByLibrary.simpleMessage("قطع"),
         "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
             "من فضلك أدخل بريد إلكتروني صحيح"),
         "please_enter_valid_phone_number":
-            MessageLookupByLibrary.simpleMessage("من فضلك ادخل رقم هاتف صحيح"),
+            MessageLookupByLibrary.simpleMessage("من فضلك أدخل رقم هاتف صحيح"),
         "popular": MessageLookupByLibrary.simpleMessage("شائع"),
+        "price_ranges_between":
+            MessageLookupByLibrary.simpleMessage("السعر يتراوح ما بين"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
+        "red": MessageLookupByLibrary.simpleMessage("أحمر"),
+        "reset": MessageLookupByLibrary.simpleMessage("إعادة ضبط"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("إعادة كلمة المرور"),
         "room_ideas": MessageLookupByLibrary.simpleMessage("أفكار غرف"),
@@ -126,14 +141,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("التوريد و التركيب"),
         "tables": MessageLookupByLibrary.simpleMessage("ترابيزات"),
+        "to": MessageLookupByLibrary.simpleMessage("إلى"),
         "total": MessageLookupByLibrary.simpleMessage("الكل:"),
         "tv_units": MessageLookupByLibrary.simpleMessage("وحدات تلفزيون"),
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage("نصنع الأثاث بعيونك أنت!!"),
         "we_have_sent_you_a_four_digit_code":
             MessageLookupByLibrary.simpleMessage(
-                "لقد ارسلنا اليك كود مكون من 4 ارقام"),
+                "لقد أرسلنا إليك رمز مكون من 4 أرقام"),
         "what_are_u_looking_for":
-            MessageLookupByLibrary.simpleMessage("عن ماذا تبحث؟")
+            MessageLookupByLibrary.simpleMessage("عن ماذا تبحث؟"),
+        "white": MessageLookupByLibrary.simpleMessage("أبيض"),
+        "yellow": MessageLookupByLibrary.simpleMessage("أصفر")
       };
 }

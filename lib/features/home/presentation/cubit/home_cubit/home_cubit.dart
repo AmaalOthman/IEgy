@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iegy/core/utils/app_assets.dart';
-import 'package:iegy/features/home/presentation/components/home_category.dart';
+import 'package:iegy/features/home/presentation/screens/filter_bottom_sheet.dart';
 import 'package:iegy/features/home/presentation/cubit/home_cubit/home_state.dart';
 import 'package:iegy/features/home/presentation/screens/notifications_screen.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
@@ -90,5 +88,11 @@ class HomeCubit extends Cubit<HomeState> {
         },
       ),
     );
+  }
+
+  void onFilterPressed(BuildContext context) {
+    showModalBottomSheet(
+        isScrollControlled: true,
+        context: context, builder: (_) => const FilterBottomSheet());
   }
 }

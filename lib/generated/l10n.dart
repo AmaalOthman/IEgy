@@ -851,6 +851,156 @@ class S {
       args: [],
     );
   }
+
+  /// `Filter`
+  String get filter {
+    return Intl.message(
+      'Filter',
+      name: 'filter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price ranges between`
+  String get price_ranges_between {
+    return Intl.message(
+      'Price ranges between',
+      name: 'price_ranges_between',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To`
+  String get to {
+    return Intl.message(
+      'To',
+      name: 'to',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Category`
+  String get category {
+    return Intl.message(
+      'Category',
+      name: 'category',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Color`
+  String get color {
+    return Intl.message(
+      'Color',
+      name: 'color',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Grey`
+  String get grey {
+    return Intl.message(
+      'Grey',
+      name: 'grey',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blue`
+  String get blue {
+    return Intl.message(
+      'Blue',
+      name: 'blue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Green`
+  String get green {
+    return Intl.message(
+      'Green',
+      name: 'green',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Red`
+  String get red {
+    return Intl.message(
+      'Red',
+      name: 'red',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `White`
+  String get white {
+    return Intl.message(
+      'White',
+      name: 'white',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yellow`
+  String get yellow {
+    return Intl.message(
+      'Yellow',
+      name: 'yellow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Black`
+  String get black {
+    return Intl.message(
+      'Black',
+      name: 'black',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apply Filtration`
+  String get apply_filtration {
+    return Intl.message(
+      'Apply Filtration',
+      name: 'apply_filtration',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset`
+  String get reset {
+    return Intl.message(
+      'Reset',
+      name: 'reset',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Filtration applied`
+  String get filtration_applied {
+    return Intl.message(
+      'Filtration applied',
+      name: 'filtration_applied',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

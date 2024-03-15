@@ -28,13 +28,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "all": MessageLookupByLibrary.simpleMessage("All"),
         "already_you_have_an_account": MessageLookupByLibrary.simpleMessage(
             "Already you have an account?"),
+        "apply_filtration":
+            MessageLookupByLibrary.simpleMessage("Apply Filtration"),
         "bed_rooms": MessageLookupByLibrary.simpleMessage("Bed rooms"),
         "best_seller": MessageLookupByLibrary.simpleMessage("Best seller"),
+        "black": MessageLookupByLibrary.simpleMessage("Black"),
+        "blue": MessageLookupByLibrary.simpleMessage("Blue"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
+        "category": MessageLookupByLibrary.simpleMessage("Category"),
         "chairs": MessageLookupByLibrary.simpleMessage("Chairs"),
         "check_your_email":
             MessageLookupByLibrary.simpleMessage("Check your email"),
+        "color": MessageLookupByLibrary.simpleMessage("Color"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm password?"),
         "contact_us": MessageLookupByLibrary.simpleMessage("Contact us"),
@@ -64,10 +70,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Exchange and return policy"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "favourites": MessageLookupByLibrary.simpleMessage("Favourites"),
+        "filter": MessageLookupByLibrary.simpleMessage("Filter"),
+        "filtration_applied":
+            MessageLookupByLibrary.simpleMessage("Filtration applied"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
         "google": MessageLookupByLibrary.simpleMessage("Google"),
+        "green": MessageLookupByLibrary.simpleMessage("Green"),
+        "grey": MessageLookupByLibrary.simpleMessage("Grey"),
         "here_we_make_u_fall_in_love_with_the_place_u_live_in":
             MessageLookupByLibrary.simpleMessage(
                 "Here we make you fall in love with the place you live in"),
@@ -110,7 +121,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "please_enter_valid_phone_number": MessageLookupByLibrary.simpleMessage(
             "Please enter valid phone number"),
         "popular": MessageLookupByLibrary.simpleMessage("Popular"),
+        "price_ranges_between":
+            MessageLookupByLibrary.simpleMessage("Price ranges between"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "red": MessageLookupByLibrary.simpleMessage("Red"),
+        "reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
         "room_ideas": MessageLookupByLibrary.simpleMessage("Room ideas"),
@@ -126,6 +141,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("Supply and installation"),
         "tables": MessageLookupByLibrary.simpleMessage("Tables"),
+        "to": MessageLookupByLibrary.simpleMessage("To"),
         "total": MessageLookupByLibrary.simpleMessage("Total:"),
         "tv_units": MessageLookupByLibrary.simpleMessage("TV units"),
         "we_create_furniture_with_your_eyes":
@@ -135,6 +151,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "We have sent you a four-digit code"),
         "what_are_u_looking_for":
-            MessageLookupByLibrary.simpleMessage("What are you looking for?")
+            MessageLookupByLibrary.simpleMessage("What are you looking for?"),
+        "white": MessageLookupByLibrary.simpleMessage("White"),
+        "yellow": MessageLookupByLibrary.simpleMessage("Yellow")
       };
 }

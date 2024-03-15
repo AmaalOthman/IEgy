@@ -78,5 +78,20 @@
   "notifications": "Notifications",
   "log_out": "Log out",
   "all": "All",
-  "about_us_ii": "About us"
+  "about_us_ii": "About us",
+  "filter": "Filter",
+  "price_ranges_between": "Price ranges between",
+  "to": "To",
+  "category": "Category",
+  "color": "Color",
+  "grey": "Grey",
+  "blue": "Blue",
+  "green": "Green",
+  "red": "Red",
+  "white": "White",
+  "yellow": "Yellow",
+  "black": "Black",
+  "apply_filtration": "Apply Filtration",
+  "reset": "Reset",
+  "filtration_applied": "Filtration applied"
 }
