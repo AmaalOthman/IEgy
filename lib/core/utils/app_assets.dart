@@ -64,4 +64,5 @@ class AppAssets{
   static const String offerNotification = '${iconsPath}offer_notification.png';
   static const String orderNotification = '${iconsPath}order_notification.png';
   static const String infoOutline = '${iconsPath}info_outline.png';
+  static const String x = '${iconsPath}x_mark.png';
 }

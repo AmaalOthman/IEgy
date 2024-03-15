@@ -17,6 +17,8 @@ class NotificationWidget extends StatelessWidget {
     return Column(
       children: [
         ListTile(
+          contentPadding: const EdgeInsets.all(0),
+          minVerticalPadding: 0,
           onTap: onTap,
           leading: CustomImage(
               imagePath: index == 0
@@ -25,25 +27,26 @@ class NotificationWidget extends StatelessWidget {
                       ? AppAssets.offerNotification
                       : AppAssets.infoOutline, w: 20.w, h: 20.h,),
           title: Text(index == 0
-              ? AppLocalizations.of(context)!.offers
+              ? AppLocalizations.of(context)!.orders
               : index == 1
-                  ? AppLocalizations.of(context)!.orders
-                  : AppLocalizations.of(context)!.about_us_ii),
+                  ? AppLocalizations.of(context)!.offers
+                  : AppLocalizations.of(context)!.about_us_ii, style: Theme.of(context).textTheme.displayLarge!.copyWith(fontSize: 16.w),),
           subtitle: SizedBox(width: 205.w,
-          child: Text(title),
+          child: Text(title, style: Theme.of(context).textTheme.displayMedium!.copyWith(fontSize: 16.w),),
           ),
-          trailing: const Icon(CupertinoIcons.xmark, color: AppColors.darkBlue,),
+          trailing: CustomImage(imagePath: AppAssets.x, h: 12.h, w: 12.w),
         ),
         Row(
           children: [
             SizedBox(
                 width: 205.w,
-                child: Text(details)),
+                child: Text(details, style: Theme.of(context).textTheme.displaySmall,)),
             const Spacer(),
-            const Text('21-12-2023 08:00')
+            Text('21-12-2023 08:00', style: Theme.of(context).textTheme.displaySmall,)
           ],
         ),
         Container(
+          margin: EdgeInsets.symmetric(vertical: 16.h),
           width: double.infinity,
           color: AppColors.lightBrown,
           height: .3,

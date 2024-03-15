@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iegy/core/database/cache/cache_helper.dart';
+import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/utils/app_colors.dart';
 import 'package:iegy/core/widgets/back_arrow.dart';
 import 'package:iegy/features/home/presentation/components/notification_widget.dart';
@@ -74,16 +76,20 @@ class NotificationsScreen extends StatelessWidget {
                                     .displayMedium!
                                     .copyWith(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 14.w),
+                                        fontSize: 20.w),
                                 unselectedLabelStyle: Theme.of(context)
                                     .textTheme
                                     .displayMedium!
                                     .copyWith(
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 14.w),
+                                        fontSize: 20.w),
                                 onTap: (index) {
                                   BlocProvider.of<NotificationCubit>(context).changeTab(index);
-                                })),
+                                },
+                                labelPadding: const EdgeInsets.all(0),
+                              padding: const EdgeInsets.all(0),
+                              indicatorPadding: const EdgeInsets.all(0),
+                            )),
                       ),
                     ],
                   ),
