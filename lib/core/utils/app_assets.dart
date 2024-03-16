@@ -66,4 +66,5 @@ class AppAssets{
   static const String infoOutline = '${iconsPath}info_outline.png';
   static const String x = '${iconsPath}x_mark.png';
   static const String colors = '${iconsPath}colors.png';
+  static const String changePP = '${iconsPath}change_pp.png';
 }

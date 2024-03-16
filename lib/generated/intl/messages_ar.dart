@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "doors": MessageLookupByLibrary.simpleMessage("أبواب"),
         "dressing": MessageLookupByLibrary.simpleMessage("دريسنج"),
         "dressing_room": MessageLookupByLibrary.simpleMessage("غرفة ملابس"),
+        "edit_profile": MessageLookupByLibrary.simpleMessage("تعديل الحساب"),
         "egp": MessageLookupByLibrary.simpleMessage("جنيه"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "email_is_required":
@@ -98,6 +99,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "my_account": MessageLookupByLibrary.simpleMessage("حسابي"),
         "my_address": MessageLookupByLibrary.simpleMessage("عنواني"),
         "my_basket": MessageLookupByLibrary.simpleMessage("سلتي"),
+        "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("منزل جديد!! أثاث جديد!!"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
@@ -113,6 +115,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال كلمة مرور"),
         "pay": MessageLookupByLibrary.simpleMessage("الدفع"),
+        "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
         "phone_number": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "phone_number_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال رقم الهاتف"),

@@ -93,5 +93,8 @@
   "black": "Black",
   "apply_filtration": "Apply Filtration",
   "reset": "Reset",
-  "filtration_applied": "Filtration applied"
+  "filtration_applied": "Filtration applied",
+  "payment": "Payment",
+  "edit_profile": "Edit profile",
+  "name": "Name"
 }

@@ -16,6 +16,7 @@ import 'package:iegy/features/home/presentation/cubit/filter_cubit/filter_cubit.
 import 'package:iegy/features/home/presentation/cubit/home_cubit/home_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/notification_cubit/notification_cubit.dart';
 import 'package:iegy/features/nav_bar/presentation/cubit/nav_bar_cubit.dart';
+import 'package:iegy/features/profile/presentation/cubit/edit_profile_cubit/edit_profile_cubit.dart';
 import 'package:iegy/features/profile/presentation/cubit/profile_cubit/profile_cubit.dart';
 import 'package:iegy/features/splash/presentation/cubit/welcome_cubit.dart';
 
@@ -26,19 +27,16 @@ main() async {
   runApp(MultiBlocProvider(
     providers: [
       BlocProvider(create: (context) => sl<GlobalCubit>()..getCachedLang()),
-      BlocProvider(
-        create: (context) => sl<LoginCubit>(),
-      ),
-      BlocProvider(
-        create: (context) => sl<NavBarCubit>(),
-      ),
+      BlocProvider(create: (context) => sl<LoginCubit>()),
+      BlocProvider(create: (context) => sl<NavBarCubit>()),
       BlocProvider(create: (context) => sl<WelcomeCubit>()),
       BlocProvider(create: (context) => sl<HomeCubit>()),
       BlocProvider(create: (context) => sl<CartCubit>()),
       BlocProvider(create: (context) => sl<ProfileCubit>()),
       BlocProvider(create: (context) => sl<ResetPasswordNavigatorCubit>()),
       BlocProvider(create: (context) => sl<NotificationCubit>()),
-      BlocProvider(create: (context) => sl<FilterCubit>())
+      BlocProvider(create: (context) => sl<FilterCubit>()),
+      BlocProvider(create: (context) => sl<EditProfileCubit>())
     ],
     child: const MyApp(),
   ));

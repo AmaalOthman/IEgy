@@ -13,7 +13,7 @@ class CustomTextFormField extends StatelessWidget {
       this.preIcon,
       this.suffixIcon,
       this.onSuffixPressed,
-      this.keyboardType, this.shadow, this.focusNode});
+      this.keyboardType, this.shadow, this.focusNode, this.w, this.h});
   final TextEditingController? controller;
   final String? hint, label;
   final String? Function(String?)? validator;
@@ -23,6 +23,7 @@ class CustomTextFormField extends StatelessWidget {
   final VoidCallback? onSuffixPressed;
   final TextInputType? keyboardType;
   final FocusNode? focusNode;
+  final double? w, h;
 
   @override
   Widget build(BuildContext context) {
@@ -38,20 +39,24 @@ class CustomTextFormField extends StatelessWidget {
           ),
         ]: null,
       ),
-      child: TextFormField(
-        focusNode: focusNode,
-        keyboardType: keyboardType,
-        controller: controller,
-        validator: validator,
-        obscureText: isObSecure ?? false,
-        decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(horizontal: preIcon == null? 20.w: 0),
-            hintText: hint,
-            labelText: label,
-            prefixIcon: preIcon,
-            suffixIcon: suffixIcon != null? IconButton(
-                onPressed: onSuffixPressed,
-                icon: suffixIcon!): null),
+      child: SizedBox(
+        width: w,
+        height: h,
+        child: TextFormField(
+          focusNode: focusNode,
+          keyboardType: keyboardType,
+          controller: controller,
+          validator: validator,
+          obscureText: isObSecure ?? false,
+          decoration: InputDecoration(
+            contentPadding: EdgeInsets.symmetric(horizontal: preIcon == null? 20.w: 0),
+              hintText: hint,
+              labelText: label,
+              prefixIcon: preIcon,
+              suffixIcon: suffixIcon != null? IconButton(
+                  onPressed: onSuffixPressed,
+                  icon: suffixIcon!): null),
+        ),
       ),
     );
   }

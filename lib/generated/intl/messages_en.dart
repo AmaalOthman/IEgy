@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "doors": MessageLookupByLibrary.simpleMessage("Doors"),
         "dressing": MessageLookupByLibrary.simpleMessage("Dressing"),
         "dressing_room": MessageLookupByLibrary.simpleMessage("Dressing room"),
+        "edit_profile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "egp": MessageLookupByLibrary.simpleMessage("EGP"),
         "email": MessageLookupByLibrary.simpleMessage("E-mail"),
         "email_is_required":
@@ -97,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "my_account": MessageLookupByLibrary.simpleMessage("My account"),
         "my_address": MessageLookupByLibrary.simpleMessage("My address"),
         "my_basket": MessageLookupByLibrary.simpleMessage("My basket"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("New home!! New furniture!!"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
@@ -112,6 +114,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("Password is required"),
         "pay": MessageLookupByLibrary.simpleMessage("Pay"),
+        "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "phone_number": MessageLookupByLibrary.simpleMessage("Phone number"),
         "phone_number_is_required":
             MessageLookupByLibrary.simpleMessage("Phone Number is required"),

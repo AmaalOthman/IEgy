@@ -8,6 +8,7 @@ import 'package:iegy/features/home/presentation/cubit/filter_cubit/filter_cubit.
 import 'package:iegy/features/home/presentation/cubit/home_cubit/home_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/notification_cubit/notification_cubit.dart';
 import 'package:iegy/features/nav_bar/presentation/cubit/nav_bar_cubit.dart';
+import 'package:iegy/features/profile/presentation/cubit/edit_profile_cubit/edit_profile_cubit.dart';
 import 'package:iegy/features/profile/presentation/cubit/profile_cubit/profile_cubit.dart';
 import 'package:iegy/features/splash/presentation/cubit/welcome_cubit.dart';
 
@@ -24,5 +25,6 @@ void initServiceLocator() {
   sl.registerLazySingleton(() => ResetPasswordNavigatorCubit());
   sl.registerLazySingleton(() => NotificationCubit());
   sl.registerLazySingleton(() => FilterCubit());
+  sl.registerLazySingleton(() => EditProfileCubit());
   sl.registerLazySingleton(() => CacheHelper());
 }

@@ -71,7 +71,7 @@ class CartScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 40.h,),
-                CustomButton(onPressed: () {}, text: AppLocalizations.of(context)!.pay)
+                CustomButton(onPressed: () => BlocProvider.of<CartCubit>(context).pay(context), text: AppLocalizations.of(context)!.pay)
               ],
             ),
           ),
