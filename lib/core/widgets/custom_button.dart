@@ -14,7 +14,9 @@ class CustomButton extends StatelessWidget {
       this.w = 320,
       this.h = 52,
       this.fontSize,
-      this.elevation, this.textStyle, this.borderRadius});
+      this.elevation,
+      this.textStyle,
+      this.borderRadius});
   final double? h, w;
   final double? fontSize;
   final double? elevation;
@@ -34,12 +36,13 @@ class CustomButton extends StatelessWidget {
         child: ElevatedButton(
             style: Theme.of(context).elevatedButtonTheme.style!.copyWith(
                 elevation: MaterialStateProperty.all(elevation),
-                backgroundColor:
-                    MaterialStateProperty.all(background ?? AppColors.darkBrown), shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(borderRadius?? 59),
-              ),
-            )),
+                backgroundColor: MaterialStateProperty.all(
+                    background ?? AppColors.darkBrown),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(borderRadius ?? 59),
+                  ),
+                )),
             onPressed: onPressed,
             child: Row(
               mainAxisAlignment: withIcon == true
@@ -48,9 +51,10 @@ class CustomButton extends StatelessWidget {
               children: [
                 Text(
                   text,
-                  style: textStyle?? Theme.of(context).textTheme.displayLarge!.copyWith(
-                      color: textColor ?? AppColors.white,
-                      fontSize: fontSize ?? 16.w),
+                  style: textStyle ??
+                      Theme.of(context).textTheme.displayLarge!.copyWith(
+                          color: textColor ?? AppColors.white,
+                          fontSize: fontSize ?? 16.w),
                 ),
                 if (withIcon == true)
                   icon ??

@@ -19,4 +19,9 @@ class ProfileCubit extends Cubit<ProfileState> {
   void editProfile(BuildContext context) {
     navigate(context: context, route: Routes.editProfileScreen);
   }
+
+  void goToLogin(BuildContext context) {
+    BlocProvider.of<NavBarCubit>(context).currentIndex = 0;
+    navigateLast(context: context, route: Routes.login);
+  }
 }

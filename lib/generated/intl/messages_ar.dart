@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "about_us": MessageLookupByLibrary.simpleMessage("ماذا عنا؟"),
         "about_us_ii": MessageLookupByLibrary.simpleMessage("عنا"),
         "add_to_cart": MessageLookupByLibrary.simpleMessage("أضف إلى السلة"),
+        "address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "all": MessageLookupByLibrary.simpleMessage("الكل"),
         "already_you_have_an_account":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
@@ -34,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "best_seller": MessageLookupByLibrary.simpleMessage("الأكثر مبيعاً"),
         "black": MessageLookupByLibrary.simpleMessage("أسود"),
         "blue": MessageLookupByLibrary.simpleMessage("أزرق"),
+        "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
         "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
         "category": MessageLookupByLibrary.simpleMessage("الفئة"),
@@ -58,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "edit_profile": MessageLookupByLibrary.simpleMessage("تعديل الحساب"),
         "egp": MessageLookupByLibrary.simpleMessage("جنيه"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "email_ii": MessageLookupByLibrary.simpleMessage("البريد"),
         "email_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال بريد إلكتروني"),
         "email_or_phone": MessageLookupByLibrary.simpleMessage(
@@ -116,6 +119,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("يجب إدخال كلمة مرور"),
         "pay": MessageLookupByLibrary.simpleMessage("الدفع"),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
+        "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "phone_number": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "phone_number_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال رقم الهاتف"),
@@ -133,6 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "reset_password":
             MessageLookupByLibrary.simpleMessage("إعادة كلمة المرور"),
         "room_ideas": MessageLookupByLibrary.simpleMessage("أفكار غرف"),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "search_history":
             MessageLookupByLibrary.simpleMessage("عمليات البحث السابقة"),
         "send_the_code_again":

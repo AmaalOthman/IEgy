@@ -52,6 +52,7 @@ dependencies:
   speech_to_text: ^6.6.1
   flutter_speed_dial: ^7.0.0
   pinput: ^4.0.0
+  image_picker: ^1.0.7
 
 dev_dependencies:
   flutter_test:

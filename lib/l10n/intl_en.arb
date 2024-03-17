@@ -96,5 +96,10 @@
   "filtration_applied": "Filtration applied",
   "payment": "Payment",
   "edit_profile": "Edit profile",
-  "name": "Name"
+  "name": "Name",
+  "phone": "Phone",
+  "email_ii": "E-mail",
+  "address": "Address",
+  "save": "Save",
+  "cancel": "Cancel"
 }

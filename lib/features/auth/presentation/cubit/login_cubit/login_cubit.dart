@@ -14,6 +14,8 @@ class LoginCubit extends Cubit<LoginState> {
   TextEditingController passwordController = TextEditingController();
   bool isLoginPasswordHidden = true;
   Widget suffixIcon = const Icon(Icons.visibility, color: AppColors.darkBlue);
+  FocusNode emailFocusNode = FocusNode();
+  FocusNode passwordFocusNode = FocusNode();
 
   void changeLoginPasswordSuffixIcon() {
     isLoginPasswordHidden = !isLoginPasswordHidden;
@@ -42,5 +44,10 @@ class LoginCubit extends Cubit<LoginState> {
 
   void onForgetPasswordPressed(BuildContext context) {
     navigate(context: context, route: Routes.resetPasswordNavigator);
+  }
+
+  void removeKeyboard() {
+    emailFocusNode.unfocus();
+    passwordFocusNode.unfocus();
   }
 }

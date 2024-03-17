@@ -96,5 +96,10 @@
   "filtration_applied": "تم تطبيق الفلتر",
   "payment": "الدفع",
   "edit_profile": "تعديل الحساب",
-  "name": "الاسم"
+  "name": "الاسم",
+  "phone": "الهاتف",
+  "email_ii": "البريد",
+  "address": "العنوان",
+  "save": "حفظ",
+  "cancel": "إلغاء"
 }

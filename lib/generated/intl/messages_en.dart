@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "about_us": MessageLookupByLibrary.simpleMessage("About us"),
         "about_us_ii": MessageLookupByLibrary.simpleMessage("About us"),
         "add_to_cart": MessageLookupByLibrary.simpleMessage("Add to cart"),
+        "address": MessageLookupByLibrary.simpleMessage("Address"),
         "all": MessageLookupByLibrary.simpleMessage("All"),
         "already_you_have_an_account": MessageLookupByLibrary.simpleMessage(
             "Already you have an account?"),
@@ -34,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "best_seller": MessageLookupByLibrary.simpleMessage("Best seller"),
         "black": MessageLookupByLibrary.simpleMessage("Black"),
         "blue": MessageLookupByLibrary.simpleMessage("Blue"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "category": MessageLookupByLibrary.simpleMessage("Category"),
@@ -58,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "edit_profile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "egp": MessageLookupByLibrary.simpleMessage("EGP"),
         "email": MessageLookupByLibrary.simpleMessage("E-mail"),
+        "email_ii": MessageLookupByLibrary.simpleMessage("E-mail"),
         "email_is_required":
             MessageLookupByLibrary.simpleMessage("Email is required"),
         "email_or_phone":
@@ -115,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Password is required"),
         "pay": MessageLookupByLibrary.simpleMessage("Pay"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
+        "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "phone_number": MessageLookupByLibrary.simpleMessage("Phone number"),
         "phone_number_is_required":
             MessageLookupByLibrary.simpleMessage("Phone Number is required"),
@@ -132,6 +136,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),
         "room_ideas": MessageLookupByLibrary.simpleMessage("Room ideas"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "search_history":
             MessageLookupByLibrary.simpleMessage("Search history"),
         "send_the_code_again":
