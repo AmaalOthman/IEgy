@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:iegy/core/routes/app_routes.dart';
+import 'package:iegy/core/utils/common_methods.dart';
+import 'package:iegy/features/home/presentation/cubit/more_cubit/more_cubit.dart';
 import 'package:iegy/features/home/presentation/screens/filter_bottom_sheet.dart';
 import 'package:iegy/features/home/presentation/cubit/home_cubit/home_state.dart';
 import 'package:iegy/features/home/presentation/screens/notifications_screen.dart';
@@ -94,5 +97,10 @@ class HomeCubit extends Cubit<HomeState> {
     showModalBottomSheet(
         isScrollControlled: true,
         context: context, builder: (_) => const FilterBottomSheet());
+  }
+
+  void more(BuildContext context, String section) {
+    BlocProvider.of<MoreCubit>(context).section = section;
+    navigate(context: context, route: Routes.moreScreen);
   }
 }

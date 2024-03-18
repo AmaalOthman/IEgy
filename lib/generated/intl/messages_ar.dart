@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "about_us": MessageLookupByLibrary.simpleMessage("ماذا عنا؟"),
         "about_us_ii": MessageLookupByLibrary.simpleMessage("عنا"),
         "add_to_cart": MessageLookupByLibrary.simpleMessage("أضف إلى السلة"),
+        "address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "all": MessageLookupByLibrary.simpleMessage("الكل"),
         "already_you_have_an_account":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
@@ -34,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "best_seller": MessageLookupByLibrary.simpleMessage("الأكثر مبيعاً"),
         "black": MessageLookupByLibrary.simpleMessage("أسود"),
         "blue": MessageLookupByLibrary.simpleMessage("أزرق"),
+        "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
         "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
         "category": MessageLookupByLibrary.simpleMessage("الفئة"),
@@ -55,8 +57,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "doors": MessageLookupByLibrary.simpleMessage("أبواب"),
         "dressing": MessageLookupByLibrary.simpleMessage("دريسنج"),
         "dressing_room": MessageLookupByLibrary.simpleMessage("غرفة ملابس"),
+        "edit_profile": MessageLookupByLibrary.simpleMessage("تعديل الحساب"),
         "egp": MessageLookupByLibrary.simpleMessage("جنيه"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "email_ii": MessageLookupByLibrary.simpleMessage("البريد"),
         "email_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال بريد إلكتروني"),
         "email_or_phone": MessageLookupByLibrary.simpleMessage(
@@ -73,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "filter": MessageLookupByLibrary.simpleMessage("الفلتر"),
         "filtration_applied":
             MessageLookupByLibrary.simpleMessage("تم تطبيق الفلتر"),
+        "first_name": MessageLookupByLibrary.simpleMessage("الاسم الأول"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "full_name": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
@@ -86,6 +91,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "kitchen_collections":
             MessageLookupByLibrary.simpleMessage("تشكيلات مطابخ"),
         "kitchens": MessageLookupByLibrary.simpleMessage("مطابخ"),
+        "last_name": MessageLookupByLibrary.simpleMessage("الاسم الثاني"),
+        "location": MessageLookupByLibrary.simpleMessage("الموقع"),
         "log_out": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "login_failed":
@@ -98,6 +105,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "my_account": MessageLookupByLibrary.simpleMessage("حسابي"),
         "my_address": MessageLookupByLibrary.simpleMessage("عنواني"),
         "my_basket": MessageLookupByLibrary.simpleMessage("سلتي"),
+        "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("منزل جديد!! أثاث جديد!!"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
@@ -113,6 +121,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال كلمة مرور"),
         "pay": MessageLookupByLibrary.simpleMessage("الدفع"),
+        "pay_now": MessageLookupByLibrary.simpleMessage("ادفع الآن"),
+        "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
+        "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "phone_number": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "phone_number_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال رقم الهاتف"),
@@ -130,6 +141,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "reset_password":
             MessageLookupByLibrary.simpleMessage("إعادة كلمة المرور"),
         "room_ideas": MessageLookupByLibrary.simpleMessage("أفكار غرف"),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "search_history":
             MessageLookupByLibrary.simpleMessage("عمليات البحث السابقة"),
         "send_the_code_again":

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:iegy/core/database/cache/cache_helper.dart';
+import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/utils/app_colors.dart';
 
 void navigate(
@@ -36,7 +38,7 @@ void showToast({
       fontSize: 16.0.w);
 }
 
-enum ToastStates { error, success, warning}
+enum ToastStates { error, success, warning }
 
 Color getState(ToastStates state) {
   switch (state) {
@@ -46,5 +48,13 @@ Color getState(ToastStates state) {
       return AppColors.darkBrown;
     case ToastStates.warning:
       return AppColors.blue;
+  }
+}
+
+bool isArabic() {
+  if (sl<CacheHelper>().getCachedLanguage() == 'ar') {
+    return true;
+  } else {
+    return false;
   }
 }

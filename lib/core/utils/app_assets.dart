@@ -23,6 +23,8 @@ class AppAssets{
   static const String placeholder = '${imagesPath}placeholder.png';
   static const String errorImage = '${imagesPath}error_image.jpg';
   static const String sofaCategory = '${imagesPath}sofa_category.png';
+  static const String camera = '${imagesPath}camera.png';
+  static const String gallery = '${imagesPath}gallery.png';
 
   //Icons
   static const String darkMood = '${iconsPath}dark_mood.png';
@@ -66,4 +68,6 @@ class AppAssets{
   static const String infoOutline = '${iconsPath}info_outline.png';
   static const String x = '${iconsPath}x_mark.png';
   static const String colors = '${iconsPath}colors.png';
+  static const String changePP = '${iconsPath}change_pp.png';
+  static const String arrowDown = '${iconsPath}arrow_down.png';
 }

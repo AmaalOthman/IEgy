@@ -93,5 +93,17 @@
   "black": "أسود",
   "apply_filtration": "تطبيق الفلتر",
   "reset": "إعادة ضبط",
-  "filtration_applied": "تم تطبيق الفلتر"
+  "filtration_applied": "تم تطبيق الفلتر",
+  "payment": "الدفع",
+  "edit_profile": "تعديل الحساب",
+  "name": "الاسم",
+  "phone": "الهاتف",
+  "email_ii": "البريد",
+  "address": "العنوان",
+  "save": "حفظ",
+  "cancel": "إلغاء",
+  "pay_now": "ادفع الآن",
+  "first_name": "الاسم الأول",
+  "last_name": "الاسم الثاني",
+  "location": "الموقع"
 }

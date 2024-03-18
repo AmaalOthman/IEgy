@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -23,45 +22,63 @@ class ProfileScreen extends StatelessWidget {
     return BlocBuilder<ProfileCubit, ProfileState>(
       builder: (context, state) {
         return Scaffold(
-          appBar: AppBar(
-            title: Text(
-              AppLocalizations.of(context)!.my_account,
-              style: Theme.of(context).textTheme.displayLarge,
-            ),
-            leading: IconButton(
-              onPressed: () =>
-                  BlocProvider.of<ProfileCubit>(context).onBackPressed(context),
-              icon: const BackArrow(),
+          appBar: PreferredSize(
+            preferredSize: Size(double.infinity, 84.h),
+            child: Column(
+              children: [
+                const Spacer(),
+                AppBar(
+                  title: Text(
+                    AppLocalizations.of(context)!.my_account,
+                    style: Theme.of(context).textTheme.displayLarge,
+                  ),
+                  leading: IconButton(
+                    onPressed: () =>
+                        BlocProvider.of<ProfileCubit>(context).onBackPressed(context),
+                    icon: const BackArrow(),
+                  ),
+                ),
+              ],
             ),
           ),
           body: Padding(
-            padding: EdgeInsets.symmetric(vertical: 40.h, horizontal: 15.w),
+            padding: EdgeInsets.symmetric(vertical: 70.h, horizontal: 15.w),
             child: Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CachedNetworkImage(
-                      fit: BoxFit.fill,
-                      height: 102.h,
-                      width: 102.w,
-                      imageUrl:
-                          'https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg',
-                      errorWidget: (context, url, error) =>
-                          const CustomImage(imagePath: AppAssets.errorImage),
-                      progressIndicatorBuilder: (context, url, progress) =>
-                          SizedBox(
-                              width: 180.w,
-                              child: const Center(
-                                  child: CustomLoadingIndicator())),
-                      imageBuilder: (context, imageProvider) => Container(
-                        width: 148.w,
-                        height: 131.h,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: imageProvider,
-                            fit: BoxFit.cover,
+                    Container(
+                      decoration: BoxDecoration(boxShadow: [
+                        BoxShadow(
+                          color: AppColors.black.withOpacity(0.15),
+                          spreadRadius: 2,
+                          blurRadius: 2,
+                          offset: const Offset(0, 3),
+                        ),
+                      ], borderRadius: BorderRadius.circular(500)),
+                      child: CachedNetworkImage(
+                        fit: BoxFit.fill,
+                        height: 102.h,
+                        width: 102.w,
+                        imageUrl:
+                            'https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg',
+                        errorWidget: (context, url, error) =>
+                            const CustomImage(imagePath: AppAssets.errorImage),
+                        progressIndicatorBuilder: (context, url, progress) =>
+                            SizedBox(
+                                width: 180.w,
+                                child: const Center(
+                                    child: CustomLoadingIndicator())),
+                        imageBuilder: (context, imageProvider) => Container(
+                          width: 148.w,
+                          height: 131.h,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: imageProvider,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
@@ -90,7 +107,7 @@ class ProfileScreen extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25),
                       ),
-                      onPressed: () {},
+                      onPressed: () => BlocProvider.of<ProfileCubit>(context).editProfile(context),
                       color: AppColors.lightBrown,
                       child: CustomImage(
                         imagePath: AppAssets.pin,
@@ -211,7 +228,8 @@ class ProfileScreen extends StatelessWidget {
                   height: .3.h,
                   color: AppColors.lightBrown,
                 ),
-                SizedBox(height: 188.h),
+                // SizedBox(height: 188.h),
+                const Spacer(),
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(),
@@ -223,7 +241,7 @@ class ProfileScreen extends StatelessWidget {
                     elevation: 0,
                     textStyle: Theme.of(context).textTheme.displayMedium!.copyWith(fontSize: 16.w),
                     withIcon: true,
-                    onPressed: () {}, text: AppLocalizations.of(context)!.log_out, h: 48.h, w: 175.w,),
+                    onPressed: () => BlocProvider.of<ProfileCubit>(context).goToLogin(context), text: AppLocalizations.of(context)!.log_out, h: 48.h, w: 195.w,),
                 )
               ],
             ),
