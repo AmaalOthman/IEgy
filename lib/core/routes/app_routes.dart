@@ -3,6 +3,7 @@ import 'package:iegy/features/auth/presentation/screens/login_screen.dart';
 import 'package:iegy/features/auth/presentation/screens/register_screen.dart';
 import 'package:iegy/features/auth/presentation/screens/reset_password_navigator.dart';
 import 'package:iegy/features/cart/presentation/screens/payment_screen.dart';
+import 'package:iegy/features/home/presentation/screens/more_screen.dart';
 import 'package:iegy/features/nav_bar/presentation/screens/nav_bar_screen.dart';
 import 'package:iegy/features/profile/presentation/screens/edit_profile_screen.dart';
 import 'package:iegy/features/splash/presentation/screens/splash_screen.dart';
@@ -19,6 +20,7 @@ class Routes {
   static const String searchScreen = '/searchScreen';
   static const String paymentScreen = '/paymentScreen';
   static const String editProfileScreen = '/editProfileScreen';
+  static const String moreScreen = '/moreScreen';
 }
 
 class AppRoutes {
@@ -40,6 +42,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const PaymentScreen());
       case Routes.editProfileScreen:
         return MaterialPageRoute(builder: (_) => const EditProfileScreen());
+      case Routes.moreScreen:
+        return MaterialPageRoute(builder: (_) => const MoreScreen());
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold(
           body: Center(

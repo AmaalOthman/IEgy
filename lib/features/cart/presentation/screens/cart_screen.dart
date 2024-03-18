@@ -23,15 +23,23 @@ class CartScreen extends StatelessWidget {
     return BlocBuilder<CartCubit, CartState>(
       builder: (context, state) {
         return Scaffold(
-          appBar: AppBar(
-            title: Text(
-              AppLocalizations.of(context)!.my_basket,
-              style: Theme.of(context).textTheme.displayLarge,
-            ),
-            leading: IconButton(
-              onPressed: () =>
-                  BlocProvider.of<CartCubit>(context).onBackPressed(context),
-              icon: const BackArrow(),
+          appBar: PreferredSize(
+            preferredSize: Size(double.infinity, 84.h),
+            child: Column(
+              children: [
+                const Spacer(),
+                AppBar(
+                  title: Text(
+                    AppLocalizations.of(context)!.my_basket,
+                    style: Theme.of(context).textTheme.displayLarge,
+                  ),
+                  leading: IconButton(
+                    onPressed: () =>
+                        BlocProvider.of<CartCubit>(context).onBackPressed(context),
+                    icon: const BackArrow(),
+                  ),
+                ),
+              ],
             ),
           ),
           body: Padding(

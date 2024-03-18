@@ -69,4 +69,5 @@ class AppAssets{
   static const String x = '${iconsPath}x_mark.png';
   static const String colors = '${iconsPath}colors.png';
   static const String changePP = '${iconsPath}change_pp.png';
+  static const String arrowDown = '${iconsPath}arrow_down.png';
 }

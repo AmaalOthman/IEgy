@@ -6,9 +6,10 @@ import 'package:iegy/core/utils/app_colors.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SectionTitle extends StatelessWidget {
-  SectionTitle({super.key, required this.title});
+  SectionTitle({super.key, required this.title, required this.onMoreTap});
 
-  String title;
+  final String title;
+  final VoidCallback onMoreTap;
 
   @override
   Widget build(BuildContext context) {
@@ -27,19 +28,22 @@ class SectionTitle extends StatelessWidget {
               maxLines: 1,
             ),
           ),
-          Row(
-            children: [
-              Text(
-                AppLocalizations.of(context)!.more,
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-              Icon(
-                sl<CacheHelper>().getCachedLanguage() == 'ar'
-                    ? Icons.keyboard_arrow_left_outlined
-                    : Icons.keyboard_arrow_right_outlined,
-                color: AppColors.brown,
-              ),
-            ],
+          InkWell(
+            onTap: onMoreTap,
+            child: Row(
+              children: [
+                Text(
+                  AppLocalizations.of(context)!.more,
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+                Icon(
+                  sl<CacheHelper>().getCachedLanguage() == 'ar'
+                      ? Icons.keyboard_arrow_left_outlined
+                      : Icons.keyboard_arrow_right_outlined,
+                  color: AppColors.brown,
+                ),
+              ],
+            ),
           )
         ],
       ),

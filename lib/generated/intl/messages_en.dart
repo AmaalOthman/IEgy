@@ -77,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "filter": MessageLookupByLibrary.simpleMessage("Filter"),
         "filtration_applied":
             MessageLookupByLibrary.simpleMessage("Filtration applied"),
+        "first_name": MessageLookupByLibrary.simpleMessage("First name"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
@@ -90,6 +91,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "kitchen_collections":
             MessageLookupByLibrary.simpleMessage("Kitchen collections"),
         "kitchens": MessageLookupByLibrary.simpleMessage("Kitchens"),
+        "last_name": MessageLookupByLibrary.simpleMessage("Last name"),
+        "location": MessageLookupByLibrary.simpleMessage("Location"),
         "log_out": MessageLookupByLibrary.simpleMessage("Log out"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "login_failed": MessageLookupByLibrary.simpleMessage("Login Failed"),
@@ -117,6 +120,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("Password is required"),
         "pay": MessageLookupByLibrary.simpleMessage("Pay"),
+        "pay_now": MessageLookupByLibrary.simpleMessage("Pay now"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "phone_number": MessageLookupByLibrary.simpleMessage("Phone number"),

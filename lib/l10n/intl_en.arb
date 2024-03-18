@@ -101,5 +101,9 @@
   "email_ii": "E-mail",
   "address": "Address",
   "save": "Save",
-  "cancel": "Cancel"
+  "cancel": "Cancel",
+  "pay_now": "Pay now",
+  "first_name": "First name",
+  "last_name": "Last name",
+  "location": "Location"
 }

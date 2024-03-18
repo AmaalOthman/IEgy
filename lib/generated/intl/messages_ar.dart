@@ -77,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "filter": MessageLookupByLibrary.simpleMessage("الفلتر"),
         "filtration_applied":
             MessageLookupByLibrary.simpleMessage("تم تطبيق الفلتر"),
+        "first_name": MessageLookupByLibrary.simpleMessage("الاسم الأول"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "full_name": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
@@ -90,6 +91,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "kitchen_collections":
             MessageLookupByLibrary.simpleMessage("تشكيلات مطابخ"),
         "kitchens": MessageLookupByLibrary.simpleMessage("مطابخ"),
+        "last_name": MessageLookupByLibrary.simpleMessage("الاسم الثاني"),
+        "location": MessageLookupByLibrary.simpleMessage("الموقع"),
         "log_out": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "login_failed":
@@ -118,6 +121,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال كلمة مرور"),
         "pay": MessageLookupByLibrary.simpleMessage("الدفع"),
+        "pay_now": MessageLookupByLibrary.simpleMessage("ادفع الآن"),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "phone_number": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),

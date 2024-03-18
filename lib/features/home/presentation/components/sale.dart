@@ -21,7 +21,7 @@ class Sale extends StatelessWidget {
       height: 251.h,
       width: 182.w,
       decoration: BoxDecoration(
-          color: AppColors.white, borderRadius: BorderRadius.circular(4)),
+          color: AppColors.white, borderRadius: BorderRadius.circular(4.88)),
       child: Column(children: [
         Stack(
           children: [
@@ -44,6 +44,7 @@ class Sale extends StatelessWidget {
               top: 10.h,
               right: 4.w,
               child: CircleAvatar(
+                backgroundColor: AppColors.offWhite,
                   maxRadius: 15.w,
                   child: Icon(
                     CupertinoIcons.heart,

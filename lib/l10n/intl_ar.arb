@@ -101,5 +101,9 @@
   "email_ii": "البريد",
   "address": "العنوان",
   "save": "حفظ",
-  "cancel": "إلغاء"
+  "cancel": "إلغاء",
+  "pay_now": "ادفع الآن",
+  "first_name": "الاسم الأول",
+  "last_name": "الاسم الثاني",
+  "location": "الموقع"
 }

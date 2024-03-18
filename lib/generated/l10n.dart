@@ -1081,6 +1081,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Pay now`
+  String get pay_now {
+    return Intl.message(
+      'Pay now',
+      name: 'pay_now',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First name`
+  String get first_name {
+    return Intl.message(
+      'First name',
+      name: 'first_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last name`
+  String get last_name {
+    return Intl.message(
+      'Last name',
+      name: 'last_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location`
+  String get location {
+    return Intl.message(
+      'Location',
+      name: 'location',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

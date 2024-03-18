@@ -15,7 +15,7 @@ class Idea extends StatelessWidget {
     return Stack(
       children: [
         ClipRRect(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(12),
           child: CachedNetworkImage(
             fit: BoxFit.fill,
             height: 154.h,
