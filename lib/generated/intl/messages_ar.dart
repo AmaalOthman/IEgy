@@ -35,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "best_seller": MessageLookupByLibrary.simpleMessage("الأكثر مبيعاً"),
         "black": MessageLookupByLibrary.simpleMessage("أسود"),
         "blue": MessageLookupByLibrary.simpleMessage("أزرق"),
+        "cairo": MessageLookupByLibrary.simpleMessage("القاهرة"),
         "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
         "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
@@ -50,7 +51,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "create_acc": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "create_new_acc":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+        "customer_name": MessageLookupByLibrary.simpleMessage("اسم صاحب الطلب"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("المظهر الليلي"),
+        "delivery_and_installation":
+            MessageLookupByLibrary.simpleMessage("توصيل و تركيب"),
+        "delivery_only": MessageLookupByLibrary.simpleMessage("توصيل فقط"),
         "discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch":
             MessageLookupByLibrary.simpleMessage(
                 "اكتشف تشكيلتنا المميزة من الأثاث و جدد منزلك بلمسة سحرية."),
@@ -81,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "full_name": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
+        "giza": MessageLookupByLibrary.simpleMessage("الجيزة"),
         "google": MessageLookupByLibrary.simpleMessage("جوجل"),
         "green": MessageLookupByLibrary.simpleMessage("أخضر"),
         "grey": MessageLookupByLibrary.simpleMessage("رمادي"),
@@ -100,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login_successfully":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "login_with": MessageLookupByLibrary.simpleMessage("التسجيل بـ"),
+        "luxor": MessageLookupByLibrary.simpleMessage("الأقصر"),
         "modern_chair": MessageLookupByLibrary.simpleMessage("كرسي مودرن"),
         "more": MessageLookupByLibrary.simpleMessage("المزيد"),
         "my_account": MessageLookupByLibrary.simpleMessage("حسابي"),
@@ -133,9 +140,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "please_enter_valid_phone_number":
             MessageLookupByLibrary.simpleMessage("من فضلك أدخل رقم هاتف صحيح"),
         "popular": MessageLookupByLibrary.simpleMessage("شائع"),
+        "price": MessageLookupByLibrary.simpleMessage("السعر"),
         "price_ranges_between":
             MessageLookupByLibrary.simpleMessage("السعر يتراوح ما بين"),
+        "product_name": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
+        "purchasing_in_site":
+            MessageLookupByLibrary.simpleMessage("استلام من الفرع"),
+        "qalubia": MessageLookupByLibrary.simpleMessage("القليوبية"),
         "red": MessageLookupByLibrary.simpleMessage("أحمر"),
         "reset": MessageLookupByLibrary.simpleMessage("إعادة ضبط"),
         "reset_password":
@@ -144,8 +156,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "search_history":
             MessageLookupByLibrary.simpleMessage("عمليات البحث السابقة"),
+        "security_and_privacy":
+            MessageLookupByLibrary.simpleMessage("الأمان و الخصوصية"),
         "send_the_code_again":
             MessageLookupByLibrary.simpleMessage("إرسال الرمز مرة أخري؟"),
+        "service": MessageLookupByLibrary.simpleMessage("الخدمة"),
+        "service_type": MessageLookupByLibrary.simpleMessage("نوع الخدمة"),
+        "sharkia": MessageLookupByLibrary.simpleMessage("الشرقية"),
         "shoes_cabinets": MessageLookupByLibrary.simpleMessage("جزامات"),
         "sofa": MessageLookupByLibrary.simpleMessage("سفرة"),
         "sofas": MessageLookupByLibrary.simpleMessage("أنتريهات"),
@@ -161,6 +178,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "we_have_sent_you_a_four_digit_code":
             MessageLookupByLibrary.simpleMessage(
                 "لقد أرسلنا إليك رمز مكون من 4 أرقام"),
+        "we_maintain_industry_standard_physical_and_administrative_measures_to_protect_your_personal_information":
+            MessageLookupByLibrary.simpleMessage(
+                "نحن نحافظ على التدابير المادية و الإدارية المتوافقة مع معايير الصناعة لحماية معلوماتك الشخصية"),
         "what_are_u_looking_for":
             MessageLookupByLibrary.simpleMessage("عن ماذا تبحث؟"),
         "white": MessageLookupByLibrary.simpleMessage("أبيض"),

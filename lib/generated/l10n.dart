@@ -1121,6 +1121,158 @@ class S {
       args: [],
     );
   }
+
+  /// `Cairo`
+  String get cairo {
+    return Intl.message(
+      'Cairo',
+      name: 'cairo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Giza`
+  String get giza {
+    return Intl.message(
+      'Giza',
+      name: 'giza',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Qalubia`
+  String get qalubia {
+    return Intl.message(
+      'Qalubia',
+      name: 'qalubia',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sharkia`
+  String get sharkia {
+    return Intl.message(
+      'Sharkia',
+      name: 'sharkia',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Luxor`
+  String get luxor {
+    return Intl.message(
+      'Luxor',
+      name: 'luxor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery only`
+  String get delivery_only {
+    return Intl.message(
+      'Delivery only',
+      name: 'delivery_only',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery and installation`
+  String get delivery_and_installation {
+    return Intl.message(
+      'Delivery and installation',
+      name: 'delivery_and_installation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Purchasing in site`
+  String get purchasing_in_site {
+    return Intl.message(
+      'Purchasing in site',
+      name: 'purchasing_in_site',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Service type`
+  String get service_type {
+    return Intl.message(
+      'Service type',
+      name: 'service_type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Security and privacy`
+  String get security_and_privacy {
+    return Intl.message(
+      'Security and privacy',
+      name: 'security_and_privacy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We maintain industry-standard physical and administrative measures to protect your personal information`
+  String
+      get we_maintain_industry_standard_physical_and_administrative_measures_to_protect_your_personal_information {
+    return Intl.message(
+      'We maintain industry-standard physical and administrative measures to protect your personal information',
+      name:
+          'we_maintain_industry_standard_physical_and_administrative_measures_to_protect_your_personal_information',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price`
+  String get price {
+    return Intl.message(
+      'Price',
+      name: 'price',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product name`
+  String get product_name {
+    return Intl.message(
+      'Product name',
+      name: 'product_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customer name`
+  String get customer_name {
+    return Intl.message(
+      'Customer name',
+      name: 'customer_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Service`
+  String get service {
+    return Intl.message(
+      'Service',
+      name: 'service',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

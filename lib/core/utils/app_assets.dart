@@ -70,4 +70,10 @@ class AppAssets{
   static const String colors = '${iconsPath}colors.png';
   static const String changePP = '${iconsPath}change_pp.png';
   static const String arrowDown = '${iconsPath}arrow_down.png';
+  static const String securityAndPrivacy = '${iconsPath}security_and_privacy.png';
+  static const String sofaFilled = '${iconsPath}sofa_filled.png';
+  static const String color = '${iconsPath}color.png';
+  static const String customer = '${iconsPath}customer.png';
+  static const String phone = '${iconsPath}phone.png';
+  static const String van = '${iconsPath}van.png';
 }

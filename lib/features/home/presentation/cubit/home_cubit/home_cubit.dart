@@ -14,12 +14,16 @@ class HomeCubit extends Cubit<HomeState> {
   FocusNode focusNode = FocusNode();
 
   void onWhatsAppPressed() async {
-    var whatsappUrl = "whatsapp://send?phone=+201015066160";
+    _launchInBrowser(Uri.parse(
+        'whatsapp://send?phone=+201015066160&text=السلام عليكم'));
+  }
 
-    if (await canLaunch(whatsappUrl)) {
-      await launch(whatsappUrl);
-    } else {
-      throw 'Could not launch $whatsappUrl';
+  Future<void> _launchInBrowser(Uri url) async {
+    if (!await launchUrl(
+      url,
+      mode: LaunchMode.externalApplication,
+    )) {
+      throw Exception('Could not launch $url');
     }
   }
 

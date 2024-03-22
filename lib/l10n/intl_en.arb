@@ -105,5 +105,20 @@
   "pay_now": "Pay now",
   "first_name": "First name",
   "last_name": "Last name",
-  "location": "Location"
+  "location": "Location",
+  "cairo": "Cairo",
+  "giza": "Giza",
+  "qalubia": "Qalubia",
+  "sharkia": "Sharkia",
+  "luxor": "Luxor",
+  "delivery_only": "Delivery only",
+  "delivery_and_installation": "Delivery and installation",
+  "purchasing_in_site": "Purchasing in site",
+  "service_type": "Service type",
+  "security_and_privacy": "Security and privacy",
+  "we_maintain_industry_standard_physical_and_administrative_measures_to_protect_your_personal_information": "We maintain industry-standard physical and administrative measures to protect your personal information",
+  "price": "Price",
+  "product_name": "Product name",
+  "customer_name": "Customer name",
+  "service": "Service"
 }
