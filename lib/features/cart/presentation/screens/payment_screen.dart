@@ -36,18 +36,20 @@ class PaymentScreen extends StatelessWidget {
           ),
           body: Padding(
             padding: EdgeInsets.symmetric(vertical: 32.h, horizontal: 22.w),
-            child: Column(
-              children: [
-                BlocProvider.of<PaymentCubit>(context).phases[
-                    BlocProvider.of<PaymentCubit>(context).currentPhase],
-                CustomButton(
-                    onPressed: () =>
-                        BlocProvider.of<PaymentCubit>(context).goNext(),
-                    text:
-                        BlocProvider.of<PaymentCubit>(context).currentPhase != 2
-                            ? AppLocalizations.of(context)!.next
-                            : AppLocalizations.of(context)!.pay_now)
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  BlocProvider.of<PaymentCubit>(context).phases[
+                      BlocProvider.of<PaymentCubit>(context).currentPhase],
+                  CustomButton(
+                      onPressed: () =>
+                          BlocProvider.of<PaymentCubit>(context).goNext(),
+                      text:
+                          BlocProvider.of<PaymentCubit>(context).currentPhase != 2
+                              ? AppLocalizations.of(context)!.next
+                              : AppLocalizations.of(context)!.pay_now)
+                ],
+              ),
             ),
           ),
         );

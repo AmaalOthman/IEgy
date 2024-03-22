@@ -13,6 +13,10 @@ class PaymentCubit extends Cubit<PaymentState> {
     const PaymentDataScreen()
   ];
   int currentPhase = 0;
+  FocusNode firstNameFocusNode = FocusNode();
+  FocusNode lastNameFocusNode = FocusNode();
+  FocusNode addressFocusNode = FocusNode();
+  FocusNode phoneNumberFocusNode = FocusNode();
 
   void onBackPressed(BuildContext context) {
     if (currentPhase == 0) {
@@ -26,5 +30,23 @@ class PaymentCubit extends Cubit<PaymentState> {
   void goNext() {
     currentPhase < 2? currentPhase ++: null;
     emit(MoveAPhaseState());
+  }
+
+  void showLocations() {
+    unfocusAll();
+    emit(ShowLocationsState());
+  }
+
+  void showServiceTypes() {
+    unfocusAll();
+    emit(ShowServiceTypesState());
+  }
+
+  void unfocusAll() {
+    firstNameFocusNode.unfocus();
+    lastNameFocusNode.unfocus();
+    addressFocusNode.unfocus();
+    phoneNumberFocusNode.unfocus();
+    emit(PaymentInitial());
   }
 }

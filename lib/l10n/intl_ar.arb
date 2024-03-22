@@ -105,5 +105,20 @@
   "pay_now": "ادفع الآن",
   "first_name": "الاسم الأول",
   "last_name": "الاسم الثاني",
-  "location": "الموقع"
+  "location": "الموقع",
+  "cairo": "القاهرة",
+  "giza": "الجيزة",
+  "qalubia": "القليوبية",
+  "sharkia": "الشرقية",
+  "luxor": "الأقصر",
+  "delivery_only": "توصيل فقط",
+  "delivery_and_installation": "توصيل و تركيب",
+  "purchasing_in_site": "استلام من الفرع",
+  "service_type": "نوع الخدمة",
+  "security_and_privacy": "الأمان و الخصوصية",
+  "we_maintain_industry_standard_physical_and_administrative_measures_to_protect_your_personal_information": "نحن نحافظ على التدابير المادية و الإدارية المتوافقة مع معايير الصناعة لحماية معلوماتك الشخصية",
+  "price": "السعر",
+  "product_name": "اسم المنتج",
+  "customer_name": "اسم صاحب الطلب",
+  "service": "الخدمة"
 }

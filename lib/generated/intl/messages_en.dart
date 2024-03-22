@@ -35,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "best_seller": MessageLookupByLibrary.simpleMessage("Best seller"),
         "black": MessageLookupByLibrary.simpleMessage("Black"),
         "blue": MessageLookupByLibrary.simpleMessage("Blue"),
+        "cairo": MessageLookupByLibrary.simpleMessage("Cairo"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
@@ -50,7 +51,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "create_acc": MessageLookupByLibrary.simpleMessage("Create account"),
         "create_new_acc":
             MessageLookupByLibrary.simpleMessage("Create new account"),
+        "customer_name": MessageLookupByLibrary.simpleMessage("Customer name"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("Dark mode"),
+        "delivery_and_installation":
+            MessageLookupByLibrary.simpleMessage("Delivery and installation"),
+        "delivery_only": MessageLookupByLibrary.simpleMessage("Delivery only"),
         "discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch":
             MessageLookupByLibrary.simpleMessage(
                 "Discover our distinctive collection of furniture and renew your home with a magical touch."),
@@ -81,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
+        "giza": MessageLookupByLibrary.simpleMessage("Giza"),
         "google": MessageLookupByLibrary.simpleMessage("Google"),
         "green": MessageLookupByLibrary.simpleMessage("Green"),
         "grey": MessageLookupByLibrary.simpleMessage("Grey"),
@@ -99,6 +105,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login_successfully":
             MessageLookupByLibrary.simpleMessage("Login Successfully"),
         "login_with": MessageLookupByLibrary.simpleMessage("Login with"),
+        "luxor": MessageLookupByLibrary.simpleMessage("Luxor"),
         "modern_chair": MessageLookupByLibrary.simpleMessage("Modern chair"),
         "more": MessageLookupByLibrary.simpleMessage("More"),
         "my_account": MessageLookupByLibrary.simpleMessage("My account"),
@@ -132,9 +139,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "please_enter_valid_phone_number": MessageLookupByLibrary.simpleMessage(
             "Please enter valid phone number"),
         "popular": MessageLookupByLibrary.simpleMessage("Popular"),
+        "price": MessageLookupByLibrary.simpleMessage("Price"),
         "price_ranges_between":
             MessageLookupByLibrary.simpleMessage("Price ranges between"),
+        "product_name": MessageLookupByLibrary.simpleMessage("Product name"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "purchasing_in_site":
+            MessageLookupByLibrary.simpleMessage("Purchasing in site"),
+        "qalubia": MessageLookupByLibrary.simpleMessage("Qalubia"),
         "red": MessageLookupByLibrary.simpleMessage("Red"),
         "reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "reset_password":
@@ -143,8 +155,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "search_history":
             MessageLookupByLibrary.simpleMessage("Search history"),
+        "security_and_privacy":
+            MessageLookupByLibrary.simpleMessage("Security and privacy"),
         "send_the_code_again":
             MessageLookupByLibrary.simpleMessage("Send the code again"),
+        "service": MessageLookupByLibrary.simpleMessage("Service"),
+        "service_type": MessageLookupByLibrary.simpleMessage("Service type"),
+        "sharkia": MessageLookupByLibrary.simpleMessage("Sharkia"),
         "shoes_cabinets":
             MessageLookupByLibrary.simpleMessage("Shoes cabinets"),
         "sofa": MessageLookupByLibrary.simpleMessage("Sofa"),
@@ -162,6 +179,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "we_have_sent_you_a_four_digit_code":
             MessageLookupByLibrary.simpleMessage(
                 "We have sent you a four-digit code"),
+        "we_maintain_industry_standard_physical_and_administrative_measures_to_protect_your_personal_information":
+            MessageLookupByLibrary.simpleMessage(
+                "We maintain industry-standard physical and administrative measures to protect your personal information"),
         "what_are_u_looking_for":
             MessageLookupByLibrary.simpleMessage("What are you looking for?"),
         "white": MessageLookupByLibrary.simpleMessage("White"),
