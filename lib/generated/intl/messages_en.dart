@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create new account"),
         "customer_name": MessageLookupByLibrary.simpleMessage("Customer name"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("Dark mode"),
+        "delivered_on": MessageLookupByLibrary.simpleMessage("Delivered on"),
         "delivery_and_installation":
             MessageLookupByLibrary.simpleMessage("Delivery and installation"),
         "delivery_only": MessageLookupByLibrary.simpleMessage("Delivery only"),
@@ -145,6 +146,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "price": MessageLookupByLibrary.simpleMessage("Price"),
         "price_ranges_between":
             MessageLookupByLibrary.simpleMessage("Price ranges between"),
+        "product": MessageLookupByLibrary.simpleMessage("Product"),
         "product_name": MessageLookupByLibrary.simpleMessage("Product name"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "purchasing_in_site":
@@ -167,6 +169,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sharkia": MessageLookupByLibrary.simpleMessage("Sharkia"),
         "shoes_cabinets":
             MessageLookupByLibrary.simpleMessage("Shoes cabinets"),
+        "size": MessageLookupByLibrary.simpleMessage("Size"),
         "sofa": MessageLookupByLibrary.simpleMessage("Sofa"),
         "sofas": MessageLookupByLibrary.simpleMessage("Sofas"),
         "sofra": MessageLookupByLibrary.simpleMessage("Sofra"),

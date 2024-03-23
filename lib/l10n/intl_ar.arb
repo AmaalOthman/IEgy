@@ -122,5 +122,7 @@
   "customer_name": "اسم صاحب الطلب",
   "service": "الخدمة",
   "or": "أو",
-  "cash_payment_upon_delivery": "الدفع كاش عند التسليم"
+  "cash_payment_upon_delivery": "الدفع كاش عند التسليم",
+  "size": "المقاس",
+  "delivered_on": "تم التوصيل في"
 }

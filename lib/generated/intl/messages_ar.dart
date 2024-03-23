@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "customer_name": MessageLookupByLibrary.simpleMessage("اسم صاحب الطلب"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("المظهر الليلي"),
+        "delivered_on": MessageLookupByLibrary.simpleMessage("تم التوصيل في"),
         "delivery_and_installation":
             MessageLookupByLibrary.simpleMessage("توصيل و تركيب"),
         "delivery_only": MessageLookupByLibrary.simpleMessage("توصيل فقط"),
@@ -167,6 +168,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "service_type": MessageLookupByLibrary.simpleMessage("نوع الخدمة"),
         "sharkia": MessageLookupByLibrary.simpleMessage("الشرقية"),
         "shoes_cabinets": MessageLookupByLibrary.simpleMessage("جزامات"),
+        "size": MessageLookupByLibrary.simpleMessage("المقاس"),
         "sofa": MessageLookupByLibrary.simpleMessage("سفرة"),
         "sofas": MessageLookupByLibrary.simpleMessage("أنتريهات"),
         "sofra": MessageLookupByLibrary.simpleMessage("سفرة"),

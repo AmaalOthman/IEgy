@@ -122,5 +122,8 @@
   "customer_name": "Customer name",
   "service": "Service",
   "or": "Or",
-  "cash_payment_upon_delivery": "Cash payment upon delivery"
+  "cash_payment_upon_delivery": "Cash payment upon delivery",
+  "product": "Product",
+  "size": "Size",
+  "delivered_on": "Delivered on"
 }

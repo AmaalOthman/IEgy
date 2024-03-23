@@ -1293,6 +1293,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Product`
+  String get product {
+    return Intl.message(
+      'Product',
+      name: 'product',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Size`
+  String get size {
+    return Intl.message(
+      'Size',
+      name: 'size',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivered on`
+  String get delivered_on {
+    return Intl.message(
+      'Delivered on',
+      name: 'delivered_on',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

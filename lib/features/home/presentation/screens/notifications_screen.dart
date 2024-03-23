@@ -103,7 +103,7 @@ class NotificationsScreen extends StatelessWidget {
                         NotificationWidget(index: 2, title: 'الضمان', details: 'تتميز منتجاتنا بأن معها ضمان من سنة إلى ثلاث سنوات')
                       ],
                     ),
-                    if(state is OrdersState) Column(
+                    if(state is NotificationsOrdersState) Column(
                       children: [
                         NotificationWidget(index: 0, title: 'يتم إعداد طلبك', details: 'سيتم توصيل طلبك قبل 20-2-2024')
                       ],

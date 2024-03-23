@@ -54,6 +54,7 @@ dependencies:
   pinput: ^4.0.0
   image_picker: ^1.0.7
   mobkit_dashed_border: ^0.0.6
+  dropdown_button2: ^2.3.9
 
 dev_dependencies:
   flutter_test:
