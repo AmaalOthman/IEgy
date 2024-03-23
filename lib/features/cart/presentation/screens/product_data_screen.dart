@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -209,7 +208,7 @@ class ProductDataScreen extends StatelessWidget {
                       height: 21.h,
                     ),
                     ProductDataItem(
-                        icon: AppAssets.locationSolid,
+                        icon: AppAssets.locationBrown,
                         title: AppLocalizations.of(context)!.location,
                         data: 'طنطا - غربية'),
                     SizedBox(
@@ -223,7 +222,7 @@ class ProductDataScreen extends StatelessWidget {
                       height: 21.h,
                     ),
                     ProductDataItem(
-                        icon: AppAssets.locationSolid,
+                        icon: AppAssets.locationBrown,
                         title: AppLocalizations.of(context)!.address,
                         data: 'شارع حسان بن ثابت - قسم ثان طنطا - غربية')
                   ],

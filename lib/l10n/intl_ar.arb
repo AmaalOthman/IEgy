@@ -120,5 +120,7 @@
   "price": "السعر",
   "product_name": "اسم المنتج",
   "customer_name": "اسم صاحب الطلب",
-  "service": "الخدمة"
+  "service": "الخدمة",
+  "or": "أو",
+  "cash_payment_upon_delivery": "الدفع كاش عند التسليم"
 }

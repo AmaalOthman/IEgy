@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/utils/app_colors.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
-import 'package:iegy/features/cart/presentation/components/data_input_field.dart';
 
 class ProductDataItem extends StatelessWidget {
   const ProductDataItem(
@@ -18,14 +17,14 @@ class ProductDataItem extends StatelessWidget {
           width: 8.w,
         ),
         Text('$title: ',
-            style: dataStyle.copyWith(
-                color: AppColors.darkBrown,
-                fontSize: 14,
-                fontWeight: FontWeight.bold)),
+            style: Theme.of(context).textTheme.displayLarge!.copyWith(
+                fontSize: 14)),
         Flexible(
           child: Text(data,
-              style: dataStyle.copyWith(color: AppColors.darkBrown, fontSize: 14), overflow: TextOverflow.visible,
-            softWrap: true),
+              style:
+                  Theme.of(context).textTheme.displayMedium!.copyWith(color: AppColors.darkBrown),
+              overflow: TextOverflow.visible,
+              softWrap: true),
         )
       ],
     );

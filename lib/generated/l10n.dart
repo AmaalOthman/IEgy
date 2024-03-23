@@ -1273,6 +1273,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Or`
+  String get or {
+    return Intl.message(
+      'Or',
+      name: 'or',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cash payment upon delivery`
+  String get cash_payment_upon_delivery {
+    return Intl.message(
+      'Cash payment upon delivery',
+      name: 'cash_payment_upon_delivery',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

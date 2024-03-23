@@ -120,5 +120,7 @@
   "price": "Price",
   "product_name": "Product name",
   "customer_name": "Customer name",
-  "service": "Service"
+  "service": "Service",
+  "or": "Or",
+  "cash_payment_upon_delivery": "Cash payment upon delivery"
 }
