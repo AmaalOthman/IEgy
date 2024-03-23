@@ -5,7 +5,7 @@ class AppColors{
   static const Color semiPrimary = Color(0xffc2baae);
   static const Color darkBrown = Color(0xFF3F281A);
   static const Color brown = Color(0xFF5A3724);
-  static const Color lightBrown = Color(0xFF7F6657);
+  static const Color lightBrown = Color(0xFF7E6556);
   static const Color darkBlue = Color(0xFF1F2B3B);
   static const Color blue = Color(0xFF1E4974);
   static const Color lightBlue = Color(0xFF1A78F2);

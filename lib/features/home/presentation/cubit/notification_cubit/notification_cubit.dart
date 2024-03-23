@@ -7,7 +7,7 @@ class NotificationCubit extends Cubit<NotificationState> {
   int currentTab = 0;
   List states = [
     NotificationInitial(),
-    OrdersState(),
+    NotificationsOrdersState(),
     OffersState(),
     AboutUsState()
   ];

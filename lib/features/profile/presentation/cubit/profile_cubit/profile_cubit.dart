@@ -24,4 +24,8 @@ class ProfileCubit extends Cubit<ProfileState> {
     BlocProvider.of<NavBarCubit>(context).currentIndex = 0;
     navigateLast(context: context, route: Routes.login);
   }
+
+  void goToOrders(BuildContext context) {
+    navigate(context: context, route: Routes.ordersScreen);
+  }
 }

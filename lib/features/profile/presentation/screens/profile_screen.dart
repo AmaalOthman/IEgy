@@ -133,9 +133,12 @@ class ProfileScreen extends StatelessWidget {
                     h: 20.h,
                     w: 16.w,
                   ),
-                  trailing: Icon(sl<CacheHelper>().getCachedLanguage() == 'ar'
-                      ? Icons.keyboard_arrow_left_rounded
-                      : Icons.keyboard_arrow_right_rounded),
+                  trailing: InkWell(
+                    onTap: () => BlocProvider.of<ProfileCubit>(context).goToOrders(context),
+                    child: Icon(sl<CacheHelper>().getCachedLanguage() == 'ar'
+                        ? Icons.keyboard_arrow_left_rounded
+                        : Icons.keyboard_arrow_right_rounded),
+                  ),
                 ),
                 Container(
                   width: double.infinity,

@@ -38,6 +38,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cairo": MessageLookupByLibrary.simpleMessage("القاهرة"),
         "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
+        "cash_payment_upon_delivery":
+            MessageLookupByLibrary.simpleMessage("الدفع كاش عند التسليم"),
         "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
         "category": MessageLookupByLibrary.simpleMessage("الفئة"),
         "chairs": MessageLookupByLibrary.simpleMessage("كراسي"),
@@ -53,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "customer_name": MessageLookupByLibrary.simpleMessage("اسم صاحب الطلب"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("المظهر الليلي"),
+        "delivered_on": MessageLookupByLibrary.simpleMessage("تم التوصيل في"),
         "delivery_and_installation":
             MessageLookupByLibrary.simpleMessage("توصيل و تركيب"),
         "delivery_only": MessageLookupByLibrary.simpleMessage("توصيل فقط"),
@@ -120,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لا توجد عمليات بحث سابقة!"),
         "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "offers": MessageLookupByLibrary.simpleMessage("العروض"),
+        "or": MessageLookupByLibrary.simpleMessage("أو"),
         "orders": MessageLookupByLibrary.simpleMessage("الطلبيات"),
         "orders_and_tracking":
             MessageLookupByLibrary.simpleMessage("الطلبات و تتبعها"),
@@ -164,6 +168,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "service_type": MessageLookupByLibrary.simpleMessage("نوع الخدمة"),
         "sharkia": MessageLookupByLibrary.simpleMessage("الشرقية"),
         "shoes_cabinets": MessageLookupByLibrary.simpleMessage("جزامات"),
+        "size": MessageLookupByLibrary.simpleMessage("المقاس"),
         "sofa": MessageLookupByLibrary.simpleMessage("سفرة"),
         "sofas": MessageLookupByLibrary.simpleMessage("أنتريهات"),
         "sofra": MessageLookupByLibrary.simpleMessage("سفرة"),

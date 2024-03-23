@@ -25,6 +25,7 @@ class AppAssets{
   static const String sofaCategory = '${imagesPath}sofa_category.png';
   static const String camera = '${imagesPath}camera.png';
   static const String gallery = '${imagesPath}gallery.png';
+  static const String cash = '${imagesPath}cash.png';
 
   //Icons
   static const String darkMood = '${iconsPath}dark_mood.png';
@@ -76,4 +77,5 @@ class AppAssets{
   static const String customer = '${iconsPath}customer.png';
   static const String phone = '${iconsPath}phone.png';
   static const String van = '${iconsPath}van.png';
+  static const String locationBrown = '${iconsPath}location_brown.png';
 }
