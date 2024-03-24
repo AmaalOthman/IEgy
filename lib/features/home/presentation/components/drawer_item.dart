@@ -3,16 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
 
 class DrawerItem extends StatelessWidget {
-  DrawerItem({super.key, required this.iconPath, required this.text, required this.onTap});
+  DrawerItem({super.key, required this.iconPath, required this.text, required this.navigateTo});
   String iconPath, text;
-  VoidCallback onTap;
+  VoidCallback navigateTo;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(bottom: 30.h),
       child: GestureDetector(
-        onTap: onTap,
+        onTap: navigateTo,
         child: Row(
           children: [
             CustomImage(imagePath: iconPath, w: 24.w, h: 29.44.h,),

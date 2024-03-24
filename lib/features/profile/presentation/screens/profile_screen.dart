@@ -158,9 +158,12 @@ class ProfileScreen extends StatelessWidget {
                     h: 20.h,
                     w: 17.w,
                   ),
-                  trailing: Icon(sl<CacheHelper>().getCachedLanguage() == 'ar'
-                      ? Icons.keyboard_arrow_left_rounded
-                      : Icons.keyboard_arrow_right_rounded),
+                  trailing: InkWell(
+                    onTap: () => BlocProvider.of<ProfileCubit>(context).editProfile(context),
+                    child: Icon(sl<CacheHelper>().getCachedLanguage() == 'ar'
+                        ? Icons.keyboard_arrow_left_rounded
+                        : Icons.keyboard_arrow_right_rounded),
+                  ),
                 ),
                 Container(
                   width: double.infinity,
@@ -180,28 +183,31 @@ class ProfileScreen extends StatelessWidget {
                     color: AppColors.darkBlue,
                     size: 20.w,
                   ),
-                  trailing: Stack(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16),
-                          color: AppColors.darkBlue
+                  trailing: InkWell(
+                    onTap: () => BlocProvider.of<ProfileCubit>(context).switchNotifications,
+                    child: Stack(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: AppColors.darkBlue
+                          ),
+                          height: 24.h,
+                          width: 40.w,
                         ),
-                        height: 24.h,
-                        width: 40.w,
-                      ),
-                      Positioned(
-                          right: 2,
-                          top: 2.h,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5000),
-                              color: AppColors.white
-                            ),
-                            width: 20.w,
-                            height: 20.h,
-                          ))
-                    ],
+                        Positioned(
+                            right: 2,
+                            top: 2.h,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5000),
+                                color: AppColors.white
+                              ),
+                              width: 20.w,
+                              height: 20.h,
+                            ))
+                      ],
+                    ),
                   ),
                 ),
                 Container(
@@ -222,9 +228,12 @@ class ProfileScreen extends StatelessWidget {
                     h: 22.h,
                     w: 19.w,
                   ),
-                  trailing: Icon(sl<CacheHelper>().getCachedLanguage() == 'ar'
-                      ? Icons.keyboard_arrow_left_rounded
-                      : Icons.keyboard_arrow_right_rounded),
+                  trailing: InkWell(
+                    onTap: () => BlocProvider.of<ProfileCubit>(context).goToResetPassword(context),
+                    child: Icon(sl<CacheHelper>().getCachedLanguage() == 'ar'
+                        ? Icons.keyboard_arrow_left_rounded
+                        : Icons.keyboard_arrow_right_rounded),
+                  ),
                 ),
                 Container(
                   width: double.infinity,

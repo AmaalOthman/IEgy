@@ -38,10 +38,40 @@ class Order extends StatelessWidget {
           ),
           SizedBox(width: 18.w,),
           Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
-                  Text(AppLocalizations.of(context)!.product_name)
+                  Text('${AppLocalizations.of(context)!.product}: ', style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.black, fontSize: 12.w)),
+                  Text('طاولة طعام خشب زان', style: Theme.of(context).textTheme.displayMedium!.copyWith(color: AppColors.black, fontSize: 12.w))
+                ],
+              ),
+              Row(
+                children: [
+                  Text('${AppLocalizations.of(context)!.size}: ', style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.black, fontSize: 12.w)),
+                  Text('1م * 1.5م', style: Theme.of(context).textTheme.displayMedium!.copyWith(color: AppColors.black, fontSize: 12.w))
+                ],
+              ),
+              Row(
+                children: [
+                  Text('${AppLocalizations.of(context)!.color}: ', style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.black, fontSize: 12.w)),
+                  Text('بني غامق', style: Theme.of(context).textTheme.displayMedium!.copyWith(color: AppColors.black, fontSize: 12.w)),
+                  SizedBox(width: 5.w,),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: AppColors.darkBrown,
+                      borderRadius: BorderRadius.circular(500)
+                    ),
+                    height: 5.h,
+                    width: 5.w,
+                  )
+                ],
+              ),
+              Row(
+                children: [
+                  Text('${AppLocalizations.of(context)!.delivered_on}: ', style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.black, fontSize: 12.w)),
+                  Text('24/9/2023', style: Theme.of(context).textTheme.displayMedium!.copyWith(color: AppColors.black, fontSize: 12.w))
                 ],
               )
             ],
