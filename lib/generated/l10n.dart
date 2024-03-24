@@ -1323,6 +1323,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Gesr Asswais branch, Cairo`
+  String get gesr_asswais_branch {
+    return Intl.message(
+      'Gesr Asswais branch, Cairo',
+      name: 'gesr_asswais_branch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Othman Issa St, off Trolley St`
+  String get othman_eissa_st_off_trolley_st {
+    return Intl.message(
+      'Othman Issa St, off Trolley St',
+      name: 'othman_eissa_st_off_trolley_st',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -89,6 +89,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
+        "gesr_asswais_branch":
+            MessageLookupByLibrary.simpleMessage("Gesr Asswais branch, Cairo"),
         "giza": MessageLookupByLibrary.simpleMessage("Giza"),
         "google": MessageLookupByLibrary.simpleMessage("Google"),
         "green": MessageLookupByLibrary.simpleMessage("Green"),
@@ -126,6 +128,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "orders": MessageLookupByLibrary.simpleMessage("Orders"),
         "orders_and_tracking":
             MessageLookupByLibrary.simpleMessage("Orders and tracking"),
+        "othman_eissa_st_off_trolley_st": MessageLookupByLibrary.simpleMessage(
+            "Othman Issa St, off Trolley St"),
         "our_branches": MessageLookupByLibrary.simpleMessage("Our branches"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_is_required":

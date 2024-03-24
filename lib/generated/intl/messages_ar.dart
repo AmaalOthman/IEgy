@@ -89,6 +89,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "full_name": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
+        "gesr_asswais_branch":
+            MessageLookupByLibrary.simpleMessage("فرع جسر السويس، القاهرة"),
         "giza": MessageLookupByLibrary.simpleMessage("الجيزة"),
         "google": MessageLookupByLibrary.simpleMessage("جوجل"),
         "green": MessageLookupByLibrary.simpleMessage("أخضر"),
@@ -127,6 +129,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "orders": MessageLookupByLibrary.simpleMessage("الطلبيات"),
         "orders_and_tracking":
             MessageLookupByLibrary.simpleMessage("الطلبات و تتبعها"),
+        "othman_eissa_st_off_trolley_st": MessageLookupByLibrary.simpleMessage(
+            "شارع عثمان عيسى، المتفرع من شارع الترولي"),
         "our_branches": MessageLookupByLibrary.simpleMessage("فروعنا"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "password_is_required":
