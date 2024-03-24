@@ -147,6 +147,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "price": MessageLookupByLibrary.simpleMessage("السعر"),
         "price_ranges_between":
             MessageLookupByLibrary.simpleMessage("السعر يتراوح ما بين"),
+        "product": MessageLookupByLibrary.simpleMessage("المنتج"),
         "product_name": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
         "purchasing_in_site":

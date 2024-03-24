@@ -1,3 +1,4 @@
 abstract class ProfileState {}
 
-class ProfileInitial extends ProfileState {}
+final class ProfileInitial extends ProfileState {}
+final class NotificationSwitchedState extends ProfileState {}

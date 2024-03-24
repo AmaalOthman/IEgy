@@ -107,4 +107,8 @@ class HomeCubit extends Cubit<HomeState> {
     BlocProvider.of<MoreCubit>(context).section = section;
     navigate(context: context, route: Routes.moreScreen);
   }
+
+  void navigateTo(BuildContext context, String route) {
+    navigate(context: context, route: route);
+  }
 }

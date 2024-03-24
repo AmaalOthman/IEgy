@@ -28,4 +28,12 @@ class ProfileCubit extends Cubit<ProfileState> {
   void goToOrders(BuildContext context) {
     navigate(context: context, route: Routes.ordersScreen);
   }
+
+  void switchNotifications() {
+    emit(NotificationSwitchedState());
+  }
+
+  void goToResetPassword(BuildContext context) {
+    navigate(context: context, route: Routes.resetPasswordNavigator);
+  }
 }

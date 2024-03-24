@@ -78,4 +78,5 @@ class AppAssets{
   static const String phone = '${iconsPath}phone.png';
   static const String van = '${iconsPath}van.png';
   static const String locationBrown = '${iconsPath}location_brown.png';
+  static const String map = '${iconsPath}map.png';
 }
