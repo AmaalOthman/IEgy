@@ -70,9 +70,9 @@ class CartScreen extends StatelessWidget {
                       SizedBox(height: 30.h,),
                       Row(
                         children: [
-                          Text(AppLocalizations.of(context)!.total, style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.darkBlue),),
+                          Text(AppLocalizations.of(context)!.total, style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.darkBlue)),
                           const Spacer(),
-                          Text('4500 ${AppLocalizations.of(context)!.egp}', style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.brown),)
+                          Text('4500 ${AppLocalizations.of(context)!.egp}', style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.brown))
                         ],
                       )
                     ],

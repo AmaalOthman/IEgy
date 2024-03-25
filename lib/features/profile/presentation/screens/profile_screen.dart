@@ -33,8 +33,8 @@ class ProfileScreen extends StatelessWidget {
                     style: Theme.of(context).textTheme.displayLarge,
                   ),
                   leading: IconButton(
-                    onPressed: () =>
-                        BlocProvider.of<ProfileCubit>(context).onBackPressed(context),
+                    onPressed: () => BlocProvider.of<ProfileCubit>(context)
+                        .onBackPressed(context),
                     icon: const BackArrow(),
                   ),
                 ),
@@ -56,7 +56,7 @@ class ProfileScreen extends StatelessWidget {
                           blurRadius: 2,
                           offset: const Offset(0, 3),
                         ),
-                      ], borderRadius: BorderRadius.circular(500)),
+                      ], shape: BoxShape.circle),
                       child: CachedNetworkImage(
                         fit: BoxFit.fill,
                         height: 102.h,
@@ -107,7 +107,8 @@ class ProfileScreen extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25),
                       ),
-                      onPressed: () => BlocProvider.of<ProfileCubit>(context).editProfile(context),
+                      onPressed: () => BlocProvider.of<ProfileCubit>(context)
+                          .editProfile(context),
                       color: AppColors.lightBrown,
                       child: CustomImage(
                         imagePath: AppAssets.pin,
@@ -134,7 +135,8 @@ class ProfileScreen extends StatelessWidget {
                     w: 16.w,
                   ),
                   trailing: InkWell(
-                    onTap: () => BlocProvider.of<ProfileCubit>(context).goToOrders(context),
+                    onTap: () => BlocProvider.of<ProfileCubit>(context)
+                        .goToOrders(context),
                     child: Icon(sl<CacheHelper>().getCachedLanguage() == 'ar'
                         ? Icons.keyboard_arrow_left_rounded
                         : Icons.keyboard_arrow_right_rounded),
@@ -159,7 +161,8 @@ class ProfileScreen extends StatelessWidget {
                     w: 17.w,
                   ),
                   trailing: InkWell(
-                    onTap: () => BlocProvider.of<ProfileCubit>(context).editProfile(context),
+                    onTap: () => BlocProvider.of<ProfileCubit>(context)
+                        .editProfile(context),
                     child: Icon(sl<CacheHelper>().getCachedLanguage() == 'ar'
                         ? Icons.keyboard_arrow_left_rounded
                         : Icons.keyboard_arrow_right_rounded),
@@ -184,14 +187,14 @@ class ProfileScreen extends StatelessWidget {
                     size: 20.w,
                   ),
                   trailing: InkWell(
-                    onTap: () => BlocProvider.of<ProfileCubit>(context).switchNotifications,
+                    onTap: () => BlocProvider.of<ProfileCubit>(context)
+                        .switchNotifications,
                     child: Stack(
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16),
-                            color: AppColors.darkBlue
-                          ),
+                              borderRadius: BorderRadius.circular(16),
+                              color: AppColors.darkBlue),
                           height: 24.h,
                           width: 40.w,
                         ),
@@ -200,9 +203,8 @@ class ProfileScreen extends StatelessWidget {
                             top: 2.h,
                             child: Container(
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5000),
-                                color: AppColors.white
-                              ),
+                                  borderRadius: BorderRadius.circular(5000),
+                                  color: AppColors.white),
                               width: 20.w,
                               height: 20.h,
                             ))
@@ -229,7 +231,8 @@ class ProfileScreen extends StatelessWidget {
                     w: 19.w,
                   ),
                   trailing: InkWell(
-                    onTap: () => BlocProvider.of<ProfileCubit>(context).goToResetPassword(context),
+                    onTap: () => BlocProvider.of<ProfileCubit>(context)
+                        .goToResetPassword(context),
                     child: Icon(sl<CacheHelper>().getCachedLanguage() == 'ar'
                         ? Icons.keyboard_arrow_left_rounded
                         : Icons.keyboard_arrow_right_rounded),
@@ -244,16 +247,24 @@ class ProfileScreen extends StatelessWidget {
                 const Spacer(),
                 Container(
                   decoration: BoxDecoration(
-                    border: Border.all(),
-                    borderRadius: BorderRadius.circular(25)
-                  ),
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(25)),
                   child: CustomButton(
-                    icon: CustomImage(imagePath: AppAssets.logOut, h: 16.4.h, w: 20.w),
+                    icon: CustomImage(
+                        imagePath: AppAssets.logOut, h: 16.4.h, w: 20.w),
                     background: Colors.transparent,
                     elevation: 0,
-                    textStyle: Theme.of(context).textTheme.displayMedium!.copyWith(fontSize: 16.w),
+                    textStyle: Theme.of(context)
+                        .textTheme
+                        .displayMedium!
+                        .copyWith(fontSize: 16.w),
                     withIcon: true,
-                    onPressed: () => BlocProvider.of<ProfileCubit>(context).goToLogin(context), text: AppLocalizations.of(context)!.log_out, h: 48.h, w: 195.w,),
+                    onPressed: () => BlocProvider.of<ProfileCubit>(context)
+                        .goToLogin(context),
+                    text: AppLocalizations.of(context)!.log_out,
+                    h: 48.h,
+                    w: 195.w,
+                  ),
                 )
               ],
             ),

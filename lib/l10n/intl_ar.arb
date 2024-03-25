@@ -127,5 +127,17 @@
   "size": "المقاس",
   "delivered_on": "تم التوصيل في",
   "gesr_asswais_branch": "فرع جسر السويس، القاهرة",
-  "othman_eissa_st_off_trolley_st": "شارع عثمان عيسى، المتفرع من شارع الترولي"
+  "othman_eissa_st_off_trolley_st": "شارع عثمان عيسى، المتفرع من شارع الترولي",
+  "order_tracking": "تتبع الطلب",
+  "awaiting_payment": "في انتظار الدفع",
+  "make_the_payment_by": "أكمل الدفع قبل",
+  "shipping_info": "معلومات الشحن",
+  "order_reserved": "تم وضع الطلب",
+  "pm": "م",
+  "am": "ص",
+  "shipping_address": "عنوان الشحن",
+  "edit": "تعديل",
+  "house": "المنزل",
+  "bedroom": "غرفة نوم",
+  "total_amount": "إجمالي المبلغ"
 }

@@ -58,7 +58,7 @@ class EditProfileScreen extends StatelessWidget {
                                 blurRadius: 2,
                                 offset: const Offset(0, 3),
                               ),
-                            ], borderRadius: BorderRadius.circular(500)),
+                            ], shape: BoxShape.circle),
                             child: CachedNetworkImage(
                               fit: BoxFit.fill,
                               height: 102.h,
@@ -96,8 +96,7 @@ class EditProfileScreen extends StatelessWidget {
                               child: Container(
                                   height: 33.h,
                                   width: 33.w,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5000),
+                                  decoration: BoxDecoration(shape: BoxShape.circle,
                                       border: Border.all(color: AppColors.brown),
                                       color: AppColors.white),
                                   padding: EdgeInsets.all(6.6.w),
@@ -154,7 +153,7 @@ class EditProfileScreen extends StatelessWidget {
                                   .textTheme
                                   .displayLarge!
                                   .copyWith(
-                                      fontSize: 16.w, color: AppColors.darkBlue),
+                                      fontSize: 16.h, color: AppColors.darkBlue),
                             ),
                             SizedBox(width: 10.w,),
                             CustomTextFormField(
@@ -163,7 +162,7 @@ class EditProfileScreen extends StatelessWidget {
                               style: Theme.of(context)
                                   .textTheme
                                   .displayMedium!
-                                  .copyWith(fontSize: 16.w),
+                                  .copyWith(fontSize: 16.h),
                             )
                           ],
                         ),
@@ -204,7 +203,7 @@ class EditProfileScreen extends StatelessWidget {
                                   .textTheme
                                   .displayLarge!
                                   .copyWith(
-                                  fontSize: 16.w, color: AppColors.darkBlue),
+                                  fontSize: 16.h, color: AppColors.darkBlue),
                             ),
                             SizedBox(width: 17.w,),
                             CustomTextFormField(
@@ -213,7 +212,7 @@ class EditProfileScreen extends StatelessWidget {
                               style: Theme.of(context)
                                   .textTheme
                                   .displayMedium!
-                                  .copyWith(fontSize: 16.w),
+                                  .copyWith(fontSize: 16.h),
                               keyboardType: TextInputType.emailAddress,
                             )
                           ],
@@ -256,7 +255,7 @@ class EditProfileScreen extends StatelessWidget {
                                   .textTheme
                                   .displayLarge!
                                   .copyWith(
-                                  fontSize: 16.w, color: AppColors.darkBlue),
+                                  fontSize: 16.h, color: AppColors.darkBlue),
                             ),
                             SizedBox(width: 5.w,),
                             CustomTextFormField(
@@ -265,7 +264,7 @@ class EditProfileScreen extends StatelessWidget {
                               style: Theme.of(context)
                                   .textTheme
                                   .displayMedium!
-                                  .copyWith(fontSize: 16.w),
+                                  .copyWith(fontSize: 16.h),
                               keyboardType: TextInputType.phone,
                             )
                           ],
@@ -308,7 +307,7 @@ class EditProfileScreen extends StatelessWidget {
                                   .textTheme
                                   .displayLarge!
                                   .copyWith(
-                                  fontSize: 16.w, color: AppColors.darkBlue),
+                                  fontSize: 16.h, color: AppColors.darkBlue),
                             ),
                             SizedBox(width: 5.w,),
                             CustomTextFormField(
@@ -317,7 +316,7 @@ class EditProfileScreen extends StatelessWidget {
                               style: Theme.of(context)
                                   .textTheme
                                   .displayMedium!
-                                  .copyWith(fontSize: 16.w),
+                                  .copyWith(fontSize: 16.h),
                             )
                           ],
                         ),
@@ -337,7 +336,7 @@ class EditProfileScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomButton(onPressed: () {}, text: AppLocalizations.of(context)!.save, h: 48.h, w: 191, elevation: 5,),
-                      CustomButton(onPressed: () {}, text: AppLocalizations.of(context)!.cancel, h: 48.h, w: 191, background: AppColors.white, elevation: 5, textStyle: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.black, fontSize: 16.w),)
+                      CustomButton(onPressed: () {}, text: AppLocalizations.of(context)!.cancel, h: 48.h, w: 191, background: AppColors.white, elevation: 5, textStyle: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.black, fontSize: 16.h),)
                     ],
                   )
                 ],

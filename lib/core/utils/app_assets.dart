@@ -26,6 +26,11 @@ class AppAssets{
   static const String camera = '${imagesPath}camera.png';
   static const String gallery = '${imagesPath}gallery.png';
   static const String cash = '${imagesPath}cash.png';
+  static const String paymentOrderStatus = '${imagesPath}payment_order_status.png';
+  static const String processingOrderStatus = '${imagesPath}processing_order_status.png';
+  static const String shippedOrderStatus = '${imagesPath}shipped_order_status.png';
+  static const String receivedOrderStatus = '${imagesPath}received_order_status.png';
+  static const String completeOrderStatus = '${imagesPath}complete_order_status.png';
 
   //Icons
   static const String darkMood = '${iconsPath}dark_mood.png';

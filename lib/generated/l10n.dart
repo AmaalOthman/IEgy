@@ -1343,6 +1343,126 @@ class S {
       args: [],
     );
   }
+
+  /// `Order tracking`
+  String get order_tracking {
+    return Intl.message(
+      'Order tracking',
+      name: 'order_tracking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Awaiting payment`
+  String get awaiting_payment {
+    return Intl.message(
+      'Awaiting payment',
+      name: 'awaiting_payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Make the payment by`
+  String get make_the_payment_by {
+    return Intl.message(
+      'Make the payment by',
+      name: 'make_the_payment_by',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipping info`
+  String get shipping_info {
+    return Intl.message(
+      'Shipping info',
+      name: 'shipping_info',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order reserved`
+  String get order_reserved {
+    return Intl.message(
+      'Order reserved',
+      name: 'order_reserved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `pm`
+  String get pm {
+    return Intl.message(
+      'pm',
+      name: 'pm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `am`
+  String get am {
+    return Intl.message(
+      'am',
+      name: 'am',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipping address`
+  String get shipping_address {
+    return Intl.message(
+      'Shipping address',
+      name: 'shipping_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `House`
+  String get house {
+    return Intl.message(
+      'House',
+      name: 'house',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bedroom`
+  String get bedroom {
+    return Intl.message(
+      'Bedroom',
+      name: 'bedroom',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total amount`
+  String get total_amount {
+    return Intl.message(
+      'Total amount',
+      name: 'total_amount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

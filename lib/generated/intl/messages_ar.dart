@@ -29,9 +29,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "all": MessageLookupByLibrary.simpleMessage("الكل"),
         "already_you_have_an_account":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
+        "am": MessageLookupByLibrary.simpleMessage("ص"),
         "apply_filtration":
             MessageLookupByLibrary.simpleMessage("تطبيق الفلتر"),
+        "awaiting_payment":
+            MessageLookupByLibrary.simpleMessage("في انتظار الدفع"),
         "bed_rooms": MessageLookupByLibrary.simpleMessage("غرف نوم"),
+        "bedroom": MessageLookupByLibrary.simpleMessage("غرفة نوم"),
         "best_seller": MessageLookupByLibrary.simpleMessage("الأكثر مبيعاً"),
         "black": MessageLookupByLibrary.simpleMessage("أسود"),
         "blue": MessageLookupByLibrary.simpleMessage("أزرق"),
@@ -65,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "doors": MessageLookupByLibrary.simpleMessage("أبواب"),
         "dressing": MessageLookupByLibrary.simpleMessage("دريسنج"),
         "dressing_room": MessageLookupByLibrary.simpleMessage("غرفة ملابس"),
+        "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
         "edit_profile": MessageLookupByLibrary.simpleMessage("تعديل الحساب"),
         "egp": MessageLookupByLibrary.simpleMessage("جنيه"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
@@ -99,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "هنا نجعلك تقع في حب المكان الذي تعيش فيه"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+        "house": MessageLookupByLibrary.simpleMessage("المنزل"),
         "kitchen_collections":
             MessageLookupByLibrary.simpleMessage("تشكيلات مطابخ"),
         "kitchens": MessageLookupByLibrary.simpleMessage("مطابخ"),
@@ -112,6 +118,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "login_with": MessageLookupByLibrary.simpleMessage("التسجيل بـ"),
         "luxor": MessageLookupByLibrary.simpleMessage("الأقصر"),
+        "make_the_payment_by":
+            MessageLookupByLibrary.simpleMessage("أكمل الدفع قبل"),
         "modern_chair": MessageLookupByLibrary.simpleMessage("كرسي مودرن"),
         "more": MessageLookupByLibrary.simpleMessage("المزيد"),
         "my_account": MessageLookupByLibrary.simpleMessage("حسابي"),
@@ -126,6 +134,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "offers": MessageLookupByLibrary.simpleMessage("العروض"),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "order_reserved": MessageLookupByLibrary.simpleMessage("تم وضع الطلب"),
+        "order_tracking": MessageLookupByLibrary.simpleMessage("تتبع الطلب"),
         "orders": MessageLookupByLibrary.simpleMessage("الطلبيات"),
         "orders_and_tracking":
             MessageLookupByLibrary.simpleMessage("الطلبات و تتبعها"),
@@ -147,6 +157,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "من فضلك أدخل بريد إلكتروني صحيح"),
         "please_enter_valid_phone_number":
             MessageLookupByLibrary.simpleMessage("من فضلك أدخل رقم هاتف صحيح"),
+        "pm": MessageLookupByLibrary.simpleMessage("م"),
         "popular": MessageLookupByLibrary.simpleMessage("شائع"),
         "price": MessageLookupByLibrary.simpleMessage("السعر"),
         "price_ranges_between":
@@ -172,6 +183,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "service": MessageLookupByLibrary.simpleMessage("الخدمة"),
         "service_type": MessageLookupByLibrary.simpleMessage("نوع الخدمة"),
         "sharkia": MessageLookupByLibrary.simpleMessage("الشرقية"),
+        "shipping_address": MessageLookupByLibrary.simpleMessage("عنوان الشحن"),
+        "shipping_info": MessageLookupByLibrary.simpleMessage("معلومات الشحن"),
         "shoes_cabinets": MessageLookupByLibrary.simpleMessage("جزامات"),
         "size": MessageLookupByLibrary.simpleMessage("المقاس"),
         "sofa": MessageLookupByLibrary.simpleMessage("سفرة"),
@@ -182,6 +195,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "tables": MessageLookupByLibrary.simpleMessage("ترابيزات"),
         "to": MessageLookupByLibrary.simpleMessage("إلى"),
         "total": MessageLookupByLibrary.simpleMessage("الكل:"),
+        "total_amount": MessageLookupByLibrary.simpleMessage("إجمالي المبلغ"),
         "tv_units": MessageLookupByLibrary.simpleMessage("وحدات تلفزيون"),
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage("نصنع الأثاث بعيونك أنت!!"),
