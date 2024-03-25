@@ -5,6 +5,7 @@ import 'package:iegy/core/bloc/cubit/global_cubit.dart';
 import 'package:iegy/core/bloc/cubit/global_state.dart';
 import 'package:iegy/core/routes/app_routes.dart';
 import 'package:iegy/core/utils/app_assets.dart';
+import 'package:iegy/core/utils/app_colors.dart';
 import 'package:iegy/core/utils/common_methods.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:iegy/features/home/presentation/components/drawer_item.dart';
@@ -18,8 +19,9 @@ class HomeSideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.white.withOpacity(.8),
       appBar: PreferredSize(
-        preferredSize: Size(double.infinity, 64.h),
+        preferredSize: Size(double.infinity, 72.h),
         child: Column(
           children: [
             const Spacer(),
@@ -58,7 +60,8 @@ class HomeSideMenu extends StatelessWidget {
                 DrawerItem(
                     iconPath: AppAssets.order,
                     text: AppLocalizations.of(context)!.orders_and_tracking,
-                    navigateTo: () {}),
+                    navigateTo: () => BlocProvider.of<HomeCubit>(context)
+                .navigateTo(context, Routes.orderTrackingScreen)),
                 DrawerItem(
                     iconPath: AppAssets.heart,
                     text: AppLocalizations.of(context)!.favourites,

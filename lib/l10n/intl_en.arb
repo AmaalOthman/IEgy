@@ -125,5 +125,19 @@
   "cash_payment_upon_delivery": "Cash payment upon delivery",
   "product": "Product",
   "size": "Size",
-  "delivered_on": "Delivered on"
+  "delivered_on": "Delivered on",
+  "gesr_asswais_branch": "Gesr Asswais branch, Cairo",
+  "othman_eissa_st_off_trolley_st": "Othman Issa St, off Trolley St",
+  "order_tracking": "Order tracking",
+  "awaiting_payment": "Awaiting payment",
+  "make_the_payment_by": "Make the payment by",
+  "shipping_info": "Shipping info",
+  "order_reserved": "Order reserved",
+  "pm": "pm",
+  "am": "am",
+  "shipping_address": "Shipping address",
+  "edit": "Edit",
+  "house": "House",
+  "bedroom": "Bedroom",
+  "total_amount": "Total amount"
 }

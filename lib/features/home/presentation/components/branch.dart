@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Branch extends StatelessWidget {
   const Branch({super.key});
@@ -28,10 +30,15 @@ class Branch extends StatelessWidget {
                     child: const CustomImage(imagePath: AppAssets.map,)),
                 SizedBox(width: 16.w,),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('AppLoca')
+                    Text(AppLocalizations.of(context)!.gesr_asswais_branch, style: Theme.of(context).textTheme.displayMedium!.copyWith(color: AppColors.white, fontSize: 18.w, fontWeight: FontWeight.w700),),
+                    Text(AppLocalizations.of(context)!.othman_eissa_st_off_trolley_st, style: Theme.of(context).textTheme.displayMedium!.copyWith(color: AppColors.white),)
                   ],
-                )
+                ),
+                const Spacer(),
+                Icon(Icons.arrow_forward_ios, color: AppColors.white, size: 18.w,)
               ],
             ),
           )),

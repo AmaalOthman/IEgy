@@ -38,14 +38,7 @@ class BranchesScreen extends StatelessWidget {
           ),
           body: const Column(
             children: [
-              Branch(),
-              Branch(),
-              Branch(),
-              Branch(),
-              Branch(),
-              Branch(),
-              Branch(),
-              Branch(),
+              Branch()
             ],
           ),
         );

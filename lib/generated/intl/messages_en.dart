@@ -29,9 +29,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "all": MessageLookupByLibrary.simpleMessage("All"),
         "already_you_have_an_account": MessageLookupByLibrary.simpleMessage(
             "Already you have an account?"),
+        "am": MessageLookupByLibrary.simpleMessage("am"),
         "apply_filtration":
             MessageLookupByLibrary.simpleMessage("Apply Filtration"),
+        "awaiting_payment":
+            MessageLookupByLibrary.simpleMessage("Awaiting payment"),
         "bed_rooms": MessageLookupByLibrary.simpleMessage("Bed rooms"),
+        "bedroom": MessageLookupByLibrary.simpleMessage("Bedroom"),
         "best_seller": MessageLookupByLibrary.simpleMessage("Best seller"),
         "black": MessageLookupByLibrary.simpleMessage("Black"),
         "blue": MessageLookupByLibrary.simpleMessage("Blue"),
@@ -65,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "doors": MessageLookupByLibrary.simpleMessage("Doors"),
         "dressing": MessageLookupByLibrary.simpleMessage("Dressing"),
         "dressing_room": MessageLookupByLibrary.simpleMessage("Dressing room"),
+        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "edit_profile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "egp": MessageLookupByLibrary.simpleMessage("EGP"),
         "email": MessageLookupByLibrary.simpleMessage("E-mail"),
@@ -89,6 +94,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
+        "gesr_asswais_branch":
+            MessageLookupByLibrary.simpleMessage("Gesr Asswais branch, Cairo"),
         "giza": MessageLookupByLibrary.simpleMessage("Giza"),
         "google": MessageLookupByLibrary.simpleMessage("Google"),
         "green": MessageLookupByLibrary.simpleMessage("Green"),
@@ -97,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Here we make you fall in love with the place you live in"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "house": MessageLookupByLibrary.simpleMessage("House"),
         "kitchen_collections":
             MessageLookupByLibrary.simpleMessage("Kitchen collections"),
         "kitchens": MessageLookupByLibrary.simpleMessage("Kitchens"),
@@ -109,6 +117,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Login Successfully"),
         "login_with": MessageLookupByLibrary.simpleMessage("Login with"),
         "luxor": MessageLookupByLibrary.simpleMessage("Luxor"),
+        "make_the_payment_by":
+            MessageLookupByLibrary.simpleMessage("Make the payment by"),
         "modern_chair": MessageLookupByLibrary.simpleMessage("Modern chair"),
         "more": MessageLookupByLibrary.simpleMessage("More"),
         "my_account": MessageLookupByLibrary.simpleMessage("My account"),
@@ -123,9 +133,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "offers": MessageLookupByLibrary.simpleMessage("Offers"),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
+        "order_reserved":
+            MessageLookupByLibrary.simpleMessage("Order reserved"),
+        "order_tracking":
+            MessageLookupByLibrary.simpleMessage("Order tracking"),
         "orders": MessageLookupByLibrary.simpleMessage("Orders"),
         "orders_and_tracking":
             MessageLookupByLibrary.simpleMessage("Orders and tracking"),
+        "othman_eissa_st_off_trolley_st": MessageLookupByLibrary.simpleMessage(
+            "Othman Issa St, off Trolley St"),
         "our_branches": MessageLookupByLibrary.simpleMessage("Our branches"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_is_required":
@@ -142,6 +158,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter valid email"),
         "please_enter_valid_phone_number": MessageLookupByLibrary.simpleMessage(
             "Please enter valid phone number"),
+        "pm": MessageLookupByLibrary.simpleMessage("pm"),
         "popular": MessageLookupByLibrary.simpleMessage("Popular"),
         "price": MessageLookupByLibrary.simpleMessage("Price"),
         "price_ranges_between":
@@ -167,6 +184,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "service": MessageLookupByLibrary.simpleMessage("Service"),
         "service_type": MessageLookupByLibrary.simpleMessage("Service type"),
         "sharkia": MessageLookupByLibrary.simpleMessage("Sharkia"),
+        "shipping_address":
+            MessageLookupByLibrary.simpleMessage("Shipping address"),
+        "shipping_info": MessageLookupByLibrary.simpleMessage("Shipping info"),
         "shoes_cabinets":
             MessageLookupByLibrary.simpleMessage("Shoes cabinets"),
         "size": MessageLookupByLibrary.simpleMessage("Size"),
@@ -178,6 +198,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "tables": MessageLookupByLibrary.simpleMessage("Tables"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
         "total": MessageLookupByLibrary.simpleMessage("Total:"),
+        "total_amount": MessageLookupByLibrary.simpleMessage("Total amount"),
         "tv_units": MessageLookupByLibrary.simpleMessage("TV units"),
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage(

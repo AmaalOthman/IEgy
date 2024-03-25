@@ -86,7 +86,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         ),
       ),
       floatingActionButton: Padding(
-        padding: EdgeInsets.only(bottom: 50.h),
+        padding: EdgeInsets.only(bottom: 38.h),
         child: GestureDetector(
           onTap: () => BlocProvider.of<WelcomeCubit>(context)
               .onFloatingActionButtonPressed(context),

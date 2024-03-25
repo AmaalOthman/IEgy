@@ -11,7 +11,7 @@ ThemeData getAppTheme() {
     appBarTheme: const AppBarTheme(
         backgroundColor: Colors.transparent, centerTitle: true),
     textTheme: TextTheme(
-      displayLarge: boldStyle(color: AppColors.darkBrown),
+      displayLarge: boldStyle(color: AppColors.darkBrown, fontSize: 24.w),
       displayMedium: mediumStyle(),
       displaySmall: regularStyle(),
       bodySmall: bodyRegularStyle()
@@ -56,12 +56,12 @@ ThemeData getAppTheme() {
         selectedItemColor: AppColors.darkBrown,
         showSelectedLabels: true,
         showUnselectedLabels: true,
-        unselectedIconTheme: const IconThemeData(color: AppColors.grey),
-        unselectedItemColor: AppColors.grey,
+        unselectedIconTheme: const IconThemeData(color: Color(0xffd7cfc8)),
+        unselectedItemColor: const Color(0xffd7cfc8),
         unselectedLabelStyle: GoogleFonts.ibmPlexSansArabic(
             fontWeight: FontWeight.normal,
             fontSize: 14.w,
-            color: AppColors.grey),
+            color: const Color(0xffd7cfc8)),
         type: BottomNavigationBarType.shifting),
   );
 }

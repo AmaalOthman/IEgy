@@ -7,6 +7,7 @@ import 'package:iegy/core/database/cache/cache_helper.dart';
 import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
+import 'package:iegy/core/utils/common_methods.dart';
 import 'package:iegy/core/widgets/custom_button.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:iegy/core/widgets/custom_text_form_field.dart';
@@ -40,6 +41,9 @@ class HomeScreen extends StatelessWidget {
           child: Scaffold(
               drawer: Drawer(
                 width: 270.w,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: isArabic()? const Radius.circular(25): const Radius.circular(0), topRight: isArabic()? const Radius.circular(0): const Radius.circular(25))),
+                backgroundColor: Colors.transparent,
+                elevation: .5,
                 child: const HomeSideMenu(),
               ),
               appBar: BlocProvider.of<HomeCubit>(context).focusNode.hasFocus
@@ -51,24 +55,24 @@ class HomeScreen extends StatelessWidget {
                         imagePath: AppAssets.homeLogo,
                       ),
                       actions: [
-                        GestureDetector(
-                          onTap: () => BlocProvider.of<HomeCubit>(context)
+                        IconButton(
+                          onPressed: () => BlocProvider.of<HomeCubit>(context)
                               .goToNotifications(context),
-                          child: CustomImage(
+                          icon: CustomImage(
                             imagePath: AppAssets.notifications,
                             h: 22.4.h,
                             w: 19.6.w,
                           ),
                         ),
                         SizedBox(
-                          width: 13.w,
+                          width: 6.w,
                         )
                       ],
                     ),
               body: Row(
                 children: [
                   SizedBox(
-                    width: 16.w,
+                    width: 14.25.w,
                   ),
                   SingleChildScrollView(
                     child: Column(
@@ -106,16 +110,16 @@ class HomeScreen extends StatelessWidget {
                                       BlocProvider.of<HomeCubit>(context)
                                           .onVoiceSearchClicked,
                                 )),
-                            SizedBox(width: 20.w),
-                            GestureDetector(
-                              onTap: () => BlocProvider.of<HomeCubit>(context)
+                            SizedBox(width: 8.w),
+                            IconButton(
+                              onPressed: () => BlocProvider.of<HomeCubit>(context)
                                   .onFilterPressed(context),
-                              child: CustomImage(
+                              icon: CustomImage(
                                 imagePath: AppAssets.filter,
                                 w: 18.67.w,
                               ),
                             ),
-                            SizedBox(width: 16.w)
+                            SizedBox(width: 4.w)
                           ],
                         ),
                         SizedBox(
@@ -140,7 +144,7 @@ class HomeScreen extends StatelessWidget {
                                       offset: const Offset(0, 3),
                                     ),
                                   ],
-                                  borderRadius: BorderRadius.circular(15),
+                                  borderRadius: BorderRadius.circular(12),
                                   color: const Color(0xffe8e3da),
                                 ),
                                 child: Row(
@@ -482,43 +486,47 @@ class HomeScreen extends StatelessWidget {
               ),
               floatingActionButtonLocation:
                   FloatingActionButtonLocation.startFloat,
-              floatingActionButton: SpeedDial(
-                overlayOpacity: 0,
-                iconTheme: const IconThemeData(color: AppColors.white),
-                backgroundColor: AppColors.darkBrown,
-                activeChild: const Icon(
-                  CupertinoIcons.xmark,
-                  color: AppColors.darkBlue,
-                ),
-                activeBackgroundColor: AppColors.white,
-                icon: Icons.phone_enabled,
-                children: [
-                  SpeedDialChild(
-                      shape: const CircleBorder(),
+              floatingActionButton: BlocProvider.of<HomeCubit>(context)
+                      .focusNode
+                      .hasFocus
+                  ? null
+                  : SpeedDial(
+                      overlayOpacity: 0,
+                      iconTheme: const IconThemeData(color: AppColors.white),
                       backgroundColor: AppColors.darkBrown,
-                      onTap: () =>
-                          BlocProvider.of<HomeCubit>(context).dialPhoneNumber(),
-                      child: const Icon(Icons.phone_enabled,
-                          color: AppColors.white)),
-                  SpeedDialChild(
-                    shape: const CircleBorder(),
-                    backgroundColor: AppColors.darkBrown,
-                    onTap: () =>
-                        BlocProvider.of<HomeCubit>(context).openFacebookPage(),
-                    child: const Icon(
-                      Icons.facebook,
-                      color: AppColors.white,
-                    ),
-                  ),
-                  SpeedDialChild(
-                      shape: const CircleBorder(),
-                      backgroundColor: AppColors.darkBrown,
-                      onTap: () => BlocProvider.of<HomeCubit>(context)
-                          .onWhatsAppPressed(),
-                      child: const Icon(FontAwesomeIcons.whatsapp,
-                          color: AppColors.white))
-                ],
-              )),
+                      activeChild: const Icon(
+                        CupertinoIcons.xmark,
+                        color: AppColors.darkBlue,
+                      ),
+                      activeBackgroundColor: AppColors.white,
+                      icon: Icons.phone_enabled,
+                      children: [
+                        SpeedDialChild(
+                            shape: const CircleBorder(),
+                            backgroundColor: AppColors.darkBrown,
+                            onTap: () => BlocProvider.of<HomeCubit>(context)
+                                .dialPhoneNumber(),
+                            child: const Icon(Icons.phone_enabled,
+                                color: AppColors.white)),
+                        SpeedDialChild(
+                          shape: const CircleBorder(),
+                          backgroundColor: AppColors.darkBrown,
+                          onTap: () => BlocProvider.of<HomeCubit>(context)
+                              .openFacebookPage(),
+                          child: const Icon(
+                            Icons.facebook,
+                            color: AppColors.white,
+                          ),
+                        ),
+                        SpeedDialChild(
+                            shape: const CircleBorder(),
+                            backgroundColor: AppColors.darkBrown,
+                            onTap: () => BlocProvider.of<HomeCubit>(context)
+                                .onWhatsAppPressed(),
+                            child: const Icon(FontAwesomeIcons.whatsapp,
+                                color: AppColors.white))
+                      ],
+                    )),
         );
       },
     ));
