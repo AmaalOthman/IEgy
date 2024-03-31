@@ -4,7 +4,9 @@ import 'package:iegy/features/auth/presentation/screens/register_screen.dart';
 import 'package:iegy/features/auth/presentation/screens/reset_password_navigator.dart';
 import 'package:iegy/features/cart/presentation/screens/payment_screen.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/branches_screen.dart';
+import 'package:iegy/features/home/presentation/screens/home_side_menu/fav_screen.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/order_tracking_screen.dart';
+import 'package:iegy/features/home/presentation/screens/home_side_menu/policy_screen.dart';
 import 'package:iegy/features/home/presentation/screens/more_screen.dart';
 import 'package:iegy/features/nav_bar/presentation/screens/nav_bar_screen.dart';
 import 'package:iegy/features/profile/presentation/screens/edit_profile_screen.dart';
@@ -27,6 +29,8 @@ class Routes {
   static const String ordersScreen = '/ordersScreen';
   static const String branchesScreen = '/branchesScreen';
   static const String orderTrackingScreen = '/orderTrackingScreen';
+  static const String favScreen = '/favScreen';
+  static const String policyScreen = '/policyScreen';
 }
 
 class AppRoutes {
@@ -56,6 +60,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const BranchesScreen());
       case Routes.orderTrackingScreen:
         return MaterialPageRoute(builder: (_) => const OrderTrackingScreen());
+      case Routes.favScreen:
+        return MaterialPageRoute(builder: (_) => const FavScreen());
+      case Routes.policyScreen:
+        return MaterialPageRoute(builder: (_) => const PolicyScreen());
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold(
           body: Center(

@@ -6,13 +6,15 @@ import 'package:iegy/core/database/cache/cache_helper.dart';
 import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
+import 'package:iegy/core/utils/common_methods.dart';
 import 'package:iegy/core/widgets/custom_button.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:iegy/core/widgets/custom_loading_indicator.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Sale extends StatelessWidget {
-  const Sale({super.key});
+  const Sale({super.key, this.fav});
+  final bool? fav;
 
   @override
   Widget build(BuildContext context) {
@@ -44,11 +46,11 @@ class Sale extends StatelessWidget {
               top: 10.h,
               right: 4.w,
               child: CircleAvatar(
-                backgroundColor: AppColors.offWhite,
+                backgroundColor: fav == true? Theme.of(context).primaryColor: AppColors.offWhite,
                   maxRadius: 15.w,
                   child: Icon(
-                    CupertinoIcons.heart,
-                    color: AppColors.grey,
+                    fav == true? CupertinoIcons.heart_fill:CupertinoIcons.heart,
+                    color: fav == true? AppColors.red:AppColors.grey,
                     size: 20.w,
                   )),
             )
@@ -144,7 +146,7 @@ class Sale extends StatelessWidget {
           ],
         ),
         const Spacer(),
-        Row(
+        if(fav != true) Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             CustomButton(

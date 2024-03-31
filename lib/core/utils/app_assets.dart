@@ -31,6 +31,7 @@ class AppAssets{
   static const String shippedOrderStatus = '${imagesPath}shipped_order_status.png';
   static const String receivedOrderStatus = '${imagesPath}received_order_status.png';
   static const String completeOrderStatus = '${imagesPath}complete_order_status.png';
+  static const String exchangeImage = '${imagesPath}exchange.png';
 
   //Icons
   static const String darkMood = '${iconsPath}dark_mood.png';
@@ -84,4 +85,5 @@ class AppAssets{
   static const String van = '${iconsPath}van.png';
   static const String locationBrown = '${iconsPath}location_brown.png';
   static const String map = '${iconsPath}map.png';
+  static const String add = '${iconsPath}add.png';
 }

@@ -85,6 +85,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "أدخل البريد الإلكترونى أو رقم الهاتف الخاص بك."),
         "exchange_and_return_policy":
             MessageLookupByLibrary.simpleMessage("سياسة الاستبدال و الاسترجاع"),
+        "exchange_policy":
+            MessageLookupByLibrary.simpleMessage("سياسة الاستبدال"),
         "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
         "favourites": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "filter": MessageLookupByLibrary.simpleMessage("الفلتر"),
@@ -163,12 +165,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "price_ranges_between":
             MessageLookupByLibrary.simpleMessage("السعر يتراوح ما بين"),
         "product": MessageLookupByLibrary.simpleMessage("المنتج"),
+        "product_can_be_returned_within_fourteen_days_from_the_date_of_receiving_provided_that_it_has_not_been_used_at_all_and_that_it_is_in_its_original_condition_in_terms_of_packaging_components_or_attachments_with_the_customer_bearing_the_shipping_and_packaging_expenses_in_case_of_unpacking_value_is_determined_according_to_product":
+            MessageLookupByLibrary.simpleMessage(
+                "يجوز استرجاع المنتج خلال 14 يوم من تاريخ استلامه بشرط عدم استخدامه نهائياً و كونه بحالته الأصلية من حيث التغليف و المكونات أو المرفقات مع تحمل العميل لمصاريف الشحن و التغليف في حالة فك التغليف (يتم تحديد القيمة حسب المنتج)"),
+        "product_is_ineligible_for_return_if_there_are_defects_resulting_from_misuse":
+            MessageLookupByLibrary.simpleMessage(
+                "لا يحق استرجاع المنتج في حالة وجود عيوب ناتجة عن سوء الاستخدام"),
         "product_name": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
+        "products_can_be_returned_if_they_do_not_conform_to_the_specifications_mentioned_on_the_website_or_if_product_is_damaged_or_has_manufacturing_defects":
+            MessageLookupByLibrary.simpleMessage(
+                "يمكن استرجاع المنتجات إذا كانت غير مطابقة للمواصفات المذكورة على الموقع أو إذا كان المنتج تالف أو به عيوب صناعة"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
         "purchasing_in_site":
             MessageLookupByLibrary.simpleMessage("استلام من الفرع"),
         "qalubia": MessageLookupByLibrary.simpleMessage("القليوبية"),
         "red": MessageLookupByLibrary.simpleMessage("أحمر"),
+        "refund_policy":
+            MessageLookupByLibrary.simpleMessage("سياسة الاسترداد"),
         "reset": MessageLookupByLibrary.simpleMessage("إعادة ضبط"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("إعادة كلمة المرور"),

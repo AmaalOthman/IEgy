@@ -85,6 +85,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Enter your email or phone number"),
         "exchange_and_return_policy":
             MessageLookupByLibrary.simpleMessage("Exchange and return policy"),
+        "exchange_policy":
+            MessageLookupByLibrary.simpleMessage("Exchange policy"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "favourites": MessageLookupByLibrary.simpleMessage("Favourites"),
         "filter": MessageLookupByLibrary.simpleMessage("Filter"),
@@ -164,12 +166,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "price_ranges_between":
             MessageLookupByLibrary.simpleMessage("Price ranges between"),
         "product": MessageLookupByLibrary.simpleMessage("Product"),
+        "product_can_be_returned_within_fourteen_days_from_the_date_of_receiving_provided_that_it_has_not_been_used_at_all_and_that_it_is_in_its_original_condition_in_terms_of_packaging_components_or_attachments_with_the_customer_bearing_the_shipping_and_packaging_expenses_in_case_of_unpacking_value_is_determined_according_to_product":
+            MessageLookupByLibrary.simpleMessage(
+                "Product may be returned within 14 days from the date receiving, provided that it has not been used at all and that it is in its original condition in terms of packaging, components or attachments, with the customer bearing the shipping and packaging expenses in case of unpacking (Value is determined according Product)"),
+        "product_is_ineligible_for_return_if_there_are_defects_resulting_from_misuse":
+            MessageLookupByLibrary.simpleMessage(
+                "Product is ineligible for return if there are defects resulting from misuse"),
         "product_name": MessageLookupByLibrary.simpleMessage("Product name"),
+        "products_can_be_returned_if_they_do_not_conform_to_the_specifications_mentioned_on_the_website_or_if_product_is_damaged_or_has_manufacturing_defects":
+            MessageLookupByLibrary.simpleMessage(
+                "Products can be returned if they do not conform to the specifications mentioned on the website or if product is damaged or has manufacturing defects"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "purchasing_in_site":
             MessageLookupByLibrary.simpleMessage("Purchasing in site"),
         "qalubia": MessageLookupByLibrary.simpleMessage("Qalubia"),
         "red": MessageLookupByLibrary.simpleMessage("Red"),
+        "refund_policy": MessageLookupByLibrary.simpleMessage("Refund policy"),
         "reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("Reset Password"),

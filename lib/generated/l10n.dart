@@ -1463,6 +1463,62 @@ class S {
       args: [],
     );
   }
+
+  /// `Exchange policy`
+  String get exchange_policy {
+    return Intl.message(
+      'Exchange policy',
+      name: 'exchange_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product may be returned within 14 days from the date receiving, provided that it has not been used at all and that it is in its original condition in terms of packaging, components or attachments, with the customer bearing the shipping and packaging expenses in case of unpacking (Value is determined according Product)`
+  String
+      get product_can_be_returned_within_fourteen_days_from_the_date_of_receiving_provided_that_it_has_not_been_used_at_all_and_that_it_is_in_its_original_condition_in_terms_of_packaging_components_or_attachments_with_the_customer_bearing_the_shipping_and_packaging_expenses_in_case_of_unpacking_value_is_determined_according_to_product {
+    return Intl.message(
+      'Product may be returned within 14 days from the date receiving, provided that it has not been used at all and that it is in its original condition in terms of packaging, components or attachments, with the customer bearing the shipping and packaging expenses in case of unpacking (Value is determined according Product)',
+      name:
+          'product_can_be_returned_within_fourteen_days_from_the_date_of_receiving_provided_that_it_has_not_been_used_at_all_and_that_it_is_in_its_original_condition_in_terms_of_packaging_components_or_attachments_with_the_customer_bearing_the_shipping_and_packaging_expenses_in_case_of_unpacking_value_is_determined_according_to_product',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Products can be returned if they do not conform to the specifications mentioned on the website or if product is damaged or has manufacturing defects`
+  String
+      get products_can_be_returned_if_they_do_not_conform_to_the_specifications_mentioned_on_the_website_or_if_product_is_damaged_or_has_manufacturing_defects {
+    return Intl.message(
+      'Products can be returned if they do not conform to the specifications mentioned on the website or if product is damaged or has manufacturing defects',
+      name:
+          'products_can_be_returned_if_they_do_not_conform_to_the_specifications_mentioned_on_the_website_or_if_product_is_damaged_or_has_manufacturing_defects',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product is ineligible for return if there are defects resulting from misuse`
+  String
+      get product_is_ineligible_for_return_if_there_are_defects_resulting_from_misuse {
+    return Intl.message(
+      'Product is ineligible for return if there are defects resulting from misuse',
+      name:
+          'product_is_ineligible_for_return_if_there_are_defects_resulting_from_misuse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Refund policy`
+  String get refund_policy {
+    return Intl.message(
+      'Refund policy',
+      name: 'refund_policy',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
