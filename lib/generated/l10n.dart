@@ -1519,6 +1519,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Shipping cost`
+  String get shipping_cost {
+    return Intl.message(
+      'Shipping cost',
+      name: 'shipping_cost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select region`
+  String get select_region {
+    return Intl.message(
+      'Select region',
+      name: 'select_region',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Write region`
+  String get write_region {
+    return Intl.message(
+      'Write region',
+      name: 'write_region',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ismaeilia`
+  String get ismaeilia {
+    return Intl.message(
+      'Ismaeilia',
+      name: 'ismaeilia',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Terms & Conditions`
+  String get terms_and_conditions {
+    return Intl.message(
+      'Terms & Conditions',
+      name: 'terms_and_conditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipping`
+  String get shipping {
+    return Intl.message(
+      'Shipping',
+      name: 'shipping',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

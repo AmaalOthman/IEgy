@@ -107,6 +107,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "هنا نجعلك تقع في حب المكان الذي تعيش فيه"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "house": MessageLookupByLibrary.simpleMessage("المنزل"),
+        "ismaeilia": MessageLookupByLibrary.simpleMessage("الإسماعيلية"),
         "kitchen_collections":
             MessageLookupByLibrary.simpleMessage("تشكيلات مطابخ"),
         "kitchens": MessageLookupByLibrary.simpleMessage("مطابخ"),
@@ -191,12 +192,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("عمليات البحث السابقة"),
         "security_and_privacy":
             MessageLookupByLibrary.simpleMessage("الأمان و الخصوصية"),
+        "select_region": MessageLookupByLibrary.simpleMessage("اختر البلد"),
         "send_the_code_again":
             MessageLookupByLibrary.simpleMessage("إرسال الرمز مرة أخري؟"),
         "service": MessageLookupByLibrary.simpleMessage("الخدمة"),
         "service_type": MessageLookupByLibrary.simpleMessage("نوع الخدمة"),
         "sharkia": MessageLookupByLibrary.simpleMessage("الشرقية"),
+        "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
         "shipping_address": MessageLookupByLibrary.simpleMessage("عنوان الشحن"),
+        "shipping_cost": MessageLookupByLibrary.simpleMessage("تكاليف الشحن"),
         "shipping_info": MessageLookupByLibrary.simpleMessage("معلومات الشحن"),
         "shoes_cabinets": MessageLookupByLibrary.simpleMessage("جزامات"),
         "size": MessageLookupByLibrary.simpleMessage("المقاس"),
@@ -206,6 +210,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("التوريد و التركيب"),
         "tables": MessageLookupByLibrary.simpleMessage("ترابيزات"),
+        "terms_and_conditions":
+            MessageLookupByLibrary.simpleMessage("الشروط و الأحكام"),
         "to": MessageLookupByLibrary.simpleMessage("إلى"),
         "total": MessageLookupByLibrary.simpleMessage("الكل:"),
         "total_amount": MessageLookupByLibrary.simpleMessage("إجمالي المبلغ"),
@@ -221,6 +227,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "what_are_u_looking_for":
             MessageLookupByLibrary.simpleMessage("عن ماذا تبحث؟"),
         "white": MessageLookupByLibrary.simpleMessage("أبيض"),
+        "write_region": MessageLookupByLibrary.simpleMessage("اكتب البلد"),
         "yellow": MessageLookupByLibrary.simpleMessage("أصفر")
       };
 }

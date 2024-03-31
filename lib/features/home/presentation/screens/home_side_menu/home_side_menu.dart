@@ -78,7 +78,7 @@ class HomeSideMenu extends StatelessWidget {
                 DrawerItem(
                     iconPath: AppAssets.hummer,
                     text: AppLocalizations.of(context)!.supply_and_installation,
-                    navigateTo: () {}),
+                    navigateTo: () => BlocProvider.of<HomeCubit>(context).navigateTo(context, Routes.supplyAndInstallationScreen)),
                 DrawerItem(
                     iconPath: AppAssets.info,
                     text: AppLocalizations.of(context)!.about_us,

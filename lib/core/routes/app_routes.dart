@@ -7,6 +7,7 @@ import 'package:iegy/features/home/presentation/screens/home_side_menu/branches_
 import 'package:iegy/features/home/presentation/screens/home_side_menu/fav_screen.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/order_tracking_screen.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/policy_screen.dart';
+import 'package:iegy/features/home/presentation/screens/home_side_menu/supply_and_installation_screen.dart';
 import 'package:iegy/features/home/presentation/screens/more_screen.dart';
 import 'package:iegy/features/nav_bar/presentation/screens/nav_bar_screen.dart';
 import 'package:iegy/features/profile/presentation/screens/edit_profile_screen.dart';
@@ -31,6 +32,7 @@ class Routes {
   static const String orderTrackingScreen = '/orderTrackingScreen';
   static const String favScreen = '/favScreen';
   static const String policyScreen = '/policyScreen';
+  static const String supplyAndInstallationScreen = '/supplyAndInstallationScreen';
 }
 
 class AppRoutes {
@@ -64,6 +66,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const FavScreen());
       case Routes.policyScreen:
         return MaterialPageRoute(builder: (_) => const PolicyScreen());
+      case Routes.supplyAndInstallationScreen:
+        return MaterialPageRoute(builder: (_) => const SupplyAndInstallationScreen());
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold(
           body: Center(

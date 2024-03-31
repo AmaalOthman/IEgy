@@ -107,6 +107,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Here we make you fall in love with the place you live in"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "house": MessageLookupByLibrary.simpleMessage("House"),
+        "ismaeilia": MessageLookupByLibrary.simpleMessage("Ismaeilia"),
         "kitchen_collections":
             MessageLookupByLibrary.simpleMessage("Kitchen collections"),
         "kitchens": MessageLookupByLibrary.simpleMessage("Kitchens"),
@@ -191,13 +192,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Search history"),
         "security_and_privacy":
             MessageLookupByLibrary.simpleMessage("Security and privacy"),
+        "select_region": MessageLookupByLibrary.simpleMessage("Select region"),
         "send_the_code_again":
             MessageLookupByLibrary.simpleMessage("Send the code again"),
         "service": MessageLookupByLibrary.simpleMessage("Service"),
         "service_type": MessageLookupByLibrary.simpleMessage("Service type"),
         "sharkia": MessageLookupByLibrary.simpleMessage("Sharkia"),
+        "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
         "shipping_address":
             MessageLookupByLibrary.simpleMessage("Shipping address"),
+        "shipping_cost": MessageLookupByLibrary.simpleMessage("Shipping cost"),
         "shipping_info": MessageLookupByLibrary.simpleMessage("Shipping info"),
         "shoes_cabinets":
             MessageLookupByLibrary.simpleMessage("Shoes cabinets"),
@@ -208,6 +212,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("Supply and installation"),
         "tables": MessageLookupByLibrary.simpleMessage("Tables"),
+        "terms_and_conditions":
+            MessageLookupByLibrary.simpleMessage("Terms & Conditions"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
         "total": MessageLookupByLibrary.simpleMessage("Total:"),
         "total_amount": MessageLookupByLibrary.simpleMessage("Total amount"),
@@ -224,6 +230,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "what_are_u_looking_for":
             MessageLookupByLibrary.simpleMessage("What are you looking for?"),
         "white": MessageLookupByLibrary.simpleMessage("White"),
+        "write_region": MessageLookupByLibrary.simpleMessage("Write region"),
         "yellow": MessageLookupByLibrary.simpleMessage("Yellow")
       };
 }

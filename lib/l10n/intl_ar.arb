@@ -144,5 +144,11 @@
   "product_can_be_returned_within_fourteen_days_from_the_date_of_receiving_provided_that_it_has_not_been_used_at_all_and_that_it_is_in_its_original_condition_in_terms_of_packaging_components_or_attachments_with_the_customer_bearing_the_shipping_and_packaging_expenses_in_case_of_unpacking_value_is_determined_according_to_product": "يجوز استرجاع المنتج خلال 14 يوم من تاريخ استلامه بشرط عدم استخدامه نهائياً و كونه بحالته الأصلية من حيث التغليف و المكونات أو المرفقات مع تحمل العميل لمصاريف الشحن و التغليف في حالة فك التغليف (يتم تحديد القيمة حسب المنتج)",
   "products_can_be_returned_if_they_do_not_conform_to_the_specifications_mentioned_on_the_website_or_if_product_is_damaged_or_has_manufacturing_defects": "يمكن استرجاع المنتجات إذا كانت غير مطابقة للمواصفات المذكورة على الموقع أو إذا كان المنتج تالف أو به عيوب صناعة",
   "product_is_ineligible_for_return_if_there_are_defects_resulting_from_misuse": "لا يحق استرجاع المنتج في حالة وجود عيوب ناتجة عن سوء الاستخدام",
-  "refund_policy": "سياسة الاسترداد"
+  "refund_policy": "سياسة الاسترداد",
+  "shipping_cost": "تكاليف الشحن",
+  "select_region": "اختر البلد",
+  "write_region": "اكتب البلد",
+  "ismaeilia": "الإسماعيلية",
+  "terms_and_conditions": "الشروط و الأحكام",
+  "shipping": "الشحن"
 }
