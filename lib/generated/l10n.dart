@@ -542,11 +542,11 @@ class S {
     );
   }
 
-  /// `My basket`
-  String get my_basket {
+  /// `My cart`
+  String get my_cart {
     return Intl.message(
-      'My basket',
-      name: 'my_basket',
+      'My cart',
+      name: 'my_cart',
       desc: '',
       args: [],
     );
@@ -1575,6 +1575,46 @@ class S {
     return Intl.message(
       'Shipping',
       name: 'shipping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Modifications canceled`
+  String get modifications_canceled {
+    return Intl.message(
+      'Modifications canceled',
+      name: 'modifications_canceled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Modifications saved`
+  String get modifications_saved {
+    return Intl.message(
+      'Modifications saved',
+      name: 'modifications_saved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order details`
+  String get order_details {
+    return Intl.message(
+      'Order details',
+      name: 'order_details',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Received on`
+  String get received_on {
+    return Intl.message(
+      'Received on',
+      name: 'received_on',
       desc: '',
       args: [],
     );

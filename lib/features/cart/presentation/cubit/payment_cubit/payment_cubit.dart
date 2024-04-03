@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iegy/features/cart/presentation/cubit/payment_cubit/payment_state.dart';
@@ -25,6 +26,7 @@ class PaymentCubit extends Cubit<PaymentState> {
       currentPhase --;
       emit(MoveAPhaseState());
     }
+    log(currentPhase.toString(), name: 'المرحلة الحالية: ');
   }
 
   void goNext() {

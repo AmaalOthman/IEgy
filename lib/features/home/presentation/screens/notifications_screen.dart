@@ -22,23 +22,24 @@ class NotificationsScreen extends StatelessWidget {
             return true;
           },
           child: Scaffold(
-            appBar: AppBar(
-              leading: Row(
-                children: [
-                  SizedBox(
-                    width: 20.5.w,
-                  ),
-                  BackArrow(
-                    onTap: () => BlocProvider.of<NotificationCubit>(context)
-                        .onBackPressed(context),
-                  ),
-                ],
-              ),
-              title: Text(
-                AppLocalizations.of(context)!.notifications,
-                style: Theme.of(context).textTheme.displayLarge,
-              ),
-            ),
+            appBar: PreferredSize(
+                preferredSize: Size(double.infinity, 87.h),
+                child: Column(children: [
+                  const Spacer(),
+                  AppBar(
+                      title: SizedBox(
+                          width: 181.w,
+                          child: Text(
+                            AppLocalizations.of(context)!
+                                .notifications,
+                            style: Theme.of(context).textTheme.displayLarge,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
+                            textAlign: TextAlign.center,
+                          )),
+                      leading: BackArrow(onTap: () => BlocProvider.of<NotificationCubit>(context)
+                          .onBackPressed(context),))
+                ])),
             body: Padding(
               padding: EdgeInsets.symmetric(vertical: 24.h, horizontal: 16.w),
               child: SingleChildScrollView(

@@ -48,7 +48,7 @@
   "exchange_and_return_policy": "Exchange and return policy",
   "supply_and_installation": "Supply and installation",
   "about_us": "About us",
-  "my_basket": "My basket",
+  "my_cart": "My cart",
   "modern_chair": "Modern chair",
   "enter_discount_promo_code": "Enter discount promo code",
   "total": "Total:",
@@ -150,5 +150,9 @@
   "write_region": "Write region",
   "ismaeilia": "Ismaeilia",
   "terms_and_conditions": "Terms & Conditions",
-  "shipping": "Shipping"
+  "shipping": "Shipping",
+  "modifications_canceled": "Modifications canceled",
+  "modifications_saved": "Modifications saved",
+  "order_details": "Order details",
+  "received_on": "Received on"
 }

@@ -48,7 +48,7 @@
   "exchange_and_return_policy": "سياسة الاستبدال و الاسترجاع",
   "supply_and_installation": "التوريد و التركيب",
   "about_us": "ماذا عنا؟",
-  "my_basket": "سلتي",
+  "my_cart": "سلتي",
   "modern_chair": "كرسي مودرن",
   "enter_discount_promo_code": "أدخل الرمز الترويجي للخصم",
   "total": "الكل:",
@@ -150,5 +150,9 @@
   "write_region": "اكتب البلد",
   "ismaeilia": "الإسماعيلية",
   "terms_and_conditions": "الشروط و الأحكام",
-  "shipping": "الشحن"
+  "shipping": "الشحن",
+  "modifications_canceled": "تم إلغاء التعديلات",
+  "modifications_saved": "تم حفظ التعديلات",
+  "order_details": "تفاصيل الطلبية",
+  "received_on": "تم الاستلام في"
 }

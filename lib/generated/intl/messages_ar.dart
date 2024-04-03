@@ -124,10 +124,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "make_the_payment_by":
             MessageLookupByLibrary.simpleMessage("أكمل الدفع قبل"),
         "modern_chair": MessageLookupByLibrary.simpleMessage("كرسي مودرن"),
+        "modifications_canceled":
+            MessageLookupByLibrary.simpleMessage("تم إلغاء التعديلات"),
+        "modifications_saved":
+            MessageLookupByLibrary.simpleMessage("تم حفظ التعديلات"),
         "more": MessageLookupByLibrary.simpleMessage("المزيد"),
         "my_account": MessageLookupByLibrary.simpleMessage("حسابي"),
         "my_address": MessageLookupByLibrary.simpleMessage("عنواني"),
-        "my_basket": MessageLookupByLibrary.simpleMessage("سلتي"),
+        "my_cart": MessageLookupByLibrary.simpleMessage("سلتي"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("منزل جديد!! أثاث جديد!!"),
@@ -137,6 +141,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "offers": MessageLookupByLibrary.simpleMessage("العروض"),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "order_details": MessageLookupByLibrary.simpleMessage("تفاصيل الطلبية"),
         "order_reserved": MessageLookupByLibrary.simpleMessage("تم وضع الطلب"),
         "order_tracking": MessageLookupByLibrary.simpleMessage("تتبع الطلب"),
         "orders": MessageLookupByLibrary.simpleMessage("الطلبيات"),
@@ -180,6 +185,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchasing_in_site":
             MessageLookupByLibrary.simpleMessage("استلام من الفرع"),
         "qalubia": MessageLookupByLibrary.simpleMessage("القليوبية"),
+        "received_on": MessageLookupByLibrary.simpleMessage("تم الاستلام في"),
         "red": MessageLookupByLibrary.simpleMessage("أحمر"),
         "refund_policy":
             MessageLookupByLibrary.simpleMessage("سياسة الاسترداد"),

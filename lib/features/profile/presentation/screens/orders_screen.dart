@@ -30,13 +30,10 @@ class OrdersScreen extends StatelessWidget {
                         .textTheme
                         .displayLarge,
                   ),
-                  leading: IconButton(
-                    onPressed: () => BlocProvider.of<OrdersCubit>(context).onBackPressed(context),
-                    icon: const BackArrow(),
-                  ),
-                ),
-              ],
-            ),
+                  leading: const BackArrow()
+                )
+              ]
+            )
           ),
           body: Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 24.h),

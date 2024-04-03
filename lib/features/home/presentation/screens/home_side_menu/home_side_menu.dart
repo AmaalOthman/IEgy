@@ -82,7 +82,7 @@ class HomeSideMenu extends StatelessWidget {
                 DrawerItem(
                     iconPath: AppAssets.info,
                     text: AppLocalizations.of(context)!.about_us,
-                    navigateTo: () {})
+                    navigateTo: () => BlocProvider.of<HomeCubit>(context).navigateTo(context, Routes.aboutUsScreen))
               ],
             );
           },

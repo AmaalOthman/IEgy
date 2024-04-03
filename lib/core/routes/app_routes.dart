@@ -3,6 +3,7 @@ import 'package:iegy/features/auth/presentation/screens/login_screen.dart';
 import 'package:iegy/features/auth/presentation/screens/register_screen.dart';
 import 'package:iegy/features/auth/presentation/screens/reset_password_navigator.dart';
 import 'package:iegy/features/cart/presentation/screens/payment_screen.dart';
+import 'package:iegy/features/home/presentation/screens/home_side_menu/about_us_screen.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/branches_screen.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/fav_screen.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/order_tracking_screen.dart';
@@ -11,6 +12,7 @@ import 'package:iegy/features/home/presentation/screens/home_side_menu/supply_an
 import 'package:iegy/features/home/presentation/screens/more_screen.dart';
 import 'package:iegy/features/nav_bar/presentation/screens/nav_bar_screen.dart';
 import 'package:iegy/features/profile/presentation/screens/edit_profile_screen.dart';
+import 'package:iegy/features/profile/presentation/screens/order_details_screen.dart';
 import 'package:iegy/features/profile/presentation/screens/orders_screen.dart';
 import 'package:iegy/features/splash/presentation/screens/splash_screen.dart';
 import 'package:iegy/features/splash/presentation/screens/welcome_screen.dart';
@@ -33,6 +35,8 @@ class Routes {
   static const String favScreen = '/favScreen';
   static const String policyScreen = '/policyScreen';
   static const String supplyAndInstallationScreen = '/supplyAndInstallationScreen';
+  static const String aboutUsScreen = '/aboutUsScreen';
+  static const String orderDetailsScreen = '/orderDetailsScreen';
 }
 
 class AppRoutes {
@@ -68,6 +72,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const PolicyScreen());
       case Routes.supplyAndInstallationScreen:
         return MaterialPageRoute(builder: (_) => const SupplyAndInstallationScreen());
+      case Routes.aboutUsScreen:
+        return MaterialPageRoute(builder: (_) => const AboutUsScreen());
+      case Routes.orderDetailsScreen:
+        return MaterialPageRoute(builder: (_) => const OrderDetailsScreen());
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold(
           body: Center(

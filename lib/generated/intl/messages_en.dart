@@ -123,10 +123,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "make_the_payment_by":
             MessageLookupByLibrary.simpleMessage("Make the payment by"),
         "modern_chair": MessageLookupByLibrary.simpleMessage("Modern chair"),
+        "modifications_canceled":
+            MessageLookupByLibrary.simpleMessage("Modifications canceled"),
+        "modifications_saved":
+            MessageLookupByLibrary.simpleMessage("Modifications saved"),
         "more": MessageLookupByLibrary.simpleMessage("More"),
         "my_account": MessageLookupByLibrary.simpleMessage("My account"),
         "my_address": MessageLookupByLibrary.simpleMessage("My address"),
-        "my_basket": MessageLookupByLibrary.simpleMessage("My basket"),
+        "my_cart": MessageLookupByLibrary.simpleMessage("My cart"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("New home!! New furniture!!"),
@@ -136,6 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "offers": MessageLookupByLibrary.simpleMessage("Offers"),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
+        "order_details": MessageLookupByLibrary.simpleMessage("Order details"),
         "order_reserved":
             MessageLookupByLibrary.simpleMessage("Order reserved"),
         "order_tracking":
@@ -181,6 +186,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchasing_in_site":
             MessageLookupByLibrary.simpleMessage("Purchasing in site"),
         "qalubia": MessageLookupByLibrary.simpleMessage("Qalubia"),
+        "received_on": MessageLookupByLibrary.simpleMessage("Received on"),
         "red": MessageLookupByLibrary.simpleMessage("Red"),
         "refund_policy": MessageLookupByLibrary.simpleMessage("Refund policy"),
         "reset": MessageLookupByLibrary.simpleMessage("Reset"),
