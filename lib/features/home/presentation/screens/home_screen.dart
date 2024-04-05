@@ -82,34 +82,33 @@ class HomeScreen extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            SizedBox(
-                                width: 350.w,
-                                child: CustomTextFormField(
-                                  controller: TextEditingController(
-                                      text: BlocProvider.of<HomeCubit>(context)
-                                              .speechToText
-                                              .isListening
-                                          ? "listening.."
-                                          : BlocProvider.of<HomeCubit>(context)
-                                              .spokenWords),
-                                  focusNode: BlocProvider.of<HomeCubit>(context)
-                                      .focusNode,
-                                  shadow: true,
-                                  preIcon: const Icon(
-                                    Icons.search,
-                                    color: AppColors.darkBlue,
-                                  ),
-                                  suffixIcon: CustomImage(
-                                    imagePath: AppAssets.mic,
-                                    h: 18.h,
-                                    w: 13.39.w,
-                                  ),
-                                  hint: AppLocalizations.of(context)!
-                                      .what_are_u_looking_for,
-                                  onSuffixPressed:
-                                      BlocProvider.of<HomeCubit>(context)
-                                          .onVoiceSearchClicked,
-                                )),
+                            CustomTextFormField(
+                              w: 350.w,
+                              controller: TextEditingController(
+                                  text: BlocProvider.of<HomeCubit>(context)
+                                          .speechToText
+                                          .isListening
+                                      ? "listening.."
+                                      : BlocProvider.of<HomeCubit>(context)
+                                          .spokenWords),
+                              focusNode: BlocProvider.of<HomeCubit>(context)
+                                  .focusNode,
+                              shadow: true,
+                              preIcon: const Icon(
+                                Icons.search,
+                                color: AppColors.darkBlue,
+                              ),
+                              suffixIcon: CustomImage(
+                                imagePath: AppAssets.mic,
+                                h: 18.h,
+                                w: 13.39.w,
+                              ),
+                              hint: AppLocalizations.of(context)!
+                                  .what_are_u_looking_for,
+                              onSuffixPressed:
+                                  BlocProvider.of<HomeCubit>(context)
+                                      .onVoiceSearchClicked,
+                            ),
                             SizedBox(width: 8.w),
                             IconButton(
                               onPressed: () => BlocProvider.of<HomeCubit>(context)

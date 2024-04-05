@@ -102,7 +102,7 @@ class OrderDetailsScreen extends StatelessWidget {
                           icon: AppAssets.calendar,
                           title: AppLocalizations.of(context)!.received_on,
                           data: '24/9/2023')
-                    ],
+                    ]
                   ))
             ])));
   }

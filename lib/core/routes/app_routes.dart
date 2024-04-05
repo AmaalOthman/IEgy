@@ -6,6 +6,7 @@ import 'package:iegy/features/cart/presentation/screens/payment_screen.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/about_us_screen.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/branches_screen.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/fav_screen.dart';
+import 'package:iegy/features/home/presentation/screens/home_side_menu/map_screen.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/order_tracking_screen.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/policy_screen.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/supply_and_installation_screen.dart';
@@ -37,6 +38,7 @@ class Routes {
   static const String supplyAndInstallationScreen = '/supplyAndInstallationScreen';
   static const String aboutUsScreen = '/aboutUsScreen';
   static const String orderDetailsScreen = '/orderDetailsScreen';
+  static const String mapScreen = '/mapScreen';
 }
 
 class AppRoutes {
@@ -76,6 +78,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const AboutUsScreen());
       case Routes.orderDetailsScreen:
         return MaterialPageRoute(builder: (_) => const OrderDetailsScreen());
+      case Routes.mapScreen:
+        return MaterialPageRoute(builder: (_) => const MapScreen());
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold(
           body: Center(

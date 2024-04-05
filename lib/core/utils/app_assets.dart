@@ -91,4 +91,5 @@ class AppAssets{
   static const String cartSelected = '${iconsPath}cart_selected.png';
   static const String profile = '${iconsPath}profile.png';
   static const String calendar = '${iconsPath}calendar.png';
+  static const String googleLocation = '${iconsPath}google_location.png';
 }
