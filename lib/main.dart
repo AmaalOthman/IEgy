@@ -1,14 +1,15 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/bloc/cubit/global_cubit.dart';
 import 'package:iegy/core/bloc/cubit/global_state.dart';
-import 'package:iegy/core/database/cache/cache_helper.dart';
+import 'package:iegy/core/functions/initialize_services.dart';
 import 'package:iegy/core/routes/app_routes.dart';
-import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/theme/app_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/features/auth/presentation/cubit/login_cubit/login_cubit.dart';
 import 'package:iegy/features/auth/presentation/cubit/reset_password_navigator_cubit/reset_password_navigator_cubit.dart';
 import 'package:iegy/features/cart/presentation/cubit/cart_cubit/cart_cubit.dart';
@@ -28,31 +29,11 @@ import 'package:iegy/features/profile/presentation/cubit/orders_cubit/orders_cub
 import 'package:iegy/features/profile/presentation/cubit/profile_cubit/profile_cubit.dart';
 import 'package:iegy/features/splash/presentation/cubit/welcome_cubit.dart';
 
-main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  initServiceLocator();
-  await sl<CacheHelper>().init();
-  runApp(MultiBlocProvider(providers: [
-    BlocProvider(create: (context) => sl<GlobalCubit>()..getCachedLang()),
-    BlocProvider(create: (context) => sl<LoginCubit>()),
-    BlocProvider(create: (context) => sl<NavBarCubit>()),
-    BlocProvider(create: (context) => sl<WelcomeCubit>()),
-    BlocProvider(create: (context) => sl<HomeCubit>()),
-    BlocProvider(create: (context) => sl<CartCubit>()),
-    BlocProvider(create: (context) => sl<ProfileCubit>()),
-    BlocProvider(create: (context) => sl<ResetPasswordNavigatorCubit>()),
-    BlocProvider(create: (context) => sl<NotificationCubit>()),
-    BlocProvider(create: (context) => sl<FilterCubit>()),
-    BlocProvider(create: (context) => sl<EditProfileCubit>()),
-    BlocProvider(create: (context) => sl<PaymentCubit>()),
-    BlocProvider(create: (context) => sl<MoreCubit>()),
-    BlocProvider(create: (context) => sl<OrdersCubit>()),
-    BlocProvider(create: (context) => sl<BranchesCubit>()),
-    BlocProvider(create: (context) => sl<OrderTrackingCubit>()),
-    BlocProvider(create: (context) => sl<SupplyAndInstallationCubit>()),
-    BlocProvider(create: (context) => sl<MapCubit>()),
-    BlocProvider(create: (context) => sl<FavCubit>())
-  ], child: const MyApp()));
+main() {
+  initializeServices();
+  runApp(
+      DevicePreview(
+        enabled: true, builder: (context) => const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -61,27 +42,48 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-        designSize: const Size(430, 932),
-        builder: (context, child) =>
-            BlocBuilder<GlobalCubit, GlobalState>(builder: (context, state) {
-              return MaterialApp(
-                  initialRoute: Routes.initialRoute,
-                  onGenerateRoute: AppRoutes.generateRoute,
-                  title: 'IEgy',
-                  theme: getAppTheme(),
-                  localizationsDelegates: const [
-                    AppLocalizations.delegate,
-                    GlobalMaterialLocalizations.delegate,
-                    GlobalWidgetsLocalizations.delegate,
-                    GlobalCupertinoLocalizations.delegate
-                  ],
-                  supportedLocales: const [
-                    Locale('ar'), // العربية
-                    Locale('en') // Spanish
-                  ],
-                  locale:
-                      Locale(BlocProvider.of<GlobalCubit>(context).langCode));
-            }));
+    return MultiBlocProvider(
+      providers: [BlocProvider(create: (context) => sl<GlobalCubit>()..getCachedLang()),
+        BlocProvider(create: (context) => sl<LoginCubit>()),
+        BlocProvider(create: (context) => sl<NavBarCubit>()),
+        BlocProvider(create: (context) => sl<WelcomeCubit>()),
+        BlocProvider(create: (context) => sl<HomeCubit>()),
+        BlocProvider(create: (context) => sl<CartCubit>()),
+        BlocProvider(create: (context) => sl<ProfileCubit>()),
+        BlocProvider(create: (context) => sl<ResetPasswordNavigatorCubit>()),
+        BlocProvider(create: (context) => sl<NotificationCubit>()),
+        BlocProvider(create: (context) => sl<FilterCubit>()),
+        BlocProvider(create: (context) => sl<EditProfileCubit>()),
+        BlocProvider(create: (context) => sl<PaymentCubit>()),
+        BlocProvider(create: (context) => sl<MoreCubit>()),
+        BlocProvider(create: (context) => sl<OrdersCubit>()),
+        BlocProvider(create: (context) => sl<BranchesCubit>()),
+        BlocProvider(create: (context) => sl<OrderTrackingCubit>()),
+        BlocProvider(create: (context) => sl<SupplyAndInstallationCubit>()),
+        BlocProvider(create: (context) => sl<MapCubit>()),
+        BlocProvider(create: (context) => sl<FavCubit>())],
+      child: ScreenUtilInit(
+          designSize: const Size(430, 932),
+          builder: (context, child) =>
+              BlocBuilder<GlobalCubit, GlobalState>(builder: (context, state) {
+                return MaterialApp(
+                    initialRoute: Routes.initialRoute,
+                    onGenerateRoute: AppRoutes.generateRoute,
+                    title: 'IEgy',
+                    theme: getAppTheme(),
+                    localizationsDelegates: const [
+                      AppLocalizations.delegate,
+                      GlobalMaterialLocalizations.delegate,
+                      GlobalWidgetsLocalizations.delegate,
+                      GlobalCupertinoLocalizations.delegate
+                    ],
+                    supportedLocales: const [
+                      Locale('ar'), // العربية
+                      Locale('en') // Spanish
+                    ],
+                    locale:
+                        Locale(BlocProvider.of<GlobalCubit>(context).langCode));
+              })),
+    );
   }
 }

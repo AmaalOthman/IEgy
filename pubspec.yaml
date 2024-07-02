@@ -57,6 +57,7 @@ dependencies:
   dropdown_button2: ^2.3.9
   location: ^6.0.1
   google_maps_flutter: ^2.2.8
+  device_preview: ^1.1.0
 
 dev_dependencies:
   flutter_test:
