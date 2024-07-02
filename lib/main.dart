@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
                   title: 'IEgy',
                   theme: getAppTheme(),
                   localizationsDelegates: const [
-                    AppLocalizations.delegate,
+                    AppLocalizatioens.delegate,
                     GlobalMaterialLocalizations.delegate,
                     GlobalWidgetsLocalizations.delegate,
                     GlobalCupertinoLocalizations.delegate
