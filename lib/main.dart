@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -32,27 +33,28 @@ main() async {
   WidgetsFlutterBinding.ensureInitialized();
   initServiceLocator();
   await sl<CacheHelper>().init();
-  runApp(MultiBlocProvider(providers: [
-    BlocProvider(create: (context) => sl<GlobalCubit>()..getCachedLang()),
-    BlocProvider(create: (context) => sl<LoginCubit>()),
-    BlocProvider(create: (context) => sl<NavBarCubit>()),
-    BlocProvider(create: (context) => sl<WelcomeCubit>()),
-    BlocProvider(create: (context) => sl<HomeCubit>()),
-    BlocProvider(create: (context) => sl<CartCubit>()),
-    BlocProvider(create: (context) => sl<ProfileCubit>()),
-    BlocProvider(create: (context) => sl<ResetPasswordNavigatorCubit>()),
-    BlocProvider(create: (context) => sl<NotificationCubit>()),
-    BlocProvider(create: (context) => sl<FilterCubit>()),
-    BlocProvider(create: (context) => sl<EditProfileCubit>()),
-    BlocProvider(create: (context) => sl<PaymentCubit>()),
-    BlocProvider(create: (context) => sl<MoreCubit>()),
-    BlocProvider(create: (context) => sl<OrdersCubit>()),
-    BlocProvider(create: (context) => sl<BranchesCubit>()),
-    BlocProvider(create: (context) => sl<OrderTrackingCubit>()),
-    BlocProvider(create: (context) => sl<SupplyAndInstallationCubit>()),
-    BlocProvider(create: (context) => sl<MapCubit>()),
-    BlocProvider(create: (context) => sl<FavCubit>())
-  ], child: const MyApp()));
+  runApp(DevicePreview(enabled: true, builder: (context) => MultiBlocProvider(providers: [
+      BlocProvider(create: (context) => sl<GlobalCubit>()..getCachedLang()),
+      BlocProvider(create: (context) => sl<LoginCubit>()),
+      BlocProvider(create: (context) => sl<NavBarCubit>()),
+      BlocProvider(create: (context) => sl<WelcomeCubit>()),
+      BlocProvider(create: (context) => sl<HomeCubit>()),
+      BlocProvider(create: (context) => sl<CartCubit>()),
+      BlocProvider(create: (context) => sl<ProfileCubit>()),
+      BlocProvider(create: (context) => sl<ResetPasswordNavigatorCubit>()),
+      BlocProvider(create: (context) => sl<NotificationCubit>()),
+      BlocProvider(create: (context) => sl<FilterCubit>()),
+      BlocProvider(create: (context) => sl<EditProfileCubit>()),
+      BlocProvider(create: (context) => sl<PaymentCubit>()),
+      BlocProvider(create: (context) => sl<MoreCubit>()),
+      BlocProvider(create: (context) => sl<OrdersCubit>()),
+      BlocProvider(create: (context) => sl<BranchesCubit>()),
+      BlocProvider(create: (context) => sl<OrderTrackingCubit>()),
+      BlocProvider(create: (context) => sl<SupplyAndInstallationCubit>()),
+      BlocProvider(create: (context) => sl<MapCubit>()),
+      BlocProvider(create: (context) => sl<FavCubit>())
+    ], child: const MyApp()),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -71,10 +73,10 @@ class MyApp extends StatelessWidget {
                   title: 'IEgy',
                   theme: getAppTheme(),
                   localizationsDelegates: const [
-                    AppLocalizatioens.delegate,
+                    AppLocalizations.delegate,
                     GlobalMaterialLocalizations.delegate,
                     GlobalWidgetsLocalizations.delegate,
-                    GlobalCupertinoLocalizations.delegate
+                    GlobalCupertinoLocalizations.delegate,
                   ],
                   supportedLocales: const [
                     Locale('ar'), // العربية
