@@ -1,30 +1,31 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iegy/core/routes/app_routes.dart';
-import 'package:iegy/core/utils/common_methods.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:iegy/features/home/presentation/cubit/branches_cubit/branches_state.dart';
+import 'package:iegy/features/home/presentation/screens/home_side_menu/map_screen.dart';
 import 'package:location/location.dart';
 
 class BranchesCubit extends Cubit<BranchesState> {
   BranchesCubit() : super(BranchesInitial());
 
   Location location = Location();
-  LocationData? _locationData;
+  LocationData? locationData;
 
   void getPermission() async {
     var isLocationServiceEnabled = await isServiceEnabled();
-    if(!isLocationServiceEnabled) return;
+    if (!isLocationServiceEnabled) return;
     var isPermissionEnabled = await isPermissionGranted();
-    if(!isPermissionEnabled) return;
-    _locationData = await location.getLocation();
+    if (!isPermissionEnabled) return;
+    locationData = await location.getLocation();
     location.onLocationChanged.listen((LocationData currentLocation) {
-      _locationData = currentLocation;
-      // log(_locationData?.latitude.toString() ?? '', name: 'دائرة العرض:');
-      // log(_locationData?.longitude.toString() ?? '', name: 'خط الطول:');
+      locationData = currentLocation;
+      log(locationData?.latitude.toString() ?? '', name: 'دائرة العرض:');
+      log(locationData?.longitude.toString() ?? '', name: 'خط الطول:');
     });
   }
 
-  //get location opened
+//get location opened
   Future<bool> isServiceEnabled() async {
     bool serviceEnabled;
     serviceEnabled = await location.serviceEnabled();
@@ -34,7 +35,7 @@ class BranchesCubit extends Cubit<BranchesState> {
     return serviceEnabled;
   }
 
-  //get permission to use location
+//get permission to use location
   Future<bool> isPermissionGranted() async {
     PermissionStatus permissionGranted;
     permissionGranted = await location.hasPermission();
@@ -46,6 +47,7 @@ class BranchesCubit extends Cubit<BranchesState> {
 
   void openLocation(BuildContext context) {
     getPermission();
-    navigate(context: context, route: Routes.mapScreen);
+    // navigate(context: context, route: Routes.mapScreen, arg: LatLng((locationData?.latitude) ?? 1, (locationData?.longitude)?? 1));
+    Navigator.push(context, MaterialPageRoute(builder: (_) => MapScreen(latLng: LatLng((locationData?.latitude)?? 30.152102, (locationData?.longitude)?? 31.335730))));
   }
 }

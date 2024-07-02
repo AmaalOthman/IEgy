@@ -78,8 +78,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const AboutUsScreen());
       case Routes.orderDetailsScreen:
         return MaterialPageRoute(builder: (_) => const OrderDetailsScreen());
-      case Routes.mapScreen:
-        return MaterialPageRoute(builder: (_) => const MapScreen());
+      /*case Routes.mapScreen:
+        return MaterialPageRoute(builder: (_) => MapScreen());*/
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold(
           body: Center(

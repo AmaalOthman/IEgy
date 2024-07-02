@@ -258,7 +258,7 @@ class OrderTrackingScreen extends StatelessWidget {
                 width: double.infinity,
                 padding: EdgeInsets.all(16.h),
                 child: CustomButton(
-                    onPressed: () {}, text: AppLocalizations.of(context)!.pay))
+                    onPressed: () => BlocProvider.of<OrderTrackingCubit>(context).makeAPayment(context), text: AppLocalizations.of(context)!.pay))
           ]));
     });
   }

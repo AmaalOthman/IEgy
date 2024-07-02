@@ -154,5 +154,9 @@
   "modifications_canceled": "Modifications canceled",
   "modifications_saved": "Modifications saved",
   "order_details": "Order details",
-  "received_on": "Received on"
+  "received_on": "Received on",
+  "explore": "Explore",
+  "by_car": "By car",
+  "by_bike": "By bike",
+  "on_foot": "On foot"
 }

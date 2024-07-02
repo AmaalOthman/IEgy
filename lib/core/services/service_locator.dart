@@ -6,6 +6,7 @@ import 'package:iegy/features/auth/presentation/cubit/reset_password_navigator_c
 import 'package:iegy/features/cart/presentation/cubit/cart_cubit/cart_cubit.dart';
 import 'package:iegy/features/cart/presentation/cubit/payment_cubit/payment_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/branches_cubit/branches_cubit.dart';
+import 'package:iegy/features/home/presentation/cubit/fav_cubit/fav_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/filter_cubit/filter_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/home_cubit/home_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/map_cubit/map_cubit.dart';
@@ -40,5 +41,6 @@ void initServiceLocator() {
   sl.registerLazySingleton(() => OrderTrackingCubit());
   sl.registerLazySingleton(() => SupplyAndInstallationCubit());
   sl.registerLazySingleton(() => MapCubit());
+  sl.registerLazySingleton(() => FavCubit());
   sl.registerLazySingleton(() => CacheHelper());
 }

@@ -27,9 +27,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: BlocBuilder<HomeCubit, HomeState>(
-      builder: (context, state) {
-        return WillPopScope(
+    return SafeArea(
+        child: BlocBuilder<HomeCubit, HomeState>(builder: (context, state) {
+      return WillPopScope(
           onWillPop: () async {
             if (BlocProvider.of<HomeCubit>(context).focusNode.hasFocus) {
               BlocProvider.of<HomeCubit>(context).focusNode.unfocus();
@@ -41,10 +41,17 @@ class HomeScreen extends StatelessWidget {
           child: Scaffold(
               drawer: Drawer(
                 width: 270.w,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: isArabic()? const Radius.circular(25): const Radius.circular(0), topRight: isArabic()? const Radius.circular(0): const Radius.circular(25))),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        topLeft: isArabic()
+                            ? const Radius.circular(25)
+                            : const Radius.circular(0),
+                        topRight: isArabic()
+                            ? const Radius.circular(0)
+                            : const Radius.circular(25))),
                 backgroundColor: Colors.transparent,
                 elevation: .5,
-                child: const HomeSideMenu(),
+                child: const HomeSideMenu()
               ),
               appBar: BlocProvider.of<HomeCubit>(context).focusNode.hasFocus
                   ? null
@@ -91,8 +98,8 @@ class HomeScreen extends StatelessWidget {
                                       ? "listening.."
                                       : BlocProvider.of<HomeCubit>(context)
                                           .spokenWords),
-                              focusNode: BlocProvider.of<HomeCubit>(context)
-                                  .focusNode,
+                              focusNode:
+                                  BlocProvider.of<HomeCubit>(context).focusNode,
                               shadow: true,
                               preIcon: const Icon(
                                 Icons.search,
@@ -101,7 +108,7 @@ class HomeScreen extends StatelessWidget {
                               suffixIcon: CustomImage(
                                 imagePath: AppAssets.mic,
                                 h: 18.h,
-                                w: 13.39.w,
+                                w: 13.39.w
                               ),
                               hint: AppLocalizations.of(context)!
                                   .what_are_u_looking_for,
@@ -111,8 +118,9 @@ class HomeScreen extends StatelessWidget {
                             ),
                             SizedBox(width: 8.w),
                             IconButton(
-                              onPressed: () => BlocProvider.of<HomeCubit>(context)
-                                  .onFilterPressed(context),
+                              onPressed: () =>
+                                  BlocProvider.of<HomeCubit>(context)
+                                      .onFilterPressed(context),
                               icon: CustomImage(
                                 imagePath: AppAssets.filter,
                                 w: 18.67.w,
@@ -525,9 +533,7 @@ class HomeScreen extends StatelessWidget {
                             child: const Icon(FontAwesomeIcons.whatsapp,
                                 color: AppColors.white))
                       ],
-                    )),
-        );
-      },
-    ));
+                    )));
+    }));
   }
 }

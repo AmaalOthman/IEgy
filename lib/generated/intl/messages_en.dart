@@ -39,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "best_seller": MessageLookupByLibrary.simpleMessage("Best seller"),
         "black": MessageLookupByLibrary.simpleMessage("Black"),
         "blue": MessageLookupByLibrary.simpleMessage("Blue"),
+        "by_bike": MessageLookupByLibrary.simpleMessage("By bike"),
+        "by_car": MessageLookupByLibrary.simpleMessage("By car"),
         "cairo": MessageLookupByLibrary.simpleMessage("Cairo"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
@@ -87,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Exchange and return policy"),
         "exchange_policy":
             MessageLookupByLibrary.simpleMessage("Exchange policy"),
+        "explore": MessageLookupByLibrary.simpleMessage("Explore"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "favourites": MessageLookupByLibrary.simpleMessage("Favourites"),
         "filter": MessageLookupByLibrary.simpleMessage("Filter"),
@@ -139,6 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("No history yet!"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "offers": MessageLookupByLibrary.simpleMessage("Offers"),
+        "on_foot": MessageLookupByLibrary.simpleMessage("On foot"),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
         "order_details": MessageLookupByLibrary.simpleMessage("Order details"),
         "order_reserved":

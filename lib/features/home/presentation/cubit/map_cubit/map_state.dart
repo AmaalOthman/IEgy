@@ -1,3 +1,4 @@
 abstract class MapState {}
 
-class MapInitial extends MapState {}
+final class MapInitial extends MapState {}
+final class SpeechEnabledState extends MapState {}

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:iegy/core/utils/app_assets.dart';
@@ -8,12 +9,16 @@ import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:iegy/core/widgets/custom_text_form_field.dart';
 import 'package:iegy/features/home/presentation/components/filter_category.dart';
 import 'package:iegy/features/home/presentation/components/sale.dart';
+import 'package:iegy/features/home/presentation/cubit/fav_cubit/fav_cubit.dart';
+import 'package:iegy/features/home/presentation/cubit/fav_cubit/fav_state.dart';
 
 class FavScreen extends StatelessWidget {
   const FavScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    return BlocBuilder<FavCubit, FavState>(
+  builder: (context, state) {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size(double.infinity, 84.h),
@@ -41,15 +46,15 @@ class FavScreen extends StatelessWidget {
               SizedBox(
                   width: 350.w,
                   child: CustomTextFormField(
-                    /*controller: TextEditingController(
-                        text: BlocProvider.of<HomeCubit>(context)
+                    controller: TextEditingController(
+                        text: BlocProvider.of<FavCubit>(context)
                             .speechToText
                             .isListening
                             ? "listening.."
-                            : BlocProvider.of<HomeCubit>(context)
+                            : BlocProvider.of<FavCubit>(context)
                             .spokenWords),
-                    focusNode: BlocProvider.of<HomeCubit>(context)
-                        .focusNode,*/
+                    focusNode: BlocProvider.of<FavCubit>(context)
+                        .focusNode,
                     shadow: true,
                     preIcon: const Icon(
                       Icons.search,
@@ -62,16 +67,14 @@ class FavScreen extends StatelessWidget {
                     ),
                     hint: AppLocalizations.of(context)!
                         .what_are_u_looking_for,
-                    /*onSuffixPressed:
-                    BlocProvider.of<HomeCubit>(context)
-                        .onVoiceSearchClicked,*/
+                    onSuffixPressed:
+                    BlocProvider.of<FavCubit>(context)
+                        .onVoiceSearchClicked
                   )),
               SizedBox(width: 8.w),
               IconButton(
-                onPressed: () =>
-                {/*
-                  BlocProvider.of<HomeCubit>(context).onFilterPressed(context)
-                */},
+                onPressed: () => BlocProvider.of<FavCubit>(context).onFilterPressed(context)
+                ,
                 icon: CustomImage(
                   imagePath: AppAssets.filter,
                   w: 18.67.w,
@@ -130,5 +133,7 @@ class FavScreen extends StatelessWidget {
         ]
       )
     );
+  },
+);
   }
 }

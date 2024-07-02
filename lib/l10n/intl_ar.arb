@@ -154,5 +154,9 @@
   "modifications_canceled": "تم إلغاء التعديلات",
   "modifications_saved": "تم حفظ التعديلات",
   "order_details": "تفاصيل الطلبية",
-  "received_on": "تم الاستلام في"
+  "received_on": "تم الاستلام في",
+  "explore": "استكشف",
+  "by_car": "بالسيارة",
+  "by_bike": "بالدراجة",
+  "on_foot": "سيراً"
 }

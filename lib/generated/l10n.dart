@@ -1619,6 +1619,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Explore`
+  String get explore {
+    return Intl.message(
+      'Explore',
+      name: 'explore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By car`
+  String get by_car {
+    return Intl.message(
+      'By car',
+      name: 'by_car',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By bike`
+  String get by_bike {
+    return Intl.message(
+      'By bike',
+      name: 'by_bike',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `On foot`
+  String get on_foot {
+    return Intl.message(
+      'On foot',
+      name: 'on_foot',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

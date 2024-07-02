@@ -92,4 +92,9 @@ class AppAssets{
   static const String profile = '${iconsPath}profile.png';
   static const String calendar = '${iconsPath}calendar.png';
   static const String googleLocation = '${iconsPath}google_location.png';
+  static const String car = '${iconsPath}car.png';
+  static const String bike = '${iconsPath}bike.png';
+  static const String walking = '${iconsPath}walking.png';
+  static const String locationOnMap = '${iconsPath}location_on_map.png';
+  static const String userLocation = '${iconsPath}user_location.png';
 }
