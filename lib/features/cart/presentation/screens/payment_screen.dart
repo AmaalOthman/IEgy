@@ -12,9 +12,8 @@ class PaymentScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<PaymentCubit, PaymentState>(
-      builder: (context, state) {
-        return Scaffold(
+    return BlocBuilder<PaymentCubit, PaymentState>(builder: (context, state) {
+      return Scaffold(
           appBar: PreferredSize(
             preferredSize: Size(double.infinity, 84.h),
             child: Column(
@@ -25,35 +24,26 @@ class PaymentScreen extends StatelessWidget {
                     AppLocalizations.of(context)!.payment,
                     style: Theme.of(context).textTheme.displayLarge,
                   ),
-                  leading: IconButton(
-                    onPressed: () => BlocProvider.of<PaymentCubit>(context)
-                        .onBackPressed(context),
-                    icon: const BackArrow(),
-                  ),
+                  leading: BackArrow(onTap: () => BlocProvider.of<PaymentCubit>(context)
+                      .onBackPressed(context))
                 ),
               ],
             ),
           ),
           body: Padding(
-            padding: EdgeInsets.symmetric(vertical: 32.h, horizontal: 22.w),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  BlocProvider.of<PaymentCubit>(context).phases[
-                      BlocProvider.of<PaymentCubit>(context).currentPhase],
-                  CustomButton(
-                      onPressed: () =>
-                          BlocProvider.of<PaymentCubit>(context).goNext(),
-                      text:
-                          BlocProvider.of<PaymentCubit>(context).currentPhase != 2
-                              ? AppLocalizations.of(context)!.next
-                              : AppLocalizations.of(context)!.pay_now)
-                ],
-              ),
-            ),
-          ),
-        );
-      },
-    );
+              padding: EdgeInsets.symmetric(vertical: 32.h, horizontal: 22.w),
+              child: SingleChildScrollView(
+                  child: Column(children: [
+                BlocProvider.of<PaymentCubit>(context).phases[
+                    BlocProvider.of<PaymentCubit>(context).currentPhase],
+                CustomButton(
+                    onPressed: () =>
+                        BlocProvider.of<PaymentCubit>(context).goNext(),
+                    text:
+                        BlocProvider.of<PaymentCubit>(context).currentPhase != 2
+                            ? AppLocalizations.of(context)!.next
+                            : AppLocalizations.of(context)!.pay_now)
+              ]))));
+    });
   }
 }

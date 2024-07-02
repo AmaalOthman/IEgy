@@ -542,11 +542,11 @@ class S {
     );
   }
 
-  /// `My basket`
-  String get my_basket {
+  /// `My cart`
+  String get my_cart {
     return Intl.message(
-      'My basket',
-      name: 'my_basket',
+      'My cart',
+      name: 'my_cart',
       desc: '',
       args: [],
     );
@@ -1459,6 +1459,202 @@ class S {
     return Intl.message(
       'Total amount',
       name: 'total_amount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exchange policy`
+  String get exchange_policy {
+    return Intl.message(
+      'Exchange policy',
+      name: 'exchange_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product may be returned within 14 days from the date receiving, provided that it has not been used at all and that it is in its original condition in terms of packaging, components or attachments, with the customer bearing the shipping and packaging expenses in case of unpacking (Value is determined according Product)`
+  String
+      get product_can_be_returned_within_fourteen_days_from_the_date_of_receiving_provided_that_it_has_not_been_used_at_all_and_that_it_is_in_its_original_condition_in_terms_of_packaging_components_or_attachments_with_the_customer_bearing_the_shipping_and_packaging_expenses_in_case_of_unpacking_value_is_determined_according_to_product {
+    return Intl.message(
+      'Product may be returned within 14 days from the date receiving, provided that it has not been used at all and that it is in its original condition in terms of packaging, components or attachments, with the customer bearing the shipping and packaging expenses in case of unpacking (Value is determined according Product)',
+      name:
+          'product_can_be_returned_within_fourteen_days_from_the_date_of_receiving_provided_that_it_has_not_been_used_at_all_and_that_it_is_in_its_original_condition_in_terms_of_packaging_components_or_attachments_with_the_customer_bearing_the_shipping_and_packaging_expenses_in_case_of_unpacking_value_is_determined_according_to_product',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Products can be returned if they do not conform to the specifications mentioned on the website or if product is damaged or has manufacturing defects`
+  String
+      get products_can_be_returned_if_they_do_not_conform_to_the_specifications_mentioned_on_the_website_or_if_product_is_damaged_or_has_manufacturing_defects {
+    return Intl.message(
+      'Products can be returned if they do not conform to the specifications mentioned on the website or if product is damaged or has manufacturing defects',
+      name:
+          'products_can_be_returned_if_they_do_not_conform_to_the_specifications_mentioned_on_the_website_or_if_product_is_damaged_or_has_manufacturing_defects',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product is ineligible for return if there are defects resulting from misuse`
+  String
+      get product_is_ineligible_for_return_if_there_are_defects_resulting_from_misuse {
+    return Intl.message(
+      'Product is ineligible for return if there are defects resulting from misuse',
+      name:
+          'product_is_ineligible_for_return_if_there_are_defects_resulting_from_misuse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Refund policy`
+  String get refund_policy {
+    return Intl.message(
+      'Refund policy',
+      name: 'refund_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipping cost`
+  String get shipping_cost {
+    return Intl.message(
+      'Shipping cost',
+      name: 'shipping_cost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select region`
+  String get select_region {
+    return Intl.message(
+      'Select region',
+      name: 'select_region',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Write region`
+  String get write_region {
+    return Intl.message(
+      'Write region',
+      name: 'write_region',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ismaeilia`
+  String get ismaeilia {
+    return Intl.message(
+      'Ismaeilia',
+      name: 'ismaeilia',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Terms & Conditions`
+  String get terms_and_conditions {
+    return Intl.message(
+      'Terms & Conditions',
+      name: 'terms_and_conditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipping`
+  String get shipping {
+    return Intl.message(
+      'Shipping',
+      name: 'shipping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Modifications canceled`
+  String get modifications_canceled {
+    return Intl.message(
+      'Modifications canceled',
+      name: 'modifications_canceled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Modifications saved`
+  String get modifications_saved {
+    return Intl.message(
+      'Modifications saved',
+      name: 'modifications_saved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order details`
+  String get order_details {
+    return Intl.message(
+      'Order details',
+      name: 'order_details',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Received on`
+  String get received_on {
+    return Intl.message(
+      'Received on',
+      name: 'received_on',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Explore`
+  String get explore {
+    return Intl.message(
+      'Explore',
+      name: 'explore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By car`
+  String get by_car {
+    return Intl.message(
+      'By car',
+      name: 'by_car',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By bike`
+  String get by_bike {
+    return Intl.message(
+      'By bike',
+      name: 'by_bike',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `On foot`
+  String get on_foot {
+    return Intl.message(
+      'On foot',
+      name: 'on_foot',
       desc: '',
       args: [],
     );

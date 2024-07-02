@@ -65,24 +65,24 @@ class HomeSideMenu extends StatelessWidget {
                 DrawerItem(
                     iconPath: AppAssets.heart,
                     text: AppLocalizations.of(context)!.favourites,
-                    navigateTo: () {}),
-                DrawerItem(
+                    navigateTo: () => BlocProvider.of<HomeCubit>(context).navigateTo(context, Routes.favScreen)),
+                /*DrawerItem(
                     iconPath: AppAssets.darkMood,
                     text: AppLocalizations.of(context)!.dark_mode,
-                    navigateTo: () {}),
+                    navigateTo: () {}),*/
                 DrawerItem(
                     iconPath: AppAssets.exchange,
                     text: AppLocalizations.of(context)!
                         .exchange_and_return_policy,
-                    navigateTo: () {}),
+                    navigateTo: () => BlocProvider.of<HomeCubit>(context).navigateTo(context, Routes.policyScreen)),
                 DrawerItem(
                     iconPath: AppAssets.hummer,
                     text: AppLocalizations.of(context)!.supply_and_installation,
-                    navigateTo: () {}),
+                    navigateTo: () => BlocProvider.of<HomeCubit>(context).navigateTo(context, Routes.supplyAndInstallationScreen)),
                 DrawerItem(
                     iconPath: AppAssets.info,
                     text: AppLocalizations.of(context)!.about_us,
-                    navigateTo: () {})
+                    navigateTo: () => BlocProvider.of<HomeCubit>(context).navigateTo(context, Routes.aboutUsScreen))
               ],
             );
           },

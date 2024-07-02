@@ -21,27 +21,22 @@ class MoreScreen extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: PreferredSize(
-            preferredSize: Size(double.infinity, 84.h),
-            child: Column(
-              children: [
+              preferredSize: Size(double.infinity, 87.h),
+              child: Column(children: [
                 const Spacer(),
                 AppBar(
-                  title: Text(
-                    BlocProvider.of<MoreCubit>(context).section,
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .displayLarge,
-                  ),
-                  leading: IconButton(
-                    onPressed: () =>
-                    BlocProvider.of<MoreCubit>(context).onBackPressed(context),
-                    icon: const BackArrow(),
-                  ),
-                ),
-              ],
-            ),
-          ),
+                    title: SizedBox(
+                        width: 181.w,
+                        child: Text(
+                          BlocProvider.of<MoreCubit>(context).section,
+                          style: Theme.of(context).textTheme.displayLarge,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 2,
+                          textAlign: TextAlign.center,
+                        )),
+                    leading: BackArrow(onTap: () =>
+                        BlocProvider.of<MoreCubit>(context).onBackPressed(context),))
+              ])),
           body: Padding(
             padding: EdgeInsets.only(top: 32.h, bottom: 69.h, left: 16.w, right: 16.w),
             child: Column(

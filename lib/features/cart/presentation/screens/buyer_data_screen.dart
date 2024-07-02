@@ -353,9 +353,9 @@ class BuyerDataScreen extends StatelessWidget {
                           .copyWith(fontSize: 12.w))),
               SizedBox(height: 126.h)
             ],
-          ),
+          )
         );
-      },
+      }
     );
   }
 }

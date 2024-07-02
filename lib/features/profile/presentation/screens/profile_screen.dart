@@ -23,24 +23,18 @@ class ProfileScreen extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: PreferredSize(
-            preferredSize: Size(double.infinity, 84.h),
-            child: Column(
-              children: [
+              preferredSize: Size(double.infinity, 84.h),
+              child: Column(children: [
                 const Spacer(),
                 AppBar(
-                  title: Text(
-                    AppLocalizations.of(context)!.my_account,
-                    style: Theme.of(context).textTheme.displayLarge,
-                  ),
-                  leading: IconButton(
-                    onPressed: () => BlocProvider.of<ProfileCubit>(context)
-                        .onBackPressed(context),
-                    icon: const BackArrow(),
-                  ),
-                ),
-              ],
-            ),
-          ),
+                    title: Text(
+                      AppLocalizations.of(context)!.my_account,
+                      style: Theme.of(context).textTheme.displayLarge,
+                    ),
+                    leading: BackArrow(
+                        onTap: () => BlocProvider.of<ProfileCubit>(context)
+                            .onBackPressed(context)))
+              ])),
           body: Padding(
             padding: EdgeInsets.symmetric(vertical: 70.h, horizontal: 15.w),
             child: Column(

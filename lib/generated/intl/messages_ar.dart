@@ -39,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "best_seller": MessageLookupByLibrary.simpleMessage("الأكثر مبيعاً"),
         "black": MessageLookupByLibrary.simpleMessage("أسود"),
         "blue": MessageLookupByLibrary.simpleMessage("أزرق"),
+        "by_bike": MessageLookupByLibrary.simpleMessage("بالدراجة"),
+        "by_car": MessageLookupByLibrary.simpleMessage("بالسيارة"),
         "cairo": MessageLookupByLibrary.simpleMessage("القاهرة"),
         "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
@@ -85,6 +87,9 @@ class MessageLookup extends MessageLookupByLibrary {
                 "أدخل البريد الإلكترونى أو رقم الهاتف الخاص بك."),
         "exchange_and_return_policy":
             MessageLookupByLibrary.simpleMessage("سياسة الاستبدال و الاسترجاع"),
+        "exchange_policy":
+            MessageLookupByLibrary.simpleMessage("سياسة الاستبدال"),
+        "explore": MessageLookupByLibrary.simpleMessage("استكشف"),
         "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
         "favourites": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "filter": MessageLookupByLibrary.simpleMessage("الفلتر"),
@@ -105,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "هنا نجعلك تقع في حب المكان الذي تعيش فيه"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "house": MessageLookupByLibrary.simpleMessage("المنزل"),
+        "ismaeilia": MessageLookupByLibrary.simpleMessage("الإسماعيلية"),
         "kitchen_collections":
             MessageLookupByLibrary.simpleMessage("تشكيلات مطابخ"),
         "kitchens": MessageLookupByLibrary.simpleMessage("مطابخ"),
@@ -121,10 +127,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "make_the_payment_by":
             MessageLookupByLibrary.simpleMessage("أكمل الدفع قبل"),
         "modern_chair": MessageLookupByLibrary.simpleMessage("كرسي مودرن"),
+        "modifications_canceled":
+            MessageLookupByLibrary.simpleMessage("تم إلغاء التعديلات"),
+        "modifications_saved":
+            MessageLookupByLibrary.simpleMessage("تم حفظ التعديلات"),
         "more": MessageLookupByLibrary.simpleMessage("المزيد"),
         "my_account": MessageLookupByLibrary.simpleMessage("حسابي"),
         "my_address": MessageLookupByLibrary.simpleMessage("عنواني"),
-        "my_basket": MessageLookupByLibrary.simpleMessage("سلتي"),
+        "my_cart": MessageLookupByLibrary.simpleMessage("سلتي"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("منزل جديد!! أثاث جديد!!"),
@@ -133,7 +143,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لا توجد عمليات بحث سابقة!"),
         "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "offers": MessageLookupByLibrary.simpleMessage("العروض"),
+        "on_foot": MessageLookupByLibrary.simpleMessage("سيراً"),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "order_details": MessageLookupByLibrary.simpleMessage("تفاصيل الطلبية"),
         "order_reserved": MessageLookupByLibrary.simpleMessage("تم وضع الطلب"),
         "order_tracking": MessageLookupByLibrary.simpleMessage("تتبع الطلب"),
         "orders": MessageLookupByLibrary.simpleMessage("الطلبيات"),
@@ -163,12 +175,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "price_ranges_between":
             MessageLookupByLibrary.simpleMessage("السعر يتراوح ما بين"),
         "product": MessageLookupByLibrary.simpleMessage("المنتج"),
+        "product_can_be_returned_within_fourteen_days_from_the_date_of_receiving_provided_that_it_has_not_been_used_at_all_and_that_it_is_in_its_original_condition_in_terms_of_packaging_components_or_attachments_with_the_customer_bearing_the_shipping_and_packaging_expenses_in_case_of_unpacking_value_is_determined_according_to_product":
+            MessageLookupByLibrary.simpleMessage(
+                "يجوز استرجاع المنتج خلال 14 يوم من تاريخ استلامه بشرط عدم استخدامه نهائياً و كونه بحالته الأصلية من حيث التغليف و المكونات أو المرفقات مع تحمل العميل لمصاريف الشحن و التغليف في حالة فك التغليف (يتم تحديد القيمة حسب المنتج)"),
+        "product_is_ineligible_for_return_if_there_are_defects_resulting_from_misuse":
+            MessageLookupByLibrary.simpleMessage(
+                "لا يحق استرجاع المنتج في حالة وجود عيوب ناتجة عن سوء الاستخدام"),
         "product_name": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
+        "products_can_be_returned_if_they_do_not_conform_to_the_specifications_mentioned_on_the_website_or_if_product_is_damaged_or_has_manufacturing_defects":
+            MessageLookupByLibrary.simpleMessage(
+                "يمكن استرجاع المنتجات إذا كانت غير مطابقة للمواصفات المذكورة على الموقع أو إذا كان المنتج تالف أو به عيوب صناعة"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
         "purchasing_in_site":
             MessageLookupByLibrary.simpleMessage("استلام من الفرع"),
         "qalubia": MessageLookupByLibrary.simpleMessage("القليوبية"),
+        "received_on": MessageLookupByLibrary.simpleMessage("تم الاستلام في"),
         "red": MessageLookupByLibrary.simpleMessage("أحمر"),
+        "refund_policy":
+            MessageLookupByLibrary.simpleMessage("سياسة الاسترداد"),
         "reset": MessageLookupByLibrary.simpleMessage("إعادة ضبط"),
         "reset_password":
             MessageLookupByLibrary.simpleMessage("إعادة كلمة المرور"),
@@ -178,12 +202,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("عمليات البحث السابقة"),
         "security_and_privacy":
             MessageLookupByLibrary.simpleMessage("الأمان و الخصوصية"),
+        "select_region": MessageLookupByLibrary.simpleMessage("اختر البلد"),
         "send_the_code_again":
             MessageLookupByLibrary.simpleMessage("إرسال الرمز مرة أخري؟"),
         "service": MessageLookupByLibrary.simpleMessage("الخدمة"),
         "service_type": MessageLookupByLibrary.simpleMessage("نوع الخدمة"),
         "sharkia": MessageLookupByLibrary.simpleMessage("الشرقية"),
+        "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
         "shipping_address": MessageLookupByLibrary.simpleMessage("عنوان الشحن"),
+        "shipping_cost": MessageLookupByLibrary.simpleMessage("تكاليف الشحن"),
         "shipping_info": MessageLookupByLibrary.simpleMessage("معلومات الشحن"),
         "shoes_cabinets": MessageLookupByLibrary.simpleMessage("جزامات"),
         "size": MessageLookupByLibrary.simpleMessage("المقاس"),
@@ -193,6 +220,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("التوريد و التركيب"),
         "tables": MessageLookupByLibrary.simpleMessage("ترابيزات"),
+        "terms_and_conditions":
+            MessageLookupByLibrary.simpleMessage("الشروط و الأحكام"),
         "to": MessageLookupByLibrary.simpleMessage("إلى"),
         "total": MessageLookupByLibrary.simpleMessage("الكل:"),
         "total_amount": MessageLookupByLibrary.simpleMessage("إجمالي المبلغ"),
@@ -208,6 +237,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "what_are_u_looking_for":
             MessageLookupByLibrary.simpleMessage("عن ماذا تبحث؟"),
         "white": MessageLookupByLibrary.simpleMessage("أبيض"),
+        "write_region": MessageLookupByLibrary.simpleMessage("اكتب البلد"),
         "yellow": MessageLookupByLibrary.simpleMessage("أصفر")
       };
 }

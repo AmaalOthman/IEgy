@@ -48,8 +48,8 @@ class FilterColor extends StatelessWidget {
                   height: 13.33.h,
                   width: 13.33.w,
                   decoration: BoxDecoration(
+                    shape: BoxShape.circle,
                     border: index == 5? Border.all(color: AppColors.grey): null,
-                    borderRadius: BorderRadius.circular(500),
                       color: index == 1
                           ? AppColors.grey
                           : index == 2

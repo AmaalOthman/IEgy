@@ -31,8 +31,8 @@ class NavBarScreen extends StatelessWidget {
             height: 88.h,
             child: ClipRRect(
               borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(13),
-                topRight: Radius.circular(13),
+                topLeft: Radius.circular(12),
+                topRight: Radius.circular(12),
               ),
               child: BottomNavigationBar(
                 currentIndex: BlocProvider.of<NavBarCubit>(context).currentIndex,
@@ -76,7 +76,7 @@ class NavBarScreen extends StatelessWidget {
                 ],
               ),
             ),
-          ),
+          )
         );
       },
     );

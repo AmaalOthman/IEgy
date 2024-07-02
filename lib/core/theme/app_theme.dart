@@ -11,7 +11,7 @@ ThemeData getAppTheme() {
     appBarTheme: const AppBarTheme(
         backgroundColor: Colors.transparent, centerTitle: true),
     textTheme: TextTheme(
-      displayLarge: boldStyle(color: AppColors.darkBrown, fontSize: 24.w),
+      displayLarge: boldStyle(color: AppColors.darkBrown, fontSize: 24.h),
       displayMedium: mediumStyle(),
       displaySmall: regularStyle(),
       bodySmall: bodyRegularStyle()

@@ -15,8 +15,6 @@ class AppAssets{
   static const String homeOutline = '${imagesPath}home_outline.png';
   static const String categoriesOutline = '${imagesPath}categories_outline.png';
   static const String cart = '${imagesPath}cart.png';
-  static const String cartSelected = '${imagesPath}cart_selected.png';
-  static const String profile = '${imagesPath}profile.png';
   static const String profileOutline = '${imagesPath}profile_outline.png';
   static const String homeLogo = '${imagesPath}home_logo.png';
   static const String home1st = '${imagesPath}home_1st.png';
@@ -31,6 +29,9 @@ class AppAssets{
   static const String shippedOrderStatus = '${imagesPath}shipped_order_status.png';
   static const String receivedOrderStatus = '${imagesPath}received_order_status.png';
   static const String completeOrderStatus = '${imagesPath}complete_order_status.png';
+  static const String exchangeImage = '${imagesPath}exchange.png';
+  static const String installation = '${imagesPath}installation.png';
+  static const String aboutUs = '${imagesPath}about_us.png';
 
   //Icons
   static const String darkMood = '${iconsPath}dark_mood.png';
@@ -84,4 +85,16 @@ class AppAssets{
   static const String van = '${iconsPath}van.png';
   static const String locationBrown = '${iconsPath}location_brown.png';
   static const String map = '${iconsPath}map.png';
+  static const String add = '${iconsPath}add.png';
+  static const String arrowUp = '${iconsPath}arrow_up.png';
+  static const String arrowUpDownII = '${iconsPath}arrow_down_ii.png';
+  static const String cartSelected = '${iconsPath}cart_selected.png';
+  static const String profile = '${iconsPath}profile.png';
+  static const String calendar = '${iconsPath}calendar.png';
+  static const String googleLocation = '${iconsPath}google_location.png';
+  static const String car = '${iconsPath}car.png';
+  static const String bike = '${iconsPath}bike.png';
+  static const String walking = '${iconsPath}walking.png';
+  static const String locationOnMap = '${iconsPath}location_on_map.png';
+  static const String userLocation = '${iconsPath}user_location.png';
 }

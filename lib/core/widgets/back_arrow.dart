@@ -11,9 +11,9 @@ class BackArrow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: sl<CacheHelper>().getCachedLanguage() == 'ar'
+    return IconButton(
+      onPressed: onTap?? () => Navigator.pop(context),
+      icon: sl<CacheHelper>().getCachedLanguage() == 'ar'
           ? CustomImage(imagePath: AppAssets.back, h: 21.h, w: 27.w)
           : Transform(
               transform: Matrix4.identity()..scale(-1.0, 1.0),
