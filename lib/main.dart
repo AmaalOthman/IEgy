@@ -1,8 +1,5 @@
 import 'package:device_preview/device_preview.dart';
-<<<<<<< HEAD
-=======
 import 'package:firebase_core/firebase_core.dart';
->>>>>>> sign_up
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -37,13 +34,6 @@ import 'package:iegy/firebase_options.dart';
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
-<<<<<<< HEAD
-  initServiceLocator();
-  await sl<CacheHelper>().init();
-  runApp(DevicePreview(enabled: true, builder: (context) => MultiBlocProvider(providers: [
-      BlocProvider(create: (context) => sl<GlobalCubit>()..getCachedLang()),
-      BlocProvider(create: (context) => sl<LoginCubit>()),
-=======
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await initializeServices();
   runApp(DevicePreview(
@@ -52,7 +42,6 @@ main() async {
       BlocProvider(create: (context) => sl<GlobalCubit>()..getCachedLang()),
       BlocProvider<AuthCubit>(
           create: (context) => AuthCubit(sl<AuthRepositoryImplementation>())),
->>>>>>> sign_up
       BlocProvider(create: (context) => sl<NavBarCubit>()),
       BlocProvider(create: (context) => sl<WelcomeCubit>()),
       BlocProvider(create: (context) => sl<HomeCubit>()),
