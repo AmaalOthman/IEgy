@@ -16,6 +16,7 @@ import 'package:iegy/features/home/presentation/cubit/notification_cubit/notific
 import 'package:iegy/features/home/presentation/cubit/order_tracking_cubit/order_tracking_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/supply_and_installation_cubit/supply_and_installation_cubit.dart';
 import 'package:iegy/features/nav_bar/presentation/cubit/nav_bar_cubit.dart';
+import 'package:iegy/features/profile/data/repos/profile_repo_implementation.dart';
 import 'package:iegy/features/profile/presentation/cubit/edit_profile_cubit/edit_profile_cubit.dart';
 import 'package:iegy/features/profile/presentation/cubit/orders_cubit/orders_cubit.dart';
 import 'package:iegy/features/profile/presentation/cubit/profile_cubit/profile_cubit.dart';
@@ -27,11 +28,12 @@ void initServiceLocator() {
   sl.registerLazySingleton(() => GlobalCubit());
   sl.registerSingleton<AuthRepositoryImplementation>(
     AuthRepositoryImplementation());
+  sl.registerSingleton<ProfileRepoImplementation>(
+      ProfileRepoImplementation());
   sl.registerLazySingleton(() => NavBarCubit());
   sl.registerLazySingleton(() => WelcomeCubit());
   sl.registerLazySingleton(() => HomeCubit());
   sl.registerLazySingleton(() => CartCubit());
-  sl.registerLazySingleton(() => ProfileCubit());
   sl.registerLazySingleton(() => ResetPasswordNavigatorCubit());
   sl.registerLazySingleton(() => NotificationCubit());
   sl.registerLazySingleton(() => FilterCubit());

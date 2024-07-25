@@ -86,6 +86,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Enter your email or phone number"),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
+        "errorLogingoutTryAgainLater": MessageLookupByLibrary.simpleMessage(
+            "Error logging out, check your internet connection"),
         "exchange_and_return_policy":
             MessageLookupByLibrary.simpleMessage("Exchange and return policy"),
         "exchange_policy":
@@ -229,6 +231,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "somethingWentWrongPleaseTryAgainLater":
             MessageLookupByLibrary.simpleMessage(
                 "Something went wrong, Please try again later"),
+        "successLogOut":
+            MessageLookupByLibrary.simpleMessage("Success logging out"),
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("Supply and installation"),
         "tables": MessageLookupByLibrary.simpleMessage("Tables"),

@@ -26,6 +26,7 @@ import 'package:iegy/features/home/presentation/cubit/notification_cubit/notific
 import 'package:iegy/features/home/presentation/cubit/order_tracking_cubit/order_tracking_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/supply_and_installation_cubit/supply_and_installation_cubit.dart';
 import 'package:iegy/features/nav_bar/presentation/cubit/nav_bar_cubit.dart';
+import 'package:iegy/features/profile/data/repos/profile_repo_implementation.dart';
 import 'package:iegy/features/profile/presentation/cubit/edit_profile_cubit/edit_profile_cubit.dart';
 import 'package:iegy/features/profile/presentation/cubit/orders_cubit/orders_cubit.dart';
 import 'package:iegy/features/profile/presentation/cubit/profile_cubit/profile_cubit.dart';
@@ -42,11 +43,12 @@ main() async {
       BlocProvider(create: (context) => sl<GlobalCubit>()..getCachedLang()),
       BlocProvider<AuthCubit>(
           create: (context) => AuthCubit(sl<AuthRepositoryImplementation>())),
+      BlocProvider<ProfileCubit>(
+          create: (context) => ProfileCubit(sl<ProfileRepoImplementation>())),
       BlocProvider(create: (context) => sl<NavBarCubit>()),
       BlocProvider(create: (context) => sl<WelcomeCubit>()),
       BlocProvider(create: (context) => sl<HomeCubit>()),
       BlocProvider(create: (context) => sl<CartCubit>()),
-      BlocProvider(create: (context) => sl<ProfileCubit>()),
       BlocProvider(create: (context) => sl<ResetPasswordNavigatorCubit>()),
       BlocProvider(create: (context) => sl<NotificationCubit>()),
       BlocProvider(create: (context) => sl<FilterCubit>()),

@@ -167,5 +167,7 @@
   "error": "Error",
   "ok": "OK",
   "warning": "Warning",
-  "nameIsRequired": "Name is required"
+  "nameIsRequired": "Name is required",
+  "errorLogingoutTryAgainLater": "Error logging out, check your internet connection",
+  "successLogOut": "Success logging out"
 }

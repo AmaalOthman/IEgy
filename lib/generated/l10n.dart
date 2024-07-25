@@ -1749,6 +1749,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Error logging out, check your internet connection`
+  String get errorLogingoutTryAgainLater {
+    return Intl.message(
+      'Error logging out, check your internet connection',
+      name: 'errorLogingoutTryAgainLater',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Success logging out`
+  String get successLogOut {
+    return Intl.message(
+      'Success logging out',
+      name: 'successLogOut',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

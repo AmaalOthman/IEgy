@@ -86,6 +86,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "أدخل البريد الإلكترونى أو رقم الهاتف الخاص بك."),
         "error": MessageLookupByLibrary.simpleMessage("خطأ"),
+        "errorLogingoutTryAgainLater": MessageLookupByLibrary.simpleMessage(
+            "خطأ في تسجيل الخروج، تحقق من اتصالك بالإنترنت."),
         "exchange_and_return_policy":
             MessageLookupByLibrary.simpleMessage("سياسة الاستبدال و الاسترجاع"),
         "exchange_policy":
@@ -225,6 +227,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "somethingWentWrongPleaseTryAgainLater":
             MessageLookupByLibrary.simpleMessage(
                 "حدث خطأ ما، من فضلك حاول لاحقاً"),
+        "successLogOut":
+            MessageLookupByLibrary.simpleMessage("تم تسجيل الخروج بنجاح"),
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("التوريد و التركيب"),
         "tables": MessageLookupByLibrary.simpleMessage("ترابيزات"),
