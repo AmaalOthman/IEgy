@@ -1,16 +1,17 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/bloc/cubit/global_cubit.dart';
 import 'package:iegy/core/bloc/cubit/global_state.dart';
-import 'package:iegy/core/database/cache/cache_helper.dart';
 import 'package:iegy/core/functions/initialize_services.dart';
 import 'package:iegy/core/routes/app_routes.dart';
 import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/theme/app_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:iegy/features/auth/data/repos/auth_repo_implementation.dart';
 import 'package:iegy/features/auth/presentation/cubit/auth_cubit/auth_cubit.dart';
 import 'package:iegy/features/auth/presentation/cubit/reset_password_navigator_cubit/reset_password_navigator_cubit.dart';
 import 'package:iegy/features/cart/presentation/cubit/cart_cubit/cart_cubit.dart';
@@ -29,12 +30,18 @@ import 'package:iegy/features/profile/presentation/cubit/edit_profile_cubit/edit
 import 'package:iegy/features/profile/presentation/cubit/orders_cubit/orders_cubit.dart';
 import 'package:iegy/features/profile/presentation/cubit/profile_cubit/profile_cubit.dart';
 import 'package:iegy/features/splash/presentation/cubit/welcome_cubit.dart';
+import 'package:iegy/firebase_options.dart';
 
 main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await initializeServices();
-  runApp(DevicePreview(enabled: true, builder: (context) => MultiBlocProvider(providers: [
+  runApp(DevicePreview(
+    enabled: true,
+    builder: (context) => MultiBlocProvider(providers: [
       BlocProvider(create: (context) => sl<GlobalCubit>()..getCachedLang()),
-      BlocProvider(create: (context) => sl<AuthCubit>()),
+      BlocProvider<AuthCubit>(
+          create: (context) => AuthCubit(sl<AuthRepositoryImplementation>())),
       BlocProvider(create: (context) => sl<NavBarCubit>()),
       BlocProvider(create: (context) => sl<WelcomeCubit>()),
       BlocProvider(create: (context) => sl<HomeCubit>()),

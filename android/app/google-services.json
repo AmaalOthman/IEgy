@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "525189608603",
+    "project_id": "iegy-bcbff",
+    "storage_bucket": "iegy-bcbff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525189608603:android:13e7f6e2023ea8f9e3c23e",
+        "android_client_info": {
+          "package_name": "com.example.iegy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAghGSXNbDHdghPIdkOy3pZZM8wL3JnI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
