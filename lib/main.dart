@@ -6,11 +6,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/bloc/cubit/global_cubit.dart';
 import 'package:iegy/core/bloc/cubit/global_state.dart';
 import 'package:iegy/core/database/cache/cache_helper.dart';
+import 'package:iegy/core/functions/initialize_services.dart';
 import 'package:iegy/core/routes/app_routes.dart';
 import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/theme/app_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:iegy/features/auth/presentation/cubit/login_cubit/login_cubit.dart';
+import 'package:iegy/features/auth/presentation/cubit/auth_cubit/auth_cubit.dart';
 import 'package:iegy/features/auth/presentation/cubit/reset_password_navigator_cubit/reset_password_navigator_cubit.dart';
 import 'package:iegy/features/cart/presentation/cubit/cart_cubit/cart_cubit.dart';
 import 'package:iegy/features/cart/presentation/cubit/payment_cubit/payment_cubit.dart';
@@ -30,12 +31,10 @@ import 'package:iegy/features/profile/presentation/cubit/profile_cubit/profile_c
 import 'package:iegy/features/splash/presentation/cubit/welcome_cubit.dart';
 
 main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  initServiceLocator();
-  await sl<CacheHelper>().init();
+  await initializeServices();
   runApp(DevicePreview(enabled: true, builder: (context) => MultiBlocProvider(providers: [
       BlocProvider(create: (context) => sl<GlobalCubit>()..getCachedLang()),
-      BlocProvider(create: (context) => sl<LoginCubit>()),
+      BlocProvider(create: (context) => sl<AuthCubit>()),
       BlocProvider(create: (context) => sl<NavBarCubit>()),
       BlocProvider(create: (context) => sl<WelcomeCubit>()),
       BlocProvider(create: (context) => sl<HomeCubit>()),

@@ -158,5 +158,14 @@
   "explore": "Explore",
   "by_car": "By car",
   "by_bike": "By bike",
-  "on_foot": "On foot"
+  "on_foot": "On foot",
+  "weekPassword": "Week password",
+  "thisEmailIsAlreadyRegistered": "This email is already registered",
+  "somethingWentWrongPleaseTryAgainLater": "Something went wrong, Please try again later",
+  "password_confirmation_is_required": "Password confirmation is required",
+  "twoPasswordsDoNotMatch": "Two passwords do not match",
+  "error": "Error",
+  "ok": "OK",
+  "warning": "Warning",
+  "nameIsRequired": "Name is required"
 }

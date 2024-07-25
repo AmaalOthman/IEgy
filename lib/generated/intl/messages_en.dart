@@ -85,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "enter_your_email_or_phone_number":
             MessageLookupByLibrary.simpleMessage(
                 "Enter your email or phone number"),
+        "error": MessageLookupByLibrary.simpleMessage("Error"),
         "exchange_and_return_policy":
             MessageLookupByLibrary.simpleMessage("Exchange and return policy"),
         "exchange_policy":
@@ -135,6 +136,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "my_address": MessageLookupByLibrary.simpleMessage("My address"),
         "my_cart": MessageLookupByLibrary.simpleMessage("My cart"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "nameIsRequired":
+            MessageLookupByLibrary.simpleMessage("Name is required"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("New home!! New furniture!!"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
@@ -142,6 +145,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("No history yet!"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "offers": MessageLookupByLibrary.simpleMessage("Offers"),
+        "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "on_foot": MessageLookupByLibrary.simpleMessage("On foot"),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
         "order_details": MessageLookupByLibrary.simpleMessage("Order details"),
@@ -156,6 +160,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Othman Issa St, off Trolley St"),
         "our_branches": MessageLookupByLibrary.simpleMessage("Our branches"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "password_confirmation_is_required":
+            MessageLookupByLibrary.simpleMessage(
+                "Password confirmation is required"),
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("Password is required"),
         "pay": MessageLookupByLibrary.simpleMessage("Pay"),
@@ -219,15 +226,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "sofa": MessageLookupByLibrary.simpleMessage("Sofa"),
         "sofas": MessageLookupByLibrary.simpleMessage("Sofas"),
         "sofra": MessageLookupByLibrary.simpleMessage("Sofra"),
+        "somethingWentWrongPleaseTryAgainLater":
+            MessageLookupByLibrary.simpleMessage(
+                "Something went wrong, Please try again later"),
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("Supply and installation"),
         "tables": MessageLookupByLibrary.simpleMessage("Tables"),
         "terms_and_conditions":
             MessageLookupByLibrary.simpleMessage("Terms & Conditions"),
+        "thisEmailIsAlreadyRegistered": MessageLookupByLibrary.simpleMessage(
+            "This email is already registered"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
         "total": MessageLookupByLibrary.simpleMessage("Total:"),
         "total_amount": MessageLookupByLibrary.simpleMessage("Total amount"),
         "tv_units": MessageLookupByLibrary.simpleMessage("TV units"),
+        "twoPasswordsDoNotMatch":
+            MessageLookupByLibrary.simpleMessage("Two passwords do not match"),
+        "warning": MessageLookupByLibrary.simpleMessage("Warning"),
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage(
                 "We create furniture with your eyes!!"),
@@ -237,6 +252,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "we_maintain_industry_standard_physical_and_administrative_measures_to_protect_your_personal_information":
             MessageLookupByLibrary.simpleMessage(
                 "We maintain industry-standard physical and administrative measures to protect your personal information"),
+        "weekPassword": MessageLookupByLibrary.simpleMessage("Week password"),
         "what_are_u_looking_for":
             MessageLookupByLibrary.simpleMessage("What are you looking for?"),
         "white": MessageLookupByLibrary.simpleMessage("White"),

@@ -6,7 +6,7 @@ import 'package:iegy/core/database/cache/cache_helper.dart';
 import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
-import 'package:iegy/core/utils/common_methods.dart';
+import 'package:iegy/core/functions/common_methods.dart';
 import 'package:iegy/core/widgets/custom_button.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:iegy/core/widgets/custom_loading_indicator.dart';
@@ -52,7 +52,8 @@ class Sale extends StatelessWidget {
                   style: Theme.of(context).textTheme.displayMedium,
                 ),
                 const Spacer(),
-                const CircleAvatar(maxRadius: 7, backgroundColor: AppColors.grey),
+                const CircleAvatar(
+                    maxRadius: 7, backgroundColor: AppColors.grey),
                 SizedBox(
                   width: 3.w,
                 ),
@@ -155,8 +156,8 @@ class Sale extends StatelessWidget {
         ),
         Positioned(
           top: 12.h,
-          right: isArabic()? 12.w: null,
-          left: isArabic()? null: 12.w,
+          right: isArabic() ? 12.w : null,
+          left: isArabic() ? null : 12.w,
           child: CircleAvatar(
               backgroundColor: fav == true
                   ? Theme.of(context).primaryColor
@@ -190,7 +191,9 @@ class Sale extends StatelessWidget {
                               : const Radius.circular(0),
                           bottomRight: isArabic()
                               ? const Radius.circular(0)
-                              : const Radius.circular(6))), child: Icon(CupertinoIcons.delete_solid, color: AppColors.lightBrown, size: 19.h)))
+                              : const Radius.circular(6))),
+                  child: Icon(CupertinoIcons.delete_solid,
+                      color: AppColors.lightBrown, size: 19.h)))
       ]),
     );
   }

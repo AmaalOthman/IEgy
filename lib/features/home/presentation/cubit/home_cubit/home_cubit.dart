@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iegy/core/routes/app_routes.dart';
-import 'package:iegy/core/utils/common_methods.dart';
+import 'package:iegy/core/functions/common_methods.dart';
 import 'package:iegy/features/home/presentation/cubit/more_cubit/more_cubit.dart';
 import 'package:iegy/features/home/presentation/screens/filter_bottom_sheet.dart';
 import 'package:iegy/features/home/presentation/cubit/home_cubit/home_state.dart';
@@ -14,8 +14,8 @@ class HomeCubit extends Cubit<HomeState> {
   FocusNode focusNode = FocusNode();
 
   void onWhatsAppPressed() async {
-    _launchInBrowser(Uri.parse(
-        'whatsapp://send?phone=+201015066160&text=السلام عليكم'));
+    _launchInBrowser(
+        Uri.parse('whatsapp://send?phone=+201015066160&text=السلام عليكم'));
   }
 
   Future<void> _launchInBrowser(Uri url) async {
@@ -39,7 +39,8 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   void openFacebookPage() async {
-    var facebookUrl = "https://www.facebook.com/profile.php?id=100086191197579&mibextid=dGKdO6";
+    var facebookUrl =
+        "https://www.facebook.com/profile.php?id=100086191197579&mibextid=dGKdO6";
 
     if (await canLaunch(facebookUrl)) {
       await launch(facebookUrl);
@@ -55,9 +56,11 @@ class HomeCubit extends Cubit<HomeState> {
 
   void onVoiceSearchClicked() async {
     speechEnabled = await speechToText.initialize();
-    if(speechToText.isListening) {
+    if (speechToText.isListening) {
       _stopListening();
-    } else {_startListening();}
+    } else {
+      _startListening();
+    }
   }
 
   void _startListening() async {
@@ -66,7 +69,7 @@ class HomeCubit extends Cubit<HomeState> {
     emit(SpeechEnabledState());
   }
 
-  void _stopListening () async {
+  void _stopListening() async {
     await speechToText.stop();
     emit(HomeInitial());
   }
@@ -86,21 +89,23 @@ class HomeCubit extends Cubit<HomeState> {
           var begin = const Offset(0.0, 1.0);
           var end = Offset.zero;
           var curve = Curves.ease;
-          var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+          var tween =
+              Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
           var slideAnimation = animation.drive(tween);
           return SlideTransition(
             position: slideAnimation,
-            child: child,
+            child: child
           );
-        },
-      ),
+        }
+      )
     );
   }
 
   void onFilterPressed(BuildContext context) {
     showModalBottomSheet(
         isScrollControlled: true,
-        context: context, builder: (_) => const FilterBottomSheet());
+        context: context,
+        builder: (_) => const FilterBottomSheet());
   }
 
   void more(BuildContext context, String section) {

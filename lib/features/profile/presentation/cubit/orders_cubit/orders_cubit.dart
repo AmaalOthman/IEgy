@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iegy/core/routes/app_routes.dart';
-import 'package:iegy/core/utils/common_methods.dart';
+import 'package:iegy/core/functions/common_methods.dart';
 import 'package:iegy/features/profile/presentation/cubit/orders_cubit/orders_state.dart';
 
 class OrdersCubit extends Cubit<OrdersState> {

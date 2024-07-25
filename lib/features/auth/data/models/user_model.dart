@@ -3,21 +3,13 @@ class UserModel {
     required this.image,
     required this.address,
     required this.name,
-    required this.about,
-    required this.createdAt,
-    required this.lastActive,
     required this.id,
-    required this.isOnline,
     required this.email,
     required this.pushToken,
     required this.phone,
-    required this.is_student,
-    required this.lessons_num,
-    required this.student_id,
-    required this.level,
-    required this.male
   });
 
+  static const String collectionName = 'users';
   late final image;
   late final address;
   late final name;
@@ -44,7 +36,7 @@ class UserModel {
     data['id'] = id;
     data['email'] = email;
     data['push_token'] = pushToken;
-    data['phone'] = phone
+    data['phone'] = phone;
     return data;
   }
 }
