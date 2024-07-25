@@ -85,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "enter_your_email_or_phone_number":
             MessageLookupByLibrary.simpleMessage(
                 "أدخل البريد الإلكترونى أو رقم الهاتف الخاص بك."),
+        "error": MessageLookupByLibrary.simpleMessage("خطأ"),
         "exchange_and_return_policy":
             MessageLookupByLibrary.simpleMessage("سياسة الاستبدال و الاسترجاع"),
         "exchange_policy":
@@ -136,6 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "my_address": MessageLookupByLibrary.simpleMessage("عنواني"),
         "my_cart": MessageLookupByLibrary.simpleMessage("سلتي"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "nameIsRequired": MessageLookupByLibrary.simpleMessage("يجب إدخال اسم"),
         "new_home_new_furniture":
             MessageLookupByLibrary.simpleMessage("منزل جديد!! أثاث جديد!!"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
@@ -143,6 +145,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لا توجد عمليات بحث سابقة!"),
         "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "offers": MessageLookupByLibrary.simpleMessage("العروض"),
+        "ok": MessageLookupByLibrary.simpleMessage("حسناً"),
         "on_foot": MessageLookupByLibrary.simpleMessage("سيراً"),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
         "order_details": MessageLookupByLibrary.simpleMessage("تفاصيل الطلبية"),
@@ -155,6 +158,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "شارع عثمان عيسى، المتفرع من شارع الترولي"),
         "our_branches": MessageLookupByLibrary.simpleMessage("فروعنا"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "password_confirmation_is_required":
+            MessageLookupByLibrary.simpleMessage("يجب تأكيد كلمة السر"),
         "password_is_required":
             MessageLookupByLibrary.simpleMessage("يجب إدخال كلمة مرور"),
         "pay": MessageLookupByLibrary.simpleMessage("الدفع"),
@@ -217,15 +222,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "sofa": MessageLookupByLibrary.simpleMessage("سفرة"),
         "sofas": MessageLookupByLibrary.simpleMessage("أنتريهات"),
         "sofra": MessageLookupByLibrary.simpleMessage("سفرة"),
+        "somethingWentWrongPleaseTryAgainLater":
+            MessageLookupByLibrary.simpleMessage(
+                "حدث خطأ ما، من فضلك حاول لاحقاً"),
         "supply_and_installation":
             MessageLookupByLibrary.simpleMessage("التوريد و التركيب"),
         "tables": MessageLookupByLibrary.simpleMessage("ترابيزات"),
         "terms_and_conditions":
             MessageLookupByLibrary.simpleMessage("الشروط و الأحكام"),
+        "thisEmailIsAlreadyRegistered": MessageLookupByLibrary.simpleMessage(
+            "هذا البريد الإلكتروني مستخدم من قبل"),
         "to": MessageLookupByLibrary.simpleMessage("إلى"),
         "total": MessageLookupByLibrary.simpleMessage("الكل:"),
         "total_amount": MessageLookupByLibrary.simpleMessage("إجمالي المبلغ"),
         "tv_units": MessageLookupByLibrary.simpleMessage("وحدات تلفزيون"),
+        "twoPasswordsDoNotMatch":
+            MessageLookupByLibrary.simpleMessage("كلمتا السر غير متطابقتين"),
+        "warning": MessageLookupByLibrary.simpleMessage("تحذير"),
         "we_create_furniture_with_your_eyes":
             MessageLookupByLibrary.simpleMessage("نصنع الأثاث بعيونك أنت!!"),
         "we_have_sent_you_a_four_digit_code":
@@ -234,6 +247,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "we_maintain_industry_standard_physical_and_administrative_measures_to_protect_your_personal_information":
             MessageLookupByLibrary.simpleMessage(
                 "نحن نحافظ على التدابير المادية و الإدارية المتوافقة مع معايير الصناعة لحماية معلوماتك الشخصية"),
+        "weekPassword": MessageLookupByLibrary.simpleMessage("كلمة سر ضعيفة"),
         "what_are_u_looking_for":
             MessageLookupByLibrary.simpleMessage("عن ماذا تبحث؟"),
         "white": MessageLookupByLibrary.simpleMessage("أبيض"),

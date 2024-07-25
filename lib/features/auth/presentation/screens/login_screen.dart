@@ -4,14 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/routes/app_routes.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
-import 'package:iegy/core/utils/common_methods.dart';
+import 'package:iegy/core/functions/common_methods.dart';
 import 'package:iegy/core/widgets/custom_button.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:iegy/core/widgets/custom_loading_indicator.dart';
 import 'package:iegy/core/widgets/custom_text_form_field.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:iegy/features/auth/presentation/cubit/login_cubit/login_cubit.dart';
-import 'package:iegy/features/auth/presentation/cubit/login_cubit/login_state.dart';
+import 'package:iegy/features/auth/presentation/cubit/auth_cubit/auth_cubit.dart';
+import 'package:iegy/features/auth/presentation/cubit/auth_cubit/auth_state.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -19,15 +19,13 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => BlocProvider.of<LoginCubit>(context).removeKeyboard(),
+      onTap: () => BlocProvider.of<AuthCubit>(context).removeKeyboard(),
       child: Scaffold(
         body: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(
-                horizontal: 55.w,
-                vertical: 32.h),
+            padding: EdgeInsets.symmetric(horizontal: 55.w, vertical: 32.h),
             child: SingleChildScrollView(
-              child: BlocConsumer<LoginCubit, LoginState>(
+              child: BlocConsumer<AuthCubit, AuthState>(
                 listener: (context, state) {
                   if (state is LoginSuccessState) {
                     showToast(
@@ -42,59 +40,57 @@ class LoginScreen extends StatelessWidget {
                 },
                 builder: (context, state) {
                   return Form(
-                    key: BlocProvider.of<LoginCubit>(context).loginKey,
+                    key: BlocProvider.of<AuthCubit>(context).loginKey,
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
                           AppLocalizations.of(context)!.login,
-                          style: Theme.of(context).textTheme.displayLarge,
+                          style: Theme.of(context).textTheme.displayLarge
                         ),
                         SizedBox(
-                          height: 29.h,
+                          height: 29.h
                         ),
                         CustomImage(
                           imagePath: AppAssets.login,
                           h: 188.h,
-                          w: 204.02.w,
+                          w: 204.02.w
                         ),
                         SizedBox(
-                          height: 24.h,
+                          height: 24.h
                         ),
                         CustomTextFormField(
-                          focusNode: BlocProvider.of<LoginCubit>(context)
-                              .emailFocusNode,
-                          keyboardType: TextInputType.emailAddress,
-                          controller: BlocProvider.of<LoginCubit>(context)
-                              .emailController,
-                          hint: AppLocalizations.of(context)!.email,
-                          preIcon: Padding(
-                            padding: EdgeInsets.all(17.w),
-                            child: CustomImage(
-                              imagePath: AppAssets.email,
-                              h: 12.h,
-                              w: 16.w,
+                            focusNode: BlocProvider.of<AuthCubit>(context)
+                                .emailFocusNode,
+                            keyboardType: TextInputType.emailAddress,
+                            controller: BlocProvider.of<AuthCubit>(context)
+                                .loginEmailController,
+                            hint: AppLocalizations.of(context)!.email,
+                            preIcon: Padding(
+                              padding: EdgeInsets.all(17.w),
+                              child: const CustomImage(
+                                imagePath: AppAssets.email
+                              )
                             ),
-                          ),
-                          validator: (data) {
-                            if (!ValidationUtils.isValidEmail(data!)) {
-                              return AppLocalizations.of(context)!
-                                  .please_enter_valid_email;
-                            }
-                            if (data.isEmpty) {
-                              return AppLocalizations.of(context)!
-                                  .email_is_required;
-                            }
-                            return null;
-                          },
-                        ),
+                            validator: (data) {
+                              if (!ValidationUtils.isValidEmail(data!)) {
+                                return AppLocalizations.of(context)!
+                                    .please_enter_valid_email;
+                              }
+                              if (data.isEmpty) {
+                                return AppLocalizations.of(context)!
+                                    .email_is_required;
+                              }
+                              return null;
+                            }),
                         SizedBox(
-                          height: 16.h,
+                          height: 16.h
                         ),
                         CustomTextFormField(
-                          focusNode: BlocProvider.of<LoginCubit>(context)
+                          focusNode: BlocProvider.of<AuthCubit>(context)
                               .passwordFocusNode,
-                          controller: BlocProvider.of<LoginCubit>(context)
-                              .passwordController,
+                          controller: BlocProvider.of<AuthCubit>(context)
+                              .loginPasswordController,
                           hint: AppLocalizations.of(context)!.password,
                           preIcon: Padding(
                               padding: EdgeInsets.all(17.w),
@@ -103,11 +99,11 @@ class LoginScreen extends StatelessWidget {
                                 h: 16.h,
                                 w: 14.w,
                               )),
-                          isObSecure: BlocProvider.of<LoginCubit>(context)
+                          isObSecure: BlocProvider.of<AuthCubit>(context)
                               .isLoginPasswordHidden,
                           suffixIcon:
-                              BlocProvider.of<LoginCubit>(context).suffixIcon,
-                          onSuffixPressed: BlocProvider.of<LoginCubit>(context)
+                              BlocProvider.of<AuthCubit>(context).suffixIcon,
+                          onSuffixPressed: BlocProvider.of<AuthCubit>(context)
                               .changeLoginPasswordSuffixIcon,
                           validator: (data) {
                             if (data!.isEmpty) {
@@ -115,25 +111,25 @@ class LoginScreen extends StatelessWidget {
                                   .password_is_required;
                             }
                             return null;
-                          },
+                          }
                         ),
                         SizedBox(
-                          height: 16.h,
+                          height: 16.h
                         ),
                         state is LoginLoadingState
                             ? const CustomLoadingIndicator()
                             : CustomButton(
                                 onPressed: () =>
-                                    BlocProvider.of<LoginCubit>(context)
+                                    BlocProvider.of<AuthCubit>(context)
                                         .onLoginPressed(context),
                                 text: AppLocalizations.of(context)!.login),
                         SizedBox(
-                          height: 4.h,
+                          height: 4.h
                         ),
                         Row(
                           children: [
                             InkWell(
-                              onTap: () => BlocProvider.of<LoginCubit>(context)
+                              onTap: () => BlocProvider.of<AuthCubit>(context)
                                   .onForgetPasswordPressed(context),
                               child: Text(
                                 AppLocalizations.of(context)!.forgot_password,
@@ -141,17 +137,18 @@ class LoginScreen extends StatelessWidget {
                                     .textTheme
                                     .displayMedium!
                                     .copyWith(
-                                      decoration: TextDecoration.underline,
-                                    ),
-                              ),
-                            ),
-                          ],
+                                      decoration: TextDecoration.underline
+                                    )
+                              )
+                            )
+                          ]
                         ),
                         SizedBox(
-                          height: 48.h,
+                          height: 48.h
                         ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
                               height: .7,
@@ -177,9 +174,9 @@ class LoginScreen extends StatelessWidget {
                             Container(
                               height: .7,
                               width: 120.w,
-                              color: AppColors.grey,
+                              color: AppColors.grey
                             )
-                          ],
+                          ]
                         ),
                         SizedBox(
                           height: 24.h,
@@ -188,7 +185,7 @@ class LoginScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             CustomButton(
-                              w: 151.w,
+                              w: 151,
                               onPressed: () {},
                               text: AppLocalizations.of(context)!.google,
                               textColor: AppColors.blue,
@@ -200,7 +197,7 @@ class LoginScreen extends StatelessWidget {
                               background: AppColors.white,
                             ),
                             CustomButton(
-                              w: 151.w,
+                              w: 151,
                               onPressed: () {
                                 navigateLast(
                                     context: context, route: Routes.navBar);
@@ -220,7 +217,7 @@ class LoginScreen extends StatelessWidget {
                           height: 24.h,
                         ),
                         InkWell(
-                          onTap: () => BlocProvider.of<LoginCubit>(context)
+                          onTap: () => BlocProvider.of<AuthCubit>(context)
                               .onRegisterPressed(context),
                           child: Text(
                             AppLocalizations.of(context)!.create_new_acc,

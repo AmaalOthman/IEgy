@@ -7,7 +7,7 @@ import 'package:iegy/core/database/cache/cache_helper.dart';
 import 'package:iegy/core/services/service_locator.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
-import 'package:iegy/core/utils/common_methods.dart';
+import 'package:iegy/core/functions/common_methods.dart';
 import 'package:iegy/core/widgets/custom_button.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:iegy/core/widgets/custom_text_form_field.dart';
@@ -40,19 +40,18 @@ class HomeScreen extends StatelessWidget {
           },
           child: Scaffold(
               drawer: Drawer(
-                width: 270.w,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                        topLeft: isArabic()
-                            ? const Radius.circular(25)
-                            : const Radius.circular(0),
-                        topRight: isArabic()
-                            ? const Radius.circular(0)
-                            : const Radius.circular(25))),
-                backgroundColor: Colors.transparent,
-                elevation: .5,
-                child: const HomeSideMenu()
-              ),
+                  width: 270.w,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                          topLeft: isArabic()
+                              ? const Radius.circular(25)
+                              : const Radius.circular(0),
+                          topRight: isArabic()
+                              ? const Radius.circular(0)
+                              : const Radius.circular(25))),
+                  backgroundColor: Colors.transparent,
+                  elevation: .5,
+                  child: const HomeSideMenu()),
               appBar: BlocProvider.of<HomeCubit>(context).focusNode.hasFocus
                   ? null
                   : AppBar(
@@ -106,10 +105,9 @@ class HomeScreen extends StatelessWidget {
                                 color: AppColors.darkBlue,
                               ),
                               suffixIcon: CustomImage(
-                                imagePath: AppAssets.mic,
-                                h: 18.h,
-                                w: 13.39.w
-                              ),
+                                  imagePath: AppAssets.mic,
+                                  h: 18.h,
+                                  w: 13.39.w),
                               hint: AppLocalizations.of(context)!
                                   .what_are_u_looking_for,
                               onSuffixPressed:

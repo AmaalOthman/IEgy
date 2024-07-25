@@ -5,7 +5,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
-import 'package:iegy/core/utils/common_methods.dart';
+import 'package:iegy/core/functions/common_methods.dart';
 import 'package:iegy/core/widgets/back_arrow.dart';
 import 'package:iegy/core/widgets/custom_button.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
@@ -344,7 +344,7 @@ class EditProfileScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomButton(
-                          onPressed: ()  =>
+                          onPressed: () =>
                               BlocProvider.of<EditProfileCubit>(context)
                                   .save(context),
                           text: AppLocalizations.of(context)!.save,

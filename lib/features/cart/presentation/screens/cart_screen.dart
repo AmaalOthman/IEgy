@@ -4,7 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/utils/app_assets.dart';
 import 'package:iegy/core/utils/app_colors.dart';
-import 'package:iegy/core/utils/common_methods.dart';
+import 'package:iegy/core/functions/common_methods.dart';
 import 'package:iegy/core/widgets/back_arrow.dart';
 import 'package:iegy/core/widgets/custom_button.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
@@ -21,21 +21,18 @@ class CartScreen extends StatelessWidget {
     return BlocBuilder<CartCubit, CartState>(builder: (context, state) {
       return Scaffold(
           appBar: PreferredSize(
-            preferredSize: Size(double.infinity, 84.h),
-            child: Column(
-              children: [
+              preferredSize: Size(double.infinity, 84.h),
+              child: Column(children: [
                 const Spacer(),
                 AppBar(
-                  title: Text(
-                    AppLocalizations.of(context)!.my_cart,
-                    style: Theme.of(context).textTheme.displayLarge,
-                  ),
-                  leading: BackArrow(onTap: () => BlocProvider.of<CartCubit>(context)
-                      .onBackPressed(context))
-                )
-              ]
-            )
-          ),
+                    title: Text(
+                      AppLocalizations.of(context)!.my_cart,
+                      style: Theme.of(context).textTheme.displayLarge,
+                    ),
+                    leading: BackArrow(
+                        onTap: () => BlocProvider.of<CartCubit>(context)
+                            .onBackPressed(context)))
+              ])),
           body: Padding(
               padding: EdgeInsets.symmetric(vertical: 30.h),
               child: Column(children: [

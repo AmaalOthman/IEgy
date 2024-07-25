@@ -1659,6 +1659,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Week password`
+  String get weekPassword {
+    return Intl.message(
+      'Week password',
+      name: 'weekPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This email is already registered`
+  String get thisEmailIsAlreadyRegistered {
+    return Intl.message(
+      'This email is already registered',
+      name: 'thisEmailIsAlreadyRegistered',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something went wrong, Please try again later`
+  String get somethingWentWrongPleaseTryAgainLater {
+    return Intl.message(
+      'Something went wrong, Please try again later',
+      name: 'somethingWentWrongPleaseTryAgainLater',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password confirmation is required`
+  String get password_confirmation_is_required {
+    return Intl.message(
+      'Password confirmation is required',
+      name: 'password_confirmation_is_required',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Two passwords do not match`
+  String get twoPasswordsDoNotMatch {
+    return Intl.message(
+      'Two passwords do not match',
+      name: 'twoPasswordsDoNotMatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error`
+  String get error {
+    return Intl.message(
+      'Error',
+      name: 'error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `OK`
+  String get ok {
+    return Intl.message(
+      'OK',
+      name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Warning`
+  String get warning {
+    return Intl.message(
+      'Warning',
+      name: 'warning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name is required`
+  String get nameIsRequired {
+    return Intl.message(
+      'Name is required',
+      name: 'nameIsRequired',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

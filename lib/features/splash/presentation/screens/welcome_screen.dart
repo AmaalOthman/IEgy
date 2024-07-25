@@ -56,7 +56,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   h: 126.h,
                   w: 126.w,
                 ),
-                SizedBox(height: BlocProvider.of<WelcomeCubit>(context).isFirstPage? 66.h: 32.h),
+                SizedBox(
+                    height: BlocProvider.of<WelcomeCubit>(context).isFirstPage
+                        ? 66.h
+                        : 32.h),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 22.w),
                   child: Text(
@@ -64,11 +67,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         ? AppLocalizations.of(context)!
                             .we_create_furniture_with_your_eyes
                         : '${AppLocalizations.of(context)!.new_home_new_furniture}\n ${AppLocalizations.of(context)!.discover_our_distinctive_collection_of_furniture_and_renew_your_home_with_a_magical_touch}',
-                    style: Theme.of(context).textTheme.displayLarge!.copyWith(height: 2.h),
+                    style: Theme.of(context)
+                        .textTheme
+                        .displayLarge!
+                        .copyWith(height: 1.7),
                     textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(height: BlocProvider.of<WelcomeCubit>(context).isFirstPage? 66.h: 16.h),
+                SizedBox(
+                    height: BlocProvider.of<WelcomeCubit>(context).isFirstPage
+                        ? 66.h
+                        : 16.h),
                 SmoothPageIndicator(
                   controller: BlocProvider.of<WelcomeCubit>(context).controller,
                   count: BlocProvider.of<WelcomeCubit>(context).pages.length,

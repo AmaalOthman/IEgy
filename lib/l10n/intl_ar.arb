@@ -158,5 +158,14 @@
   "explore": "استكشف",
   "by_car": "بالسيارة",
   "by_bike": "بالدراجة",
-  "on_foot": "سيراً"
+  "on_foot": "سيراً",
+  "weekPassword": "كلمة سر ضعيفة",
+  "thisEmailIsAlreadyRegistered": "هذا البريد الإلكتروني مستخدم من قبل",
+  "somethingWentWrongPleaseTryAgainLater": "حدث خطأ ما، من فضلك حاول لاحقاً",
+  "password_confirmation_is_required": "يجب تأكيد كلمة السر",
+  "twoPasswordsDoNotMatch": "كلمتا السر غير متطابقتين",
+  "error": "خطأ",
+  "ok": "حسناً",
+  "warning": "تحذير",
+  "nameIsRequired": "يجب إدخال اسم"
 }
