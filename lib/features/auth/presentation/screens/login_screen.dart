@@ -119,6 +119,8 @@ class LoginScreen extends StatelessWidget {
                         state is LoginLoadingState
                             ? const CustomLoadingIndicator()
                             : CustomButton(
+                          w: 320.w,
+                                h: 52.h,
                                 onPressed: () =>
                                     BlocProvider.of<AuthCubit>(context)
                                         .onLoginPressed(context),
@@ -185,7 +187,8 @@ class LoginScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             CustomButton(
-                              w: 151,
+                              w: 131.w,
+                              h: 52.h,
                               onPressed: () {},
                               text: AppLocalizations.of(context)!.google,
                               textColor: AppColors.blue,
@@ -197,7 +200,8 @@ class LoginScreen extends StatelessWidget {
                               background: AppColors.white,
                             ),
                             CustomButton(
-                              w: 151,
+                              w: 131.w,
+                              h: 52.h,
                               onPressed: () {
                                 navigateLast(
                                     context: context, route: Routes.navBar);

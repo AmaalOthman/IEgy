@@ -32,7 +32,7 @@ class ProfileCubit extends Cubit<ProfileState> {
         emit(LogOutSuccessState(logOut));
       };
     } catch (error) {
-      emit(LogOutErrorState(errorMessage: 'Logout failed: $error'));
+      emit(LogOutErrorState(error.toString()));
     }
   }
 

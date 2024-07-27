@@ -1769,6 +1769,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Are you sure you want to log out?`
+  String get areYouSureYouWantToLogOut {
+    return Intl.message(
+      'Are you sure you want to log out?',
+      name: 'areYouSureYouWantToLogOut',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back`
+  String get back {
+    return Intl.message(
+      'Back',
+      name: 'back',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

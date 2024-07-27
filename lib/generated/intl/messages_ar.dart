@@ -32,8 +32,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "am": MessageLookupByLibrary.simpleMessage("ص"),
         "apply_filtration":
             MessageLookupByLibrary.simpleMessage("تطبيق الفلتر"),
+        "areYouSureYouWantToLogOut": MessageLookupByLibrary.simpleMessage(
+            "هل أنت متأكد أنك تريد تسجيل الخروج؟"),
         "awaiting_payment":
             MessageLookupByLibrary.simpleMessage("في انتظار الدفع"),
+        "back": MessageLookupByLibrary.simpleMessage("رجوع"),
         "bed_rooms": MessageLookupByLibrary.simpleMessage("غرف نوم"),
         "bedroom": MessageLookupByLibrary.simpleMessage("غرفة نوم"),
         "best_seller": MessageLookupByLibrary.simpleMessage("الأكثر مبيعاً"),

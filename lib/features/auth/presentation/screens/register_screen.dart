@@ -166,7 +166,8 @@ class RegisterScreen extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   CustomButton(
-                                    w: 151,
+                                    w: 131.w,
+                                    h: 52.h,
                                     onPressed: () {},
                                     text: AppLocalizations.of(context)!.google,
                                     textColor: AppColors.blue,
@@ -178,7 +179,8 @@ class RegisterScreen extends StatelessWidget {
                                     background: AppColors.white,
                                   ),
                                   CustomButton(
-                                      w: 151,
+                                      w: 131.w,
+                                      h: 52.h,
                                       onPressed: () {},
                                       text: AppLocalizations.of(context)!
                                           .facebook,

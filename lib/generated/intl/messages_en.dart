@@ -32,8 +32,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "am": MessageLookupByLibrary.simpleMessage("am"),
         "apply_filtration":
             MessageLookupByLibrary.simpleMessage("Apply Filtration"),
+        "areYouSureYouWantToLogOut": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to log out?"),
         "awaiting_payment":
             MessageLookupByLibrary.simpleMessage("Awaiting payment"),
+        "back": MessageLookupByLibrary.simpleMessage("Back"),
         "bed_rooms": MessageLookupByLibrary.simpleMessage("Bed rooms"),
         "bedroom": MessageLookupByLibrary.simpleMessage("Bedroom"),
         "best_seller": MessageLookupByLibrary.simpleMessage("Best seller"),

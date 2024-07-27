@@ -169,5 +169,7 @@
   "warning": "Warning",
   "nameIsRequired": "Name is required",
   "errorLogingoutTryAgainLater": "Error logging out, check your internet connection",
-  "successLogOut": "Success logging out"
+  "successLogOut": "Success logging out",
+  "areYouSureYouWantToLogOut": "Are you sure you want to log out?",
+  "back": "Back"
 }

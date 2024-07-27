@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/routes/app_routes.dart';
@@ -20,18 +21,20 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigateAfter3Seconds() {
-    Future.delayed(const Duration(seconds: 3))
-        .then((value) => navigateLast(context: context, route: Routes.welcome));
+    Future.delayed(const Duration(seconds: 3)).then((value) => navigateLast(
+        context: context,
+        route: FirebaseAuth.instance.currentUser != null
+            ? Routes.navBar
+            : Routes.welcome));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-      child: SizedBox(
-          height: 200.h,
-          width: 200.w,
-          child: const CustomImage(imagePath: AppAssets.appLogo)),
-    ));
+            child: SizedBox(
+                height: 200.h,
+                width: 200.w,
+                child: const CustomImage(imagePath: AppAssets.appLogo))));
   }
 }

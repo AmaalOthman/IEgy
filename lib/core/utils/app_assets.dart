@@ -68,7 +68,7 @@ class AppAssets{
   static const String categories = '${iconsPath}categories.png';
   static const String tabIndicator = '${iconsPath}tab_indicator.png';
   static const String lockerAndKey = '${iconsPath}locker_and_key.png';
-  static const String logOut = '${iconsPath}log_out.png';
+  static const String logOut = '${iconsPath}log_out.svg';
   static const String back = '${iconsPath}back.png';
   static const String offerNotification = '${iconsPath}offer_notification.png';
   static const String orderNotification = '${iconsPath}order_notification.png';

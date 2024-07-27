@@ -5,9 +5,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:iegy/core/utils/app_colors.dart';
 import 'package:iegy/core/widgets/back_arrow.dart';
-import 'package:iegy/features/profile/presentation/components/order.dart';
 import 'package:iegy/features/profile/presentation/cubit/orders_cubit/orders_cubit.dart';
 import 'package:iegy/features/profile/presentation/cubit/orders_cubit/orders_state.dart';
+import 'package:iegy/features/profile/presentation/widgets/order.dart';
 
 class OrdersScreen extends StatelessWidget {
   const OrdersScreen({super.key});
