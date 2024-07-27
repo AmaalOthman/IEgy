@@ -16,8 +16,7 @@ class LogOutDialog extends StatelessWidget {
         const Gap(12),
         Row(
           children: [
-            TextButton(onPressed: () {Navigator.pop(context);
-              context.read<ProfileCubit>().logOut(context);}, child: Text(AppLocalizations.of(context)!.log_out, style: Theme.of(context).textTheme.displayLarge!.copyWith(fontSize: 16))),
+            TextButton(onPressed: () => context.read<ProfileCubit>().logOut(context), child: Text(AppLocalizations.of(context)!.log_out, style: Theme.of(context).textTheme.displayLarge!.copyWith(fontSize: 16))),
             const Spacer(),
             TextButton(onPressed: () => Navigator.pop(context), child: Text(AppLocalizations.of(context)!.back, style: Theme.of(context).textTheme.displayLarge!.copyWith(fontSize: 16)))
           ]
