@@ -6,7 +6,10 @@ class AuthInitial extends AuthState {}
 final class ChangeLoginPasswordSuffixIcon extends AuthState {}
 final class LoginLoadingState extends AuthState {}
 final class RegisterLoadingState extends AuthState {}
-final class LoginSuccessState extends AuthState {}
+final class LoginSuccessState extends AuthState {
+  final UserModel userModel;
+  LoginSuccessState(this.userModel);
+}
 final class RegisterSuccessState extends AuthState {
   final UserModel userModel;
   RegisterSuccessState(this.userModel);

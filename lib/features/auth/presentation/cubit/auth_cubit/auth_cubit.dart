@@ -80,12 +80,24 @@ class AuthCubit extends Cubit<AuthState> {
     emit(ChangeLoginPasswordSuffixIcon());
   }
 
-  void onLoginPressed(context) {
+  Future<void> onLoginPressed(String email, String password, BuildContext context) async {
     emit(LoginLoadingState());
     if (loginKey.currentState!.validate()) {
-      log('login');
-      navigateLast(context: context, route: Routes.navBar);
-      emit(LoginSuccessState());
+      final response = await _authRepo.loginWithEmailAndPassword(email, password, context);
+      response.fold((failure) {
+        emit(LoginErrorState(failure));
+      }, (authResponse) async {
+        log(authResponse.toString(), name: 'Auth Response');
+        /*await CacheHelper()
+          .saveData("access_token", authResponse.token)
+          .then((value) {
+        DefaultLogger.logger.w("TOKEN SAVED SUCCESSFULLY ");
+        DefaultLogger.logger.w(authResponse.token.toString());
+      });
+      log(authResponse.toString());*/
+        emit(LoginSuccessState(UserModel(image: authResponse.image, id: authResponse.id, name: authResponse.name, phone:
+        authResponse.phone, address: authResponse.address, email: authResponse.email, pushToken: authResponse.pushToken)));
+      });
     } else {
       emit(LoginErrorState(AppLocalizations.of(context)!.login_failed));
     }
@@ -135,6 +147,7 @@ class AuthCubit extends Cubit<AuthState> {
       log(authResponse.toString());*/
       emit(RegisterSuccessState(UserModel(image: authResponse.image, id: authResponse.id, name: authResponse.name, phone:
       authResponse.phone, address: authResponse.address, email: authResponse.email, pushToken: authResponse.pushToken)));
+      disposeControllers();
     });
   }
 }

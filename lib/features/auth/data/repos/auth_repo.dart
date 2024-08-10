@@ -6,4 +6,5 @@ import 'package:iegy/features/auth/data/models/user_model.dart';
 abstract class AuthRepo {
   Future<Either<String, UserModel>> signUpWithEmailAndPassword(
       SignUpRequestBody signUpRequestBody, BuildContext context);
+  Future<Either<String, UserModel>> loginWithEmailAndPassword(String email, String password, BuildContext context);
 }

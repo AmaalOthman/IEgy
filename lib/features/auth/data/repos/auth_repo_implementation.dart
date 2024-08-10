@@ -25,6 +25,7 @@ class AuthRepositoryImplementation extends AuthRepo {
         phone: credentials.user?.phoneNumber ?? signUpRequestBody.phoneNumber,
         address: null,
       );
+      await insertUser(newUser);
       return Right(newUser);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
@@ -32,10 +33,12 @@ class AuthRepositoryImplementation extends AuthRepo {
       } else if (e.code == 'email-already-in-use') {
         return Left(AppLocalizations.of(context)!.thisEmailIsAlreadyRegistered);
       } else {
-        return Left(AppLocalizations.of(context)!.somethingWentWrongPleaseTryAgainLater);
+        return Left(AppLocalizations.of(context)!
+            .somethingWentWrongPleaseTryAgainLater);
       }
     } catch (e) {
-      return Left(AppLocalizations.of(context)!.somethingWentWrongPleaseTryAgainLater);
+      return Left(
+          AppLocalizations.of(context)!.somethingWentWrongPleaseTryAgainLater);
     }
   }
 
@@ -50,8 +53,39 @@ class AuthRepositoryImplementation extends AuthRepo {
     return FirebaseFirestore.instance
         .collection(UserModel.collectionName)
         .withConverter<UserModel>(
-      fromFirestore: (doc, _) => UserModel.fromJson(doc.data()!),
-      toFirestore: (user, options) => user.toJson(),
-    );
+          fromFirestore: (doc, _) => UserModel.fromJson(doc.data()!),
+          toFirestore: (user, options) => user.toJson(),
+        );
+  }
+
+  @override
+  Future<Either<String, UserModel>> loginWithEmailAndPassword(
+      String email, String password, BuildContext context) async {
+    try {
+      var credential = await auth.signInWithEmailAndPassword(
+          email: email, password: password);
+      var retrievedUser = await getFutureOfUserById(credential.user?.uid ?? '');
+
+      if (retrievedUser == null) {
+        return left(AppLocalizations.of(context)!
+            .somethingWentWrongPleaseTryAgainLater);
+      } else {
+        return right(retrievedUser);
+      }
+    } on FirebaseAuthException catch (e) {
+      return left(AppLocalizations.of(context)!.wrongEmailOrPassword);
+    } catch (e) {
+      print(e);
+      return left(AppLocalizations.of(context)!
+          .somethingWentWrongPleaseTryAgainLater);
+    }
+  }
+
+
+  static Future<UserModel?> getFutureOfUserById(String uid) async {
+    var collection = getUsersCollection();
+    var docRef = collection.doc(uid);
+    var res = await docRef.get();
+    return res.data();
   }
 }

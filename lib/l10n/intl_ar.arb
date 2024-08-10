@@ -171,5 +171,6 @@
   "errorLogingoutTryAgainLater": "خطأ في تسجيل الخروج، تحقق من اتصالك بالإنترنت.",
   "successLogOut": "تم تسجيل الخروج بنجاح",
   "areYouSureYouWantToLogOut": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
-  "back": "رجوع"
+  "back": "رجوع",
+  "wrongEmailOrPassword": "خطأ في البريد الإلكتروني أو كلمة السر"
 }
