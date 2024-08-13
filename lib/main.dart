@@ -32,13 +32,14 @@ import 'package:iegy/features/profile/presentation/cubit/orders_cubit/orders_cub
 import 'package:iegy/features/profile/presentation/cubit/profile_cubit/profile_cubit.dart';
 import 'package:iegy/features/splash/presentation/cubit/welcome_cubit.dart';
 import 'package:iegy/firebase_options.dart';
+import 'package:flutter/foundation.dart';
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await initializeServices();
   runApp(DevicePreview(
-    enabled: true,
+    enabled: !kReleaseMode,
     builder: (context) => MultiBlocProvider(providers: [
       BlocProvider(create: (context) => sl<GlobalCubit>()..getCachedLang()),
       BlocProvider<AuthCubit>(

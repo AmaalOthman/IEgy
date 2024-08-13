@@ -116,4 +116,6 @@ class HomeCubit extends Cubit<HomeState> {
   void navigateTo(BuildContext context, String route) {
     navigate(context: context, route: route);
   }
+
+  fetchHomeSliders() {}
 }

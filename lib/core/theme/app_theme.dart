@@ -51,7 +51,7 @@ ThemeData getAppTheme() {
         selectedIconTheme: const IconThemeData(color: AppColors.darkBrown),
         selectedLabelStyle: GoogleFonts.ibmPlexSansArabic(
             fontWeight: FontWeight.normal,
-            fontSize: 14.w,
+            fontSize: 14,
             color: AppColors.darkBrown),
         selectedItemColor: AppColors.darkBrown,
         showSelectedLabels: true,
@@ -60,7 +60,7 @@ ThemeData getAppTheme() {
         unselectedItemColor: const Color(0xffd7cfc8),
         unselectedLabelStyle: GoogleFonts.ibmPlexSansArabic(
             fontWeight: FontWeight.normal,
-            fontSize: 14.w,
+            fontSize: 14,
             color: const Color(0xffd7cfc8)),
         type: BottomNavigationBarType.shifting),
   );

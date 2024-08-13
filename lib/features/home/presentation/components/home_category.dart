@@ -16,8 +16,8 @@ class HomeCategory extends StatelessWidget {
         Container(
           margin: EdgeInsets.symmetric(horizontal: 6.w),
           padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 5.h),
-          width: 36.w,
-          height: 36.h,
+          width: 36,
+          height: 36,
           decoration: BoxDecoration(
               color: first == true ? AppColors.darkBrown : AppColors.white,
               borderRadius: BorderRadius.circular(10)),
@@ -27,7 +27,7 @@ class HomeCategory extends StatelessWidget {
         Text(
           label,
           style: Theme.of(context).textTheme.displaySmall!.copyWith(
-              fontSize: 8.w,
+              fontSize: 8,
               fontWeight: FontWeight.w900,
               color: AppColors.darkBrown),
         )
