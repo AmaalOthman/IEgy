@@ -1789,6 +1789,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Wrong email or password`
+  String get wrongEmailOrPassword {
+    return Intl.message(
+      'Wrong email or password',
+      name: 'wrongEmailOrPassword',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
