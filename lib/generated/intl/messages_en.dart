@@ -264,6 +264,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("What are you looking for?"),
         "white": MessageLookupByLibrary.simpleMessage("White"),
         "write_region": MessageLookupByLibrary.simpleMessage("Write region"),
+        "wrongEmailOrPassword":
+            MessageLookupByLibrary.simpleMessage("Wrong email or password"),
         "yellow": MessageLookupByLibrary.simpleMessage("Yellow")
       };
 }

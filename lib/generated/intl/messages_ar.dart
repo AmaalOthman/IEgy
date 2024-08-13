@@ -259,6 +259,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("عن ماذا تبحث؟"),
         "white": MessageLookupByLibrary.simpleMessage("أبيض"),
         "write_region": MessageLookupByLibrary.simpleMessage("اكتب البلد"),
+        "wrongEmailOrPassword": MessageLookupByLibrary.simpleMessage(
+            "خطأ في البريد الإلكتروني أو كلمة السر"),
         "yellow": MessageLookupByLibrary.simpleMessage("أصفر")
       };
 }

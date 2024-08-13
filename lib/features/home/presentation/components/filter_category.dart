@@ -6,7 +6,11 @@ import 'package:iegy/features/home/presentation/cubit/filter_cubit/filter_cubit.
 import 'package:iegy/features/home/presentation/cubit/filter_cubit/filter_state.dart';
 
 class FilterCategory extends StatelessWidget {
-  FilterCategory({super.key, required this.selected, required this.text, required this.index});
+  FilterCategory(
+      {super.key,
+      required this.selected,
+      required this.text,
+      required this.index});
 
   bool selected;
   String text;
@@ -14,21 +18,21 @@ class FilterCategory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<FilterCubit, FilterState>(
-      builder: (context, state) {
-        return MaterialButton(
-          padding: EdgeInsets.symmetric(
-              horizontal: 12.w, vertical: 4.h),
+    return BlocBuilder<FilterCubit, FilterState>(builder: (context, state) {
+      return MaterialButton(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
           minWidth: 0,
-          height: 30.h,
+          height: 30,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
-          onPressed: () => BlocProvider.of<FilterCubit>(context).onCategoryPressed(index),
+          onPressed: () =>
+              BlocProvider.of<FilterCubit>(context).onCategoryPressed(index),
           color: selected ? AppColors.lightBrown : AppColors.white,
-          child: Text(text, style: Theme.of(context).textTheme.displayMedium!.copyWith(fontSize: 12.w, color: selected? AppColors.white: AppColors.darkBlue),),
-        );
-      },
-    );
+          child: Text(text,
+              style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                  fontSize: 12,
+                  color: selected ? AppColors.white : AppColors.darkBlue)));
+    });
   }
 }
