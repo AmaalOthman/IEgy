@@ -6,6 +6,7 @@ import 'package:iegy/features/auth/presentation/cubit/auth_cubit/auth_cubit.dart
 import 'package:iegy/features/auth/presentation/cubit/reset_password_navigator_cubit/reset_password_navigator_cubit.dart';
 import 'package:iegy/features/cart/presentation/cubit/cart_cubit/cart_cubit.dart';
 import 'package:iegy/features/cart/presentation/cubit/payment_cubit/payment_cubit.dart';
+import 'package:iegy/features/home/data/repos/home_repo_impelementation.dart';
 import 'package:iegy/features/home/presentation/cubit/branches_cubit/branches_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/fav_cubit/fav_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/filter_cubit/filter_cubit.dart';
@@ -14,6 +15,7 @@ import 'package:iegy/features/home/presentation/cubit/map_cubit/map_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/more_cubit/more_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/notification_cubit/notification_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/order_tracking_cubit/order_tracking_cubit.dart';
+import 'package:iegy/features/home/presentation/cubit/sliders_cubit/sliders_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/supply_and_installation_cubit/supply_and_installation_cubit.dart';
 import 'package:iegy/features/nav_bar/presentation/cubit/nav_bar_cubit.dart';
 import 'package:iegy/features/profile/data/repos/profile_repo_implementation.dart';
@@ -46,5 +48,6 @@ void initServiceLocator() {
   sl.registerLazySingleton(() => SupplyAndInstallationCubit());
   sl.registerLazySingleton(() => MapCubit());
   sl.registerLazySingleton(() => FavCubit());
+  sl.registerLazySingleton(() => SlidersCubit(HomeRepoImplementation()));
   sl.registerLazySingleton(() => CacheHelper());
 }
