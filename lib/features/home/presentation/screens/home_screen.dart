@@ -13,6 +13,7 @@ import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:iegy/core/widgets/custom_text_form_field.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:iegy/features/home/presentation/components/home_category.dart';
+import 'package:iegy/features/home/presentation/components/home_sliders.dart';
 import 'package:iegy/features/home/presentation/components/offer.dart';
 import 'package:iegy/features/home/presentation/components/idea.dart';
 import 'package:iegy/features/home/presentation/components/sale.dart';
@@ -21,7 +22,6 @@ import 'package:iegy/features/home/presentation/cubit/home_cubit/home_cubit.dart
 import 'package:iegy/features/home/presentation/cubit/home_cubit/home_state.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/home_side_menu.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -135,72 +135,9 @@ class HomeScreen extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            CarouselSlider(
-                              options: CarouselOptions(
-                                height: 210.h,
-                                autoPlay: true,
-                                viewportFraction: 1,
-                                enlargeCenterPage: true
-                              ),
-                              items: [Container(
-                                padding: EdgeInsets.all(16.w),
-                                margin: const EdgeInsets.symmetric(vertical: 7),
-                                width: 398.w,
-                                height: 203.h,
-                                decoration: BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: AppColors.black.withOpacity(0.15),
-                                      spreadRadius: 2,
-                                      blurRadius: 2,
-                                      offset: const Offset(0, 3),
-                                    ),
-                                  ],
-                                  borderRadius: BorderRadius.circular(12),
-                                  color: const Color(0xffe8e3da),
-                                ),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 106.w,
-                                      child: Column(
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                        children: [
-                                          RichText(
-                                            // maxLines: 2,
-                                            overflow: TextOverflow.fade,
-                                            text: TextSpan(
-                                              text: AppLocalizations.of(
-                                                  context)!
-                                                  .here_we_make_u_fall_in_love_with_the_place_u_live_in,
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .displayMedium!
-                                                  .copyWith(
-                                                height: 2.h,
-                                              ),
-                                            ),
-                                          ),
-                                          CustomButton(
-                                            h: 22.h,
-                                            onPressed: () {},
-                                            text: AppLocalizations.of(context)!
-                                                .contact_us,
-                                            fontSize: 10.w,
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                    const CustomImage(
-                                        imagePath: AppAssets.home1st)
-                                  ],
-                                ),
-                              )],
-                            ),
+                            const HomeSliders(),
                             SizedBox(
-                              height: 16.h,
+                              height: 16.h
                             ),
                             SizedBox(
                               width: 414.w,
@@ -257,17 +194,17 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                              height: 17.h,
+                              height: 17.h
                             ),
                             Text(
                               AppLocalizations.of(context)!.offers,
                               style: Theme.of(context)
                                   .textTheme
                                   .displayLarge!
-                                  .copyWith(color: AppColors.brown),
+                                  .copyWith(color: AppColors.brown)
                             ),
                             SizedBox(
-                              height: 12.h,
+                              height: 12.h
                             ),
                             SizedBox(
                               height: 190.h,
@@ -293,7 +230,7 @@ class HomeScreen extends StatelessWidget {
                                         AppLocalizations.of(context)!
                                             .best_seller)),
                             SizedBox(
-                              height: 12.h,
+                              height: 12.h
                             ),
                             SizedBox(
                               height: 251.h,

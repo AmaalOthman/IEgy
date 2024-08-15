@@ -24,6 +24,7 @@ import 'package:iegy/features/home/presentation/cubit/map_cubit/map_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/more_cubit/more_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/notification_cubit/notification_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/order_tracking_cubit/order_tracking_cubit.dart';
+import 'package:iegy/features/home/presentation/cubit/sliders_cubit/sliders_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/supply_and_installation_cubit/supply_and_installation_cubit.dart';
 import 'package:iegy/features/nav_bar/presentation/cubit/nav_bar_cubit.dart';
 import 'package:iegy/features/profile/data/repos/profile_repo_implementation.dart';
@@ -60,6 +61,7 @@ main() async {
       BlocProvider(create: (context) => sl<BranchesCubit>()),
       BlocProvider(create: (context) => sl<OrderTrackingCubit>()),
       BlocProvider(create: (context) => sl<SupplyAndInstallationCubit>()),
+      BlocProvider(create: (context) => sl<SlidersCubit>()),
       BlocProvider(create: (context) => sl<MapCubit>()),
       BlocProvider(create: (context) => sl<FavCubit>())
     ], child: const MyApp()),
