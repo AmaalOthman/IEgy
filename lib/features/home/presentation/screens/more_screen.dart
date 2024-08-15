@@ -70,7 +70,17 @@ class MoreScreen extends StatelessWidget {
                       childAspectRatio: BlocProvider.of<MoreCubit>(context).section == AppLocalizations.of(context)!.best_seller? 182/251: 191/120
                     ),
                     itemBuilder: (context, index) {
-                      return BlocProvider.of<MoreCubit>(context).section == AppLocalizations.of(context)!.best_seller? const Sale(): const Idea();
+                      return BlocProvider.of<MoreCubit>(context).section == AppLocalizations.of(context)!.best_seller? const Sale(
+                          fav: true,
+                          image:
+                          'https://www.oppeinhome.com/upload/images/ueditor/20230912/top-kitchen-design-ideas-that-inspire-you-1.webp',
+                          title: 'مطبخ',
+                          color1: '0xFFFFFF',
+                          color2: '0xFFFFFF',
+                          color3: '0xFFFFFF',
+                          rateCount: '561',
+                          price: '5123',
+                          oldPrice: '23646'): const Idea();
                     },
                     itemCount: 32,
                   ),

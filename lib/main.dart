@@ -16,6 +16,7 @@ import 'package:iegy/features/auth/presentation/cubit/auth_cubit/auth_cubit.dart
 import 'package:iegy/features/auth/presentation/cubit/reset_password_navigator_cubit/reset_password_navigator_cubit.dart';
 import 'package:iegy/features/cart/presentation/cubit/cart_cubit/cart_cubit.dart';
 import 'package:iegy/features/cart/presentation/cubit/payment_cubit/payment_cubit.dart';
+import 'package:iegy/features/home/presentation/cubit/best_seller_cubit/best_seller_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/branches_cubit/branches_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/fav_cubit/fav_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/filter_cubit/filter_cubit.dart';
@@ -64,6 +65,7 @@ main() async {
       BlocProvider(create: (context) => sl<SupplyAndInstallationCubit>()),
       BlocProvider(create: (context) => sl<SlidersCubit>()),
       BlocProvider(create: (context) => sl<OffersCubit>()),
+      BlocProvider(create: (context) => sl<BestSellerCubit>()),
       BlocProvider(create: (context) => sl<MapCubit>()),
       BlocProvider(create: (context) => sl<FavCubit>())
     ], child: const MyApp()),

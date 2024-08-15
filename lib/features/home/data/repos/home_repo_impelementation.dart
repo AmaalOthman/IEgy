@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:iegy/features/home/data/models/offer_model.dart';
+import 'package:iegy/features/home/data/models/product_model.dart';
 import 'package:iegy/features/home/data/models/slider_model.dart';
 import 'package:iegy/features/home/data/repos/home_repo.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -41,6 +42,15 @@ class HomeRepoImplementation extends HomeRepo {
     });
   }
 
+  CollectionReference<ProductModel> getBestSellerCollection() {
+    return fireStore.collection('best_seller').withConverter<ProductModel>(
+        fromFirestore: (snapshot, options) {
+      return ProductModel.fromJson(snapshot.data()!);
+    }, toFirestore: (product, options) {
+      return product.toJson();
+    });
+  }
+
   @override
   Future<Either<String, Stream<QuerySnapshot<OfferModel>>>> fetchOffers(BuildContext context) async {
     try {
@@ -51,6 +61,22 @@ class HomeRepoImplementation extends HomeRepo {
     } catch (e) {
       return Left(
           AppLocalizations.of(context)!.somethingWentWrongPleaseTryAgainLater);
+    }
+  }
+
+  @override
+  Future<Either<String ,Stream<QuerySnapshot<ProductModel>>>> fetchBestSeller(BuildContext context) {
+    try {
+      // Listen for realtime updates
+      Stream<QuerySnapshot<ProductModel>> bestSellerStream = getBestSellerCollection()
+          .snapshots();
+
+      // Return the successful result wrapped in a Right, inside a Future
+      return Future.value(Right(bestSellerStream));
+    } catch (e) {
+      // Handle the error and return a Left with an error message inside a Future
+      return Future.value(Left(
+          AppLocalizations.of(context)!.somethingWentWrongPleaseTryAgainLater));
     }
   }
 }

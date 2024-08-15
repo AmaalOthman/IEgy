@@ -26,7 +26,6 @@ class _OffersListState extends State<OffersList> {
 
   @override
   Widget build(BuildContext context) {
-    String currentLang = Localizations.localeOf(context).languageCode;
     return BlocBuilder<OffersCubit, OffersState>(builder: (context, state) {
       if (state is OffersErrorState) {
         return Text(state.errorMessage);

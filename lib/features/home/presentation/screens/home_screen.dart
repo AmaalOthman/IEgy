@@ -12,6 +12,7 @@ import 'package:iegy/core/widgets/custom_button.dart';
 import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:iegy/core/widgets/custom_text_form_field.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:iegy/features/home/presentation/components/best_seller_widget.dart';
 import 'package:iegy/features/home/presentation/components/home_category.dart';
 import 'package:iegy/features/home/presentation/components/home_sliders.dart';
 import 'package:iegy/features/home/presentation/components/offer.dart';
@@ -196,20 +197,7 @@ class HomeScreen extends StatelessWidget {
                                         AppLocalizations.of(context)!
                                             .best_seller)),
                             SizedBox(height: 12.h),
-                            SizedBox(
-                              height: 251.h,
-                              width: 414.w,
-                              child: ListView.separated(
-                                scrollDirection: Axis.horizontal,
-                                itemBuilder: (context, index) {
-                                  return const Sale();
-                                },
-                                separatorBuilder: (context, index) {
-                                  return SizedBox(width: 16.w);
-                                },
-                                itemCount: 32,
-                              ),
-                            ),
+                            const BestSellerWidget(),
                             SizedBox(height: 21.h),
                             SectionTitle(
                                 title: AppLocalizations.of(context)!.room_ideas,

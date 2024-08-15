@@ -13,8 +13,20 @@ import 'package:iegy/core/widgets/custom_loading_indicator.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Sale extends StatelessWidget {
-  const Sale({super.key, this.fav});
+  const Sale(
+      {super.key,
+      this.fav,
+      required this.image,
+      required this.title,
+      required this.color1,
+      required this.color2,
+      required this.color3,
+      required this.rateCount,
+      required this.price,
+      this.oldPrice});
   final bool? fav;
+  final String image, title, color1, color2, color3, rateCount, price;
+  final String? oldPrice;
 
   @override
   Widget build(BuildContext context) {
@@ -28,110 +40,75 @@ class Sale extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 8.h),
           child: Column(children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: CachedNetworkImage(
-                height: 119.h,
-                width: 162.w,
-                imageUrl:
-                    'https://www.oppeinhome.com/upload/images/ueditor/20230912/top-kitchen-design-ideas-that-inspire-you-1.webp',
-                errorWidget: (context, url, error) =>
-                    const CustomImage(imagePath: AppAssets.errorImage),
-                // placeholder: (context, url) => const CustomImage(imagePath: AppAssets.placeholder),
-                progressIndicatorBuilder: (context, url, progress) => SizedBox(
-                    width: 228.w,
-                    child: const Center(child: CustomLoadingIndicator())),
+                borderRadius: BorderRadius.circular(20),
+                child: CachedNetworkImage(
+                  fit: BoxFit.cover,
+                    height: 119.h,
+                    width: 162.w,
+                    imageUrl: image,
+                    errorWidget: (context, url, error) =>
+                        const CustomImage(imagePath: AppAssets.errorImage),
+                    // placeholder: (context, url) => const CustomImage(imagePath: AppAssets.placeholder),
+                    progressIndicatorBuilder: (context, url, progress) =>
+                        SizedBox(
+                            width: 228.w,
+                            child: const Center(
+                                child: CustomLoadingIndicator())))),
+            SizedBox(height: 4.h),
+            Row(children: [
+              Text(title, style: Theme.of(context).textTheme.displayMedium),
+              const Spacer(),
+              CircleAvatar(
+                  maxRadius: 7, backgroundColor: Color(int.parse(color1))),
+              SizedBox(width: 3.w),
+              CircleAvatar(
+                  maxRadius: 7, backgroundColor: Color(int.parse(color2))),
+              SizedBox(
+                width: 3.w,
               ),
-            ),
-            SizedBox(
-              height: 4.h,
-            ),
-            Row(
-              children: [
-                Text(
-                  'مطبخ',
-                  style: Theme.of(context).textTheme.displayMedium,
-                ),
-                const Spacer(),
-                const CircleAvatar(
-                    maxRadius: 7, backgroundColor: AppColors.grey),
-                SizedBox(
-                  width: 3.w,
-                ),
-                const CircleAvatar(
-                  maxRadius: 7,
-                  backgroundColor: AppColors.brown,
-                ),
-                SizedBox(
-                  width: 3.w,
-                ),
-                const CircleAvatar(
-                  maxRadius: 7,
-                  backgroundColor: AppColors.darkBrown,
-                )
-              ],
-            ),
-            SizedBox(
-              height: 3.h,
-            ),
-            Row(
-              children: [
-                Text(
-                  '(738)',
-                  style: Theme.of(context).textTheme.displaySmall,
-                ),
-                Icon(
-                  CupertinoIcons.star_fill,
-                  color: AppColors.gold,
-                  size: 9.75.w,
-                ),
-                Icon(
-                  CupertinoIcons.star_fill,
-                  color: AppColors.gold,
-                  size: 9.75.w,
-                ),
-                Icon(
-                  CupertinoIcons.star_fill,
-                  color: AppColors.gold,
-                  size: 9.75.w,
-                ),
-                Icon(
-                  CupertinoIcons.star_fill,
-                  color: AppColors.gold,
-                  size: 9.75.w,
-                ),
-                Icon(
-                  CupertinoIcons.star_fill,
-                  color: AppColors.gold,
-                  size: 9.75.w,
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 8.h,
-            ),
-            Row(
-              children: [
-                Text(
-                  '3000 ${AppLocalizations.of(context)!.egp}',
-                  style: Theme.of(context)
-                      .textTheme
-                      .displayMedium!
-                      .copyWith(fontSize: 19.w),
-                ),
-                const Spacer(),
+              CircleAvatar(
+                  maxRadius: 7, backgroundColor: Color(int.parse(color3)))
+            ]),
+            SizedBox(height: 3.h),
+            Row(children: [
+              Text(
+                rateCount,
+                style: Theme.of(context).textTheme.displaySmall,
+              ),
+              Icon(CupertinoIcons.star_fill,
+                  color: AppColors.gold, size: 9.75.w),
+              Icon(CupertinoIcons.star_fill,
+                  color: AppColors.gold, size: 9.75.w),
+              Icon(CupertinoIcons.star_fill,
+                  color: AppColors.gold, size: 9.75.w),
+              Icon(CupertinoIcons.star_fill,
+                  color: AppColors.gold, size: 9.75.w),
+              Icon(CupertinoIcons.star_fill,
+                  color: AppColors.gold, size: 9.75.w)
+            ]),
+            SizedBox(height: 8.h),
+            Row(children: [
+              Text(
+                '$price ${AppLocalizations.of(context)!.egp}',
+                style: Theme.of(context)
+                    .textTheme
+                    .displayMedium!
+                    .copyWith(fontSize: 14),
+              ),
+              const Spacer(),
+              if (oldPrice != null)
                 RichText(
-                  text: TextSpan(
-                    text: '5000 ${AppLocalizations.of(context)!.egp}',
-                    style: Theme.of(context).textTheme.displayMedium!.copyWith(
-                          color: AppColors.grey,
-                          decoration: TextDecoration.lineThrough,
-                          decorationColor: AppColors.grey,
-                          decorationThickness: 2.h,
-                        ),
-                  ),
-                )
-              ],
-            ),
+                    text: TextSpan(
+                        text: '$oldPrice ${AppLocalizations.of(context)!.egp}',
+                        style: Theme.of(context)
+                            .textTheme
+                            .displayMedium!
+                            .copyWith(
+                                color: AppColors.grey,
+                                decoration: TextDecoration.lineThrough,
+                                decorationColor: AppColors.grey,
+                                decorationThickness: 2.h)))
+            ]),
             const Spacer(),
             if (fav != true)
               Row(
