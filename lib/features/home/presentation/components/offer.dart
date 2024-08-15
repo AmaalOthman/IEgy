@@ -6,17 +6,20 @@ import 'package:iegy/core/widgets/custom_image.dart';
 import 'package:iegy/core/widgets/custom_loading_indicator.dart';
 
 class Offer extends StatelessWidget {
-  const Offer({super.key});
+  const Offer({super.key, required this.image});
+  final String image;
 
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(20),
-      child: CachedNetworkImage(imageUrl: 'https://emkan-furniture.com/wp-content/uploads/2022/11/liety.jpg',
-          errorWidget: (context, url, error) => const CustomImage(imagePath: AppAssets.errorImage),
-        // placeholder: (context, url) => const CustomImage(imagePath: AppAssets.placeholder),
-        progressIndicatorBuilder: (context, url, progress) => SizedBox( width: 228.w, child: const Center(child: CustomLoadingIndicator())),
-      ),
-    );
+        borderRadius: BorderRadius.circular(20),
+        child: CachedNetworkImage(
+            imageUrl: image,
+            errorWidget: (context, url, error) =>
+                const CustomImage(imagePath: AppAssets.errorImage),
+            // placeholder: (context, url) => const CustomImage(imagePath: AppAssets.placeholder),
+            progressIndicatorBuilder: (context, url, progress) => SizedBox(
+                width: 228.w,
+                child: const Center(child: CustomLoadingIndicator()))));
   }
 }

@@ -16,6 +16,7 @@ import 'package:iegy/features/home/presentation/components/home_category.dart';
 import 'package:iegy/features/home/presentation/components/home_sliders.dart';
 import 'package:iegy/features/home/presentation/components/offer.dart';
 import 'package:iegy/features/home/presentation/components/idea.dart';
+import 'package:iegy/features/home/presentation/components/offers_list.dart';
 import 'package:iegy/features/home/presentation/components/sale.dart';
 import 'package:iegy/features/home/presentation/components/section_title.dart';
 import 'package:iegy/features/home/presentation/cubit/home_cubit/home_cubit.dart';
@@ -57,78 +58,64 @@ class HomeScreen extends StatelessWidget {
                   ? null
                   : AppBar(
                       title: const CustomImage(
-                        h: 40,
-                        w: 95,
-                        imagePath: AppAssets.homeLogo
-                      ),
+                          h: 40, w: 95, imagePath: AppAssets.homeLogo),
                       actions: [
-                        IconButton(
-                          onPressed: () => BlocProvider.of<HomeCubit>(context)
-                              .goToNotifications(context),
-                          icon: CustomImage(
-                            imagePath: AppAssets.notifications,
-                            h: 22.4.h,
-                            w: 19.6.w
-                          )
-                        ),
-                        SizedBox(
-                          width: 6.w
-                        )
-                      ]
-                    ),
+                          IconButton(
+                              onPressed: () =>
+                                  BlocProvider.of<HomeCubit>(context)
+                                      .goToNotifications(context),
+                              icon: CustomImage(
+                                  imagePath: AppAssets.notifications,
+                                  h: 22.4.h,
+                                  w: 19.6.w)),
+                          SizedBox(width: 6.w)
+                        ]),
               body: SingleChildScrollView(
                 child: Padding(
                   padding: EdgeInsetsDirectional.only(start: 10.5.w),
                   child: Column(
                     children: [
-                      SizedBox(
-                        height: 24.h
-                      ),
-                      Row(
-                        children: [
-                          CustomTextFormField(
-                            hintStyle: Theme.of(context).textTheme.displaySmall!.copyWith(fontSize: 16),
-                            w: 350.w,
-                            controller: TextEditingController(
-                                text: BlocProvider.of<HomeCubit>(context)
-                                        .speechToText
-                                        .isListening
-                                    ? "listening.."
-                                    : BlocProvider.of<HomeCubit>(context)
-                                        .spokenWords),
-                            focusNode:
-                                BlocProvider.of<HomeCubit>(context).focusNode,
-                            shadow: true,
-                            preIcon: const Icon(
-                              Icons.search,
-                              color: AppColors.darkBlue,
-                            ),
-                            suffixIcon: const CustomImage(
-                                imagePath: AppAssets.mic,
-                                h: 18,
-                                w: 13.39),
-                            hint: AppLocalizations.of(context)!
-                                .what_are_u_looking_for,
-                            onSuffixPressed:
-                                BlocProvider.of<HomeCubit>(context)
-                                    .onVoiceSearchClicked,
+                      SizedBox(height: 24.h),
+                      Row(children: [
+                        CustomTextFormField(
+                          hintStyle: Theme.of(context)
+                              .textTheme
+                              .displaySmall!
+                              .copyWith(fontSize: 16),
+                          w: 350.w,
+                          controller: TextEditingController(
+                              text: BlocProvider.of<HomeCubit>(context)
+                                      .speechToText
+                                      .isListening
+                                  ? "listening.."
+                                  : BlocProvider.of<HomeCubit>(context)
+                                      .spokenWords),
+                          focusNode:
+                              BlocProvider.of<HomeCubit>(context).focusNode,
+                          shadow: true,
+                          preIcon: const Icon(
+                            Icons.search,
+                            color: AppColors.darkBlue,
                           ),
-                          SizedBox(width: 8.w),
-                          IconButton(
-                            onPressed: () =>
-                                BlocProvider.of<HomeCubit>(context)
-                                    .onFilterPressed(context),
-                            icon: CustomImage(
-                              imagePath: AppAssets.filter,
-                              w: 18.67.w,
-                            ),
+                          suffixIcon: const CustomImage(
+                              imagePath: AppAssets.mic, h: 18, w: 13.39),
+                          hint: AppLocalizations.of(context)!
+                              .what_are_u_looking_for,
+                          onSuffixPressed: BlocProvider.of<HomeCubit>(context)
+                              .onVoiceSearchClicked,
+                        ),
+                        SizedBox(width: 8.w),
+                        IconButton(
+                          onPressed: () => BlocProvider.of<HomeCubit>(context)
+                              .onFilterPressed(context),
+                          icon: CustomImage(
+                            imagePath: AppAssets.filter,
+                            w: 18.67.w,
                           ),
-                          SizedBox(width: 4.w)
-                        ]
-                      ),
-                      SizedBox(
-                        height: 16.h
-                      ),
+                        ),
+                        SizedBox(width: 4.w)
+                      ]),
+                      SizedBox(height: 16.h),
                       if (!BlocProvider.of<HomeCubit>(context)
                           .focusNode
                           .hasFocus)
@@ -136,9 +123,7 @@ class HomeScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const HomeSliders(),
-                            SizedBox(
-                              height: 16.h
-                            ),
+                            SizedBox(height: 16.h),
                             SizedBox(
                               width: 414.w,
                               height: 50,
@@ -152,24 +137,24 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                   HomeCategory(
                                       icon: AppAssets.chair,
-                                      label: AppLocalizations.of(context)!
-                                          .chairs),
+                                      label:
+                                          AppLocalizations.of(context)!.chairs),
                                   HomeCategory(
                                       icon: AppAssets.table,
-                                      label: AppLocalizations.of(context)!
-                                          .tables),
+                                      label:
+                                          AppLocalizations.of(context)!.tables),
                                   HomeCategory(
                                       icon: AppAssets.sofa,
-                                      label: AppLocalizations.of(context)!
-                                          .sofas),
+                                      label:
+                                          AppLocalizations.of(context)!.sofas),
                                   HomeCategory(
                                       icon: AppAssets.sofra,
-                                      label: AppLocalizations.of(context)!
-                                          .sofra),
+                                      label:
+                                          AppLocalizations.of(context)!.sofra),
                                   HomeCategory(
                                       icon: AppAssets.door,
-                                      label: AppLocalizations.of(context)!
-                                          .doors),
+                                      label:
+                                          AppLocalizations.of(context)!.doors),
                                   HomeCategory(
                                       icon: AppAssets.bed,
                                       label: AppLocalizations.of(context)!
@@ -193,33 +178,14 @@ class HomeScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            SizedBox(
-                              height: 17.h
-                            ),
-                            Text(
-                              AppLocalizations.of(context)!.offers,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .displayLarge!
-                                  .copyWith(color: AppColors.brown)
-                            ),
-                            SizedBox(
-                              height: 12.h
-                            ),
-                            SizedBox(
-                              height: 190.h,
-                              width: 414.w,
-                              child: ListView.separated(
-                                scrollDirection: Axis.horizontal,
-                                itemBuilder: (context, index) {
-                                  return const Offer();
-                                },
-                                separatorBuilder: (context, index) {
-                                  return SizedBox(width: 8.w);
-                                },
-                                itemCount: 32,
-                              ),
-                            ),
+                            SizedBox(height: 17.h),
+                            Text(AppLocalizations.of(context)!.offers,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .displayLarge!
+                                    .copyWith(color: AppColors.brown)),
+                            SizedBox(height: 12.h),
+                            const OffersList(),
                             SizedBox(height: 21.h),
                             SectionTitle(
                                 title:
@@ -229,9 +195,7 @@ class HomeScreen extends StatelessWidget {
                                         context,
                                         AppLocalizations.of(context)!
                                             .best_seller)),
-                            SizedBox(
-                              height: 12.h
-                            ),
+                            SizedBox(height: 12.h),
                             SizedBox(
                               height: 251.h,
                               width: 414.w,
@@ -248,8 +212,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                             SizedBox(height: 21.h),
                             SectionTitle(
-                                title:
-                                    AppLocalizations.of(context)!.room_ideas,
+                                title: AppLocalizations.of(context)!.room_ideas,
                                 onMoreTap: () =>
                                     BlocProvider.of<HomeCubit>(context).more(
                                         context,
@@ -306,14 +269,11 @@ class HomeScreen extends StatelessWidget {
                       else
                         Column(
                           children: [
-                            SizedBox(
-                              height: 20.h
-                            ),
+                            SizedBox(height: 20.h),
                             Row(
                               children: [
                                 Text(
-                                  AppLocalizations.of(context)!
-                                      .search_history,
+                                  AppLocalizations.of(context)!.search_history,
                                   style: Theme.of(context)
                                       .textTheme
                                       .displayLarge!
@@ -333,12 +293,9 @@ class HomeScreen extends StatelessWidget {
                             ),
                             Text(
                               AppLocalizations.of(context)!.no_history_yet,
-                              style:
-                                  Theme.of(context).textTheme.displayMedium,
+                              style: Theme.of(context).textTheme.displayMedium,
                             ),
-                            SizedBox(
-                              height: 36.h
-                            ),
+                            SizedBox(height: 36.h),
                             Row(
                               children: [
                                 Text(
@@ -353,15 +310,12 @@ class HomeScreen extends StatelessWidget {
                                 )
                               ],
                             ),
-                            SizedBox(
-                              height: 12.h
-                            ),
+                            SizedBox(height: 12.h),
                             Row(
                               children: [
                                 CustomButton(
                                     onPressed: () {},
-                                    text:
-                                        AppLocalizations.of(context)!.tables,
+                                    text: AppLocalizations.of(context)!.tables,
                                     borderRadius: 15,
                                     background: AppColors.brown,
                                     w: 120.w),
@@ -379,8 +333,7 @@ class HomeScreen extends StatelessWidget {
                                 ),
                                 CustomButton(
                                     onPressed: () {},
-                                    text:
-                                        AppLocalizations.of(context)!.corner,
+                                    text: AppLocalizations.of(context)!.corner,
                                     borderRadius: 15,
                                     background: AppColors.brown,
                                     w: 120.w)
@@ -402,26 +355,22 @@ class HomeScreen extends StatelessWidget {
                                 ),
                                 CustomButton(
                                     onPressed: () {},
-                                    text: AppLocalizations.of(context)!
-                                        .tv_units,
+                                    text:
+                                        AppLocalizations.of(context)!.tv_units,
                                     borderRadius: 15,
                                     background: AppColors.brown,
-                                    w: sl<CacheHelper>()
-                                                .getCachedLanguage() ==
+                                    w: sl<CacheHelper>().getCachedLanguage() ==
                                             'ar'
                                         ? 145
                                         : 105),
-                                SizedBox(
-                                  width: 12.w
-                                ),
+                                SizedBox(width: 12.w),
                                 CustomButton(
                                     onPressed: () {},
-                                    text: AppLocalizations.of(context)!
-                                        .dressing,
+                                    text:
+                                        AppLocalizations.of(context)!.dressing,
                                     borderRadius: 15,
                                     background: AppColors.brown,
-                                    w: sl<CacheHelper>()
-                                                .getCachedLanguage() ==
+                                    w: sl<CacheHelper>().getCachedLanguage() ==
                                             'ar'
                                         ? 100
                                         : 110)

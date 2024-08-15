@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:iegy/features/home/data/models/offer_model.dart';
 import 'package:iegy/features/home/data/models/slider_model.dart';
 import 'package:iegy/features/home/data/repos/home_repo.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -29,5 +30,27 @@ class HomeRepoImplementation extends HomeRepo {
     }, toFirestore: (slider, options) {
       return slider.toJson();
     });
+  }
+
+  CollectionReference<OfferModel> getOffersCollection() {
+    return fireStore.collection('offers').withConverter<OfferModel>(
+        fromFirestore: (snapshot, options) {
+      return OfferModel.fromJson(snapshot.data()!);
+    }, toFirestore: (offer, options) {
+      return offer.toJson();
+    });
+  }
+
+  @override
+  Future<Either<String, Stream<QuerySnapshot<OfferModel>>>> fetchOffers(BuildContext context) async {
+    try {
+      // Listen for realtime update
+      return Right(getOffersCollection()
+      // .orderBy("date_time", descending: false)
+          .snapshots());
+    } catch (e) {
+      return Left(
+          AppLocalizations.of(context)!.somethingWentWrongPleaseTryAgainLater);
+    }
   }
 }
