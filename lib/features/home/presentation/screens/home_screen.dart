@@ -23,7 +23,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/home_side_menu.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extendpus StatelessWidget {
   const HomeScreen({super.key});
 
   @override
