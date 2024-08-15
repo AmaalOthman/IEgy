@@ -23,7 +23,7 @@ import 'package:iegy/features/home/presentation/cubit/home_cubit/home_state.dart
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iegy/features/home/presentation/screens/home_side_menu/home_side_menu.dart';
 
-class HomeScreen extendpus StatelessWidget {
+class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
