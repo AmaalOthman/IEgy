@@ -183,7 +183,7 @@ class LoginScreen extends StatelessWidget {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     CustomButton(
-                                      w: 131.w,
+                                      w: 133.w,
                                       h: 52.h,
                                       onPressed: () {},
                                       text:
@@ -197,7 +197,7 @@ class LoginScreen extends StatelessWidget {
                                       background: AppColors.white,
                                     ),
                                     CustomButton(
-                                      w: 131.w,
+                                      w: 143.w,
                                       h: 52.h,
                                       onPressed: () {},
                                       text: AppLocalizations.of(context)!

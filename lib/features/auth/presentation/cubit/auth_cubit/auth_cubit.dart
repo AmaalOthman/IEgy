@@ -27,8 +27,10 @@ class AuthCubit extends Cubit<AuthState> {
   bool isRegisterPasswordHidden = true;
   bool isRegisterPassConfirmHidden = true;
   Widget suffixIcon = const Icon(Icons.visibility, color: AppColors.darkBlue);
-  Widget registerPasswordSuffix = const Icon(Icons.visibility, color: AppColors.darkBlue);
-  Widget registerPassConfirmSuffix = const Icon(Icons.visibility, color: AppColors.darkBlue);
+  Widget registerPasswordSuffix =
+      const Icon(Icons.visibility, color: AppColors.darkBlue);
+  Widget registerPassConfirmSuffix =
+      const Icon(Icons.visibility, color: AppColors.darkBlue);
   FocusNode emailFocusNode = FocusNode();
   FocusNode passwordFocusNode = FocusNode();
   static AuthCubit get(context) => BlocProvider.of(context);
@@ -80,10 +82,12 @@ class AuthCubit extends Cubit<AuthState> {
     emit(ChangeLoginPasswordSuffixIcon());
   }
 
-  Future<void> onLoginPressed(String email, String password, BuildContext context) async {
+  Future<void> onLoginPressed(
+      String email, String password, BuildContext context) async {
     emit(LoginLoadingState());
     if (loginKey.currentState!.validate()) {
-      final response = await _authRepo.loginWithEmailAndPassword(email, password, context);
+      final response =
+          await _authRepo.loginWithEmailAndPassword(email, password, context);
       response.fold((failure) {
         emit(LoginErrorState(failure));
       }, (authResponse) async {
@@ -95,8 +99,14 @@ class AuthCubit extends Cubit<AuthState> {
         DefaultLogger.logger.w(authResponse.token.toString());
       });
       log(authResponse.toString());*/
-        emit(LoginSuccessState(UserModel(image: authResponse.image, id: authResponse.id, name: authResponse.name, phone:
-        authResponse.phone, address: authResponse.address, email: authResponse.email, pushToken: authResponse.pushToken)));
+        emit(LoginSuccessState(UserModel(
+            image: authResponse.image,
+            id: authResponse.id,
+            name: authResponse.name,
+            phone: authResponse.phone,
+            address: authResponse.address,
+            email: authResponse.email,
+            pushToken: authResponse.pushToken)));
       });
     } else {
       emit(LoginErrorState(AppLocalizations.of(context)!.login_failed));
@@ -122,18 +132,22 @@ class AuthCubit extends Cubit<AuthState> {
 
   void validateThenDoSignUp(BuildContext context) async {
     if (registerKey.currentState!.validate()) {
-      await signUpWithEmailAndPhone(SignUpRequestBody(
-          name: nameController.text,
-          email: signUpEmailController.text,
-          password: signUpPasswordController.text,
-          phoneNumber: signUpPhoneController.text,
-          passwordConfirmation: signUpPasswordConfirmationController.text), context);
+      await signUpWithEmailAndPhone(
+          SignUpRequestBody(
+              name: nameController.text,
+              email: signUpEmailController.text,
+              password: signUpPasswordController.text,
+              phoneNumber: signUpPhoneController.text,
+              passwordConfirmation: signUpPasswordConfirmationController.text),
+          context);
     }
   }
 
-  Future<void> signUpWithEmailAndPhone(SignUpRequestBody signUpRequestBody, BuildContext context) async {
+  Future<void> signUpWithEmailAndPhone(
+      SignUpRequestBody signUpRequestBody, BuildContext context) async {
     emit(RegisterLoadingState());
-    final response = await _authRepo.signUpWithEmailAndPassword(signUpRequestBody, context);
+    final response =
+        await _authRepo.signUpWithEmailAndPassword(signUpRequestBody, context);
     response.fold((failure) {
       emit(RegisterErrorState(failure));
     }, (authResponse) async {
@@ -145,9 +159,14 @@ class AuthCubit extends Cubit<AuthState> {
         DefaultLogger.logger.w(authResponse.token.toString());
       });
       log(authResponse.toString());*/
-      emit(RegisterSuccessState(UserModel(image: authResponse.image, id: authResponse.id, name: authResponse.name, phone:
-      authResponse.phone, address: authResponse.address, email: authResponse.email, pushToken: authResponse.pushToken)));
-      disposeControllers();
+      emit(RegisterSuccessState(UserModel(
+          image: authResponse.image,
+          id: authResponse.id,
+          name: authResponse.name,
+          phone: authResponse.phone,
+          address: authResponse.address,
+          email: authResponse.email,
+          pushToken: authResponse.pushToken)));
     });
   }
 }

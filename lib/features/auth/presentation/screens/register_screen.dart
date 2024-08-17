@@ -15,8 +15,21 @@ import 'package:iegy/core/widgets/custom_text_form_field.dart';
 import 'package:iegy/features/auth/presentation/cubit/auth_cubit/auth_cubit.dart';
 import 'package:iegy/features/auth/presentation/cubit/auth_cubit/auth_state.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+
+  @override
+  void dispose() {
+    AuthCubit.get(context).disposeControllers();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     var cubit = AuthCubit.get(context);
@@ -166,31 +179,33 @@ class RegisterScreen extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   CustomButton(
-                                    w: 131.w,
-                                    h: 52.h,
+                                    w: 138.w,
+                                    h: 52,
                                     onPressed: () {},
                                     text: AppLocalizations.of(context)!.google,
                                     textColor: AppColors.blue,
                                     withIcon: true,
-                                    icon: CustomImage(
+                                    icon: const CustomImage(
                                         imagePath: AppAssets.google,
-                                        w: 28.w,
+                                        w: 28,
                                         h: 28),
                                     background: AppColors.white,
                                   ),
                                   CustomButton(
-                                      w: 131.w,
-                                      h: 52.h,
+                                      w: 133.w,
+                                      h: 52,
                                       onPressed: () {},
                                       text: AppLocalizations.of(context)!
                                           .facebook,
                                       withIcon: true,
-                                      icon: CustomImage(
+                                      icon: const CustomImage(
                                         imagePath: AppAssets.facebook,
-                                        w: 14.53228.w,
+                                        w: 14.53228,
                                         h: 26.89956,
                                       ),
-                                      background: AppColors.lightBlue)
+                                      background: AppColors.lightBlue, textStyle:Theme.of(context).textTheme.displayMedium!.copyWith(
+                                    color: AppColors.white, fontWeight: FontWeight.bold
+                                  ))
                                 ]),
                             SizedBox(height: 20.h),
                             Row(

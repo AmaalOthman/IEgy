@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iegy/core/utils/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
@@ -39,30 +38,22 @@ class CustomButton extends StatelessWidget {
                 backgroundColor: MaterialStateProperty.all(
                     background ?? AppColors.darkBrown),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(borderRadius ?? 59),
-                  ),
-                )),
+                    RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(borderRadius ?? 59)))),
             onPressed: onPressed,
             child: Row(
-              mainAxisAlignment: withIcon == true
-                  ? MainAxisAlignment.spaceBetween
-                  : MainAxisAlignment.center,
-              children: [
-                Text(
-                  text,
-                  style: textStyle ??
-                      Theme.of(context).textTheme.displayLarge!.copyWith(
-                          color: textColor ?? AppColors.white,
-                          fontSize: fontSize ?? 16.w),
-                ),
-                if (withIcon == true)
-                  icon ??
-                      const Icon(
-                        Icons.error,
-                        color: AppColors.grey,
-                      ),
-              ],
-            )));
+                mainAxisAlignment: withIcon == true
+                    ? MainAxisAlignment.spaceBetween
+                    : MainAxisAlignment.center,
+                children: [
+                  Text(text,
+                      style: textStyle ??
+                          Theme.of(context).textTheme.displayLarge!.copyWith(
+                              color: textColor ?? AppColors.white,
+                              fontSize: fontSize ?? 16)),
+                  if (withIcon == true)
+                    icon ?? const Icon(Icons.error, color: AppColors.grey)
+                ])));
   }
 }
