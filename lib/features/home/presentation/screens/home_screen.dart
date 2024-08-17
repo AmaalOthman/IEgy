@@ -15,10 +15,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:iegy/features/home/presentation/components/best_seller_widget.dart';
 import 'package:iegy/features/home/presentation/components/home_category.dart';
 import 'package:iegy/features/home/presentation/components/home_sliders.dart';
-import 'package:iegy/features/home/presentation/components/offer.dart';
 import 'package:iegy/features/home/presentation/components/idea.dart';
 import 'package:iegy/features/home/presentation/components/offers_list.dart';
-import 'package:iegy/features/home/presentation/components/sale.dart';
 import 'package:iegy/features/home/presentation/components/section_title.dart';
 import 'package:iegy/features/home/presentation/cubit/home_cubit/home_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/home_cubit/home_state.dart';
@@ -96,7 +94,7 @@ class HomeScreen extends StatelessWidget {
                           shadow: true,
                           preIcon: const Icon(
                             Icons.search,
-                            color: AppColors.darkBlue,
+                            color: AppColors.darkBlue
                           ),
                           suffixIcon: const CustomImage(
                               imagePath: AppAssets.mic, h: 18, w: 13.39),

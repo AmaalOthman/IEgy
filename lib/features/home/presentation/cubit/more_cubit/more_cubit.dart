@@ -4,7 +4,9 @@ import 'package:iegy/features/home/presentation/cubit/more_cubit/more_state.dart
 
 class MoreCubit extends Cubit<MoreState> {
   MoreCubit() : super(MoreInitial());
+  static MoreCubit get(context) => BlocProvider.of(context);
   String section = '';
+  List<Widget> bestSellerList = [];
   int currentPage = 1;
 
   void onBackPressed(BuildContext context) {

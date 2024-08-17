@@ -8,6 +8,7 @@ import 'package:iegy/features/home/presentation/components/sale.dart';
 import 'package:iegy/features/home/presentation/cubit/best_seller_cubit/best_seller_cubit.dart';
 import 'package:iegy/features/home/presentation/cubit/best_seller_cubit/best_seller_state.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:iegy/features/home/presentation/cubit/home_cubit/home_cubit.dart';
 
 class BestSellerWidget extends StatefulWidget {
   const BestSellerWidget({super.key});
@@ -46,7 +47,23 @@ class _BestSellerWidgetState extends State<BestSellerWidget> {
                 // Convert QuerySnapshot<SliderModel> to List<Widget>
                 List<Widget> bestSellerWidget = snapshot.data!.docs.map((doc) {
                   ProductModel product =
-                      doc.data(); // Assuming doc.data() returns a SliderModel
+                      doc.data();
+                  context.read<HomeCubit>().bestSellerList = snapshot.data!.docs.map((doc) {
+                    ProductModel product =
+                    doc.data(); // Assuming doc.data() returns a SliderModel
+                    return Sale(
+                        image: product.image ??
+                            'https://w3layouts.com/wp-content/uploads/2021/06/fitment-404.png',
+                        title: currentLang == 'en'
+                            ? (product.titleEn ?? '')
+                            : (product.title ?? ''),
+                        color1: product.colors?[0] ?? 'FFFFFF',
+                        color2: product.colors?[1] ?? 'FFFFFF',
+                        color3: product.colors?[2] ?? 'FFFFFF',
+                        oldPrice: product.oldPrice,
+                        price: product.price ?? '',
+                        rateCount: product.ratesCount ?? '0');
+                  }).toList();// Assuming doc.data() returns a SliderModel
                   return Sale(
                       image: product.image ??
                           'https://w3layouts.com/wp-content/uploads/2021/06/fitment-404.png',
