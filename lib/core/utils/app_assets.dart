@@ -97,4 +97,5 @@ class AppAssets{
   static const String walking = '${iconsPath}walking.png';
   static const String locationOnMap = '${iconsPath}location_on_map.png';
   static const String userLocation = '${iconsPath}user_location.png';
+  static const String user = '${iconsPath}user.png';
 }

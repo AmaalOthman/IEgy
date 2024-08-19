@@ -96,7 +96,7 @@ class LoginScreen extends StatelessWidget {
                                         child: CustomImage(
                                           imagePath: AppAssets.locker,
                                           h: 16.h,
-                                          w: 14.w,
+                                          w: 14.w
                                         )),
                                     isObSecure:
                                         BlocProvider.of<AuthCubit>(context)

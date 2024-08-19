@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:iegy/core/functions/show_default_dialog.dart';
 import 'package:iegy/core/functions/show_default_loading_indicator.dart';
@@ -54,7 +55,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             CustomTextFormField(
                                 controller: cubit.nameController,
                                 hint: AppLocalizations.of(context)!.full_name,
-                                preIcon: const Icon(Icons.account_box),
+                                preIcon: const CustomImage(imagePath: AppAssets.user),
                                 validator: (data) {
                                   if (data == null || data.isEmpty) {
                                     return AppLocalizations.of(context)!
@@ -67,7 +68,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 keyboardType: TextInputType.emailAddress,
                                 controller: cubit.signUpEmailController,
                                 hint: AppLocalizations.of(context)!.email,
-                                preIcon: const Icon(Icons.mail),
+                                preIcon: Padding(
+                                    padding: EdgeInsets.all(17.w),
+                                    child: CustomImage(
+                                        imagePath: AppAssets.email, h: 12.h, w: 16.w)),
                                 validator: (data) {
                                   if (!ValidationUtils.isValidEmail(data!)) {
                                     return AppLocalizations.of(context)!
@@ -83,7 +87,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             CustomTextFormField(
                                 controller: cubit.signUpPasswordController,
                                 hint: AppLocalizations.of(context)!.password,
-                                preIcon: const Icon(Icons.lock),
+                                preIcon: Padding(
+                                    padding: EdgeInsets.all(17.w),
+                                    child: CustomImage(
+                                        imagePath: AppAssets.locker,
+                                        h: 16.h,
+                                        w: 14.w
+                                    )),
                                 isObSecure: cubit.isRegisterPasswordHidden,
                                 suffixIcon: cubit.registerPasswordSuffix,
                                 onSuffixPressed:
@@ -101,8 +111,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                     cubit.signUpPasswordConfirmationController,
                                 hint: AppLocalizations.of(context)!
                                     .confirm_password,
-                                preIcon: const CustomImage(
-                                    imagePath: AppAssets.locker),
+                                preIcon: Padding(
+                                    padding: EdgeInsets.all(17.w),
+                                    child: CustomImage(
+                                        imagePath: AppAssets.locker,
+                                        h: 16.h,
+                                        w: 14.w
+                                    )),
                                 isObSecure: cubit.isRegisterPassConfirmHidden,
                                 suffixIcon: cubit.registerPassConfirmSuffix,
                                 onSuffixPressed:
@@ -125,7 +140,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 keyboardType: TextInputType.phone,
                                 hint:
                                     AppLocalizations.of(context)!.phone_number,
-                                preIcon: const Icon(Icons.call),
+                                preIcon: const Icon(Icons.phone_enabled),
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
                                     return AppLocalizations.of(context)!
